@@ -8,7 +8,7 @@
         <p-column field="valorAnterior" header="Valor Anterior"></p-column>
         <p-column field="valorNuevo" header="Valor Nuevo"></p-column>
         <p-column field="fecha" header="Fecha">
-            <template let-col let-registro="rowData" pTemplate="registro" type="body">
+            <template let-col let-registro="rowData" pTemplate="registro" pTemplate="body">
                 <span>{{registro.fecha | date : 'medium'}}</span>
             </template>
         </p-column>

@@ -18,8 +18,10 @@ export class UtilService {
     nombreProyecto: string = 'GEMMAA';
     modoDios: boolean = false;
 
+    //Cambiar dependiendo de donde se ubicara la direccion a webORB opciones:
+    // -- productivo, tomcat, local
     get configuracion(): string {
-        return 'local';
+        return 'tomcat';
     }
 
     get urlWebOrb(): string {
@@ -40,9 +42,6 @@ export class UtilService {
 
     constructor(public router: Router) {
         if (this.configuracion.toLowerCase().indexOf('local') >= 0) {
-            this.modoDios = true;
-        }
-        else if (this.configuracion.toLowerCase().indexOf('tomcat') >= 0) {
             this.modoDios = true;
         }
     }

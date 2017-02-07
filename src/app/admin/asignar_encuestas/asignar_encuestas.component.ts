@@ -29,8 +29,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                 private seguridadService: SeguridadService,
                 private encuestaService: EncuestaService) {
         if (!loginService.usuarioValidado() || !loginService.emplHasAccess('admin'))
-            if (!loginService.godlike)
-                this.router.navigate(['login']);
+            this.router.navigate(['login']);
         this.rolesPermisoUsuario = [];
         this.rolesPermisoUsuario.push({label: 'Selecciona el permiso.', value: null});
         this.rolesPermisoUsuario.push({label: 'Evaluador', value: 'EVAL'});
@@ -62,7 +61,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                             this.listaPonderadosDropdown.push({
                                 label: "ID: " + p.idp + " | Evaluado: " + p.evaluado + " | Jefe: "
                                 + p.jefe + " | Par: " + p.par + " | Colaborador: " + p.colaborador + " | Cliente: " + p.cliente,
-                                value: '' + p.idp
+                                value: p
                             });
 
                         }
@@ -85,9 +84,9 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                             this.listaPonderadosDropdown.push({
                                 label: "ID: " + p.idp + " | Evaluado: " + p.evaluado + " | Jefe: "
                                 + p.jefe + " | Par: " + p.par + " | Colaborador: " + p.colaborador + " | Cliente: " + p.cliente,
-                                value: '' + p.idp
+                                value: '' + p
                             });
-                            this.ponderadoSeleccionado = p.idp;
+                            this.ponderadoSeleccionado = p;
                         }
 
                     }
@@ -101,7 +100,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
 
     listaPonderados: Ponderados[];
     listaPonderadosDropdown: SelectItem[];
-    ponderadoSeleccionado;
+    ponderadoSeleccionado: Ponderados;
     private _ponderadoTotal: number;
 
     get ponderadoTotal(): number {
@@ -411,6 +410,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
         }
 
         if (this.cliente == null && this.ponderadoSeleccionado != null && this.ponderadoSeleccionado.cliente != 0) {
+            console.log(this.ponderadoSeleccionado.cliente)
             roles.push('Si no se va a seleccionar un cliente el ponderado del cliente debe tener el valor de 0.')
         }
 
@@ -565,7 +565,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                             this.insertarUsuarioRol(this.cliente);
                     });
             }
-            let evaluacion: Evaluacion = new Evaluacion(this.encuestaSeleccionada.idte, this.ponderadoSeleccionado, this.evaluado.nip, 'F');
+            let evaluacion: Evaluacion = new Evaluacion(this.encuestaSeleccionada.idte, this.ponderadoSeleccionado.idp, this.evaluado.nip, 'F');
             Promise.resolve(this.adminService.crearEvaluacion(evaluacion, this.evaluadores)).then(o6 => {
                 var t1 = performance.now();
                 console.log("La evaluacion tardo " + Math.round(t1 - t0) + " milisegundos en guardarse.")

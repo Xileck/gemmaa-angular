@@ -4,6 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
+    "build": "ng build --prod -bh /weborb/apps/gemmaa360/",
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",

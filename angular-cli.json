@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "gemmaa360",
+      "outDir": "C:\\Tomcat\\webapps\\weborb\\apps\\gemmaa360",
       "assets": [
         "assets",
         "favicon.ico",

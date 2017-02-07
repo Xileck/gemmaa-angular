@@ -35,7 +35,7 @@ import {EncabezadoComponent} from "./encabezado/encabezado.component";
 import {FooterComponent} from "./encabezado/footer.component";
 import {NavbarComponent} from "./encabezado/navbar.component";
 import {GrowlModule} from "primeng/components/growl/growl";
-import {DialogoComponent} from "./utilidades/dialogo.component";
+import {DialogoComponent} from "./dialogo/dialogo.component";
 import {MenuAdminComponent} from "./admin/admin_menu.component";
 import {AdminEncuestasComponent} from "./admin/admin_encuestas/admin_encuestas.component";
 import {AdminUsuariosComponent} from "./admin/admin_usuarios/admin_usuarios.component";
@@ -102,7 +102,6 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
         RadioButtonModule,
         StepsModule,
         ChartModule,
-        //ChartsModule,
         ProgressBarModule,
         TooltipModule,
         InputTextModule,
@@ -113,11 +112,12 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
         AdminService,
         UtilService,
         EvaluacionService,
-        //Cambiar idioma a español para fechas, mensajes etc...
-        {provide: LOCALE_ID, useValue: "es-MX"},
         WindowRef,
         SeguridadService,
-      {provide: LocationStrategy, useClass: HashLocationStrategy}
+        //Cambiar idioma a español para fechas, mensajes etc...
+        {provide: LOCALE_ID, useValue: "es-MX"},
+        //utilizar # para cambiar de ruta (este metodo hace que funcione el redireccionamiento en tomcat y jboss)
+        {provide: LocationStrategy, useClass: HashLocationStrategy}
     ],
     bootstrap: [AppComponent]
 })

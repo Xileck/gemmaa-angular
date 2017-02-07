@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,10 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var util_service_1 = require("../servicios/util.service");
-var DialogoComponent = (function () {
+import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
+import { UtilService } from "../servicios/util.service";
+export var DialogoComponent = (function () {
     function DialogoComponent(router, utilService) {
         this.router = router;
         this.utilService = utilService;
@@ -33,42 +32,41 @@ var DialogoComponent = (function () {
             this.tipo = 'red';
     };
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], DialogoComponent.prototype, "msg", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', Boolean)
     ], DialogoComponent.prototype, "display", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', Number)
     ], DialogoComponent.prototype, "timer", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], DialogoComponent.prototype, "title", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', Boolean)
     ], DialogoComponent.prototype, "finalizo", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], DialogoComponent.prototype, "tipo", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], DialogoComponent.prototype, "pagina_regreso", void 0);
     DialogoComponent = __decorate([
-        core_1.Component({
+        Component({
             selector: "app-dialogo",
-            templateUrl: "./app/utilidades/dialogo.component.html",
-            styleUrls: ["./app/utilidades/dialogo.component.css"]
+            templateUrl: "./dialogo.component.html",
+            styleUrls: ["./dialogo.component.css"]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, util_service_1.UtilService])
+        __metadata('design:paramtypes', [Router, UtilService])
     ], DialogoComponent);
     return DialogoComponent;
 }());
-exports.DialogoComponent = DialogoComponent;
-//# sourceMappingURL=dialogo.component.js.map
+//# sourceMappingURL=C:/GEMMAA/GEMMAA_CLI/src/app/dialogo/dialogo.component.js.map

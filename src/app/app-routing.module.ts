@@ -22,11 +22,9 @@ const routes: Routes = [
     {path: 'encuestas', component: EncuestasComponent},
     {path: 'contestar_encuesta', component: ContestarEncuestaComponent},
     {path: 'reportes', component: ReportesComponent},
-    // {path: 'prueba', component: PruebaComponent},
-    // {path: 'prueba2', component: Prueba2Component},
     {path: 'bitacora', component: BitacoraComponent},
     {path: 'admin_usuarios', component: AdminUsuariosComponent},
-     {path:'reporte_evaluacion/:id',component:ReporteEvaluacionComponent}
+    {path: 'reporte_evaluacion/:id', component: ReporteEvaluacionComponent}
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
