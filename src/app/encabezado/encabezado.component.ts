@@ -35,7 +35,8 @@ export class EncabezadoComponent {
     public isCollapsed: boolean = true;
 
     constructor(public loginService: LoginService, public router: Router, private utilService: UtilService) {
-
+        if (!loginService.usuarioValidado())
+            this.router.navigate(['login']);
     }
 
     logout(): void {

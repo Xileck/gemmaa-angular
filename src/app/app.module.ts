@@ -52,6 +52,7 @@ import {ReportesComponent} from "./reportes/reportes_menu.component";
 import {FortalezasMejorasComponent} from "./reportes/fortalezas_mejoras.component";
 import {ReporteEvaluacionComponent} from "./reportes/reporte_evaluacion.component";
 import {EvaluadoresComponent} from "./reportes/evaluadores.component";
+import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 
 @NgModule({
     declarations: [
@@ -115,7 +116,8 @@ import {EvaluadoresComponent} from "./reportes/evaluadores.component";
         //Cambiar idioma a español para fechas, mensajes etc...
         {provide: LOCALE_ID, useValue: "es-MX"},
         WindowRef,
-        SeguridadService
+        SeguridadService,
+      {provide: LocationStrategy, useClass: HashLocationStrategy}
     ],
     bootstrap: [AppComponent]
 })
