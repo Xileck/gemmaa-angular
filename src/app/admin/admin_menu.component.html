@@ -1,0 +1,56 @@
+<br><br><br><br>
+<div class="container ">
+    <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
+        <li>
+            <a routerLink="/asignar_encuestas" data-toggle="tab">
+                <div class="alt-tabs-icon">
+                    <i class="icon-scope"></i>
+                </div>
+                Asignar Encuestas
+            </a>
+        </li>
+        <li (click)="display = true">
+            <a data-toggle="tab">
+                <div class="alt-tabs-icon">
+                    <i class="icon-documents"></i>
+                </div>
+                Administrar Encuestas
+            </a>
+        </li>
+        <li (click)="cargarAdminUsuarios()">
+            <a ata-toggle="tab">
+                <div class="alt-tabs-icon">
+                    <span class="icon-profile-male"></span>
+                </div>
+                Administrar Usuarios
+            </a>
+        </li>
+        <!--  <li>
+              <a routerLink="/bitacora" data-toggle="tab">
+                  <div class="alt-tabs-icon">
+                      <span class="icon-book-open"></span>
+                  </div>
+                  BitacoraComponent
+              </a>
+          </li>-->
+    </ul>
+</div>
+
+<p-dialog header="Catalogo Encuestas" [(visible)]="display">
+    <p-dataList [value]="catalogoEncuestas" [paginator]="true" [rows]="5">
+        <!--<footer>Choose from the list.</footer>-->
+        <template pTemplate="encuesta" let-encuesta>
+            <div class="ui-grid ui-grid-responsive ui-fluid fade"
+                 style="font-size:14px;padding:10px;border-bottom:1px solid #D5D5D5; text-align: left">
+                <i class=" " style="cursor:pointer;float:left;" (click)="cargarEncuesta(encuesta.idte)">
+                    {{encuesta.descripcion}} </i>
+            </div>
+        </template>
+    </p-dataList>
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button type="button" pButton icon="fa-close" (click)="display=false" label="No"></button>
+            <button type="button" pButton icon="fa-check" (click)="display=false" label="Yes"></button>
+        </div>
+    </footer>
+</p-dialog>

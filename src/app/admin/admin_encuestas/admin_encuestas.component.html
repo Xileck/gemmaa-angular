@@ -1,0 +1,153 @@
+<p-confirmDialog width="425"></p-confirmDialog>
+<p-panel *ngIf="encuesta && !blockPanel">
+    <p-header>
+        <h2>Encuesta: {{encuesta.nombre}}</h2>
+    </p-header>
+    <div class="ui-g">
+        <div class="ui-g-5"><h4>Resultados Esperados</h4></div>
+        <div class="ui-g-7"><h4>Atributos</h4></div>
+    </div>
+    <div class="ui-g home-content">
+        <div class="ui-g-4">
+            <table class="table table-hover">
+                <tbody>
+                <tr [ngClass]="{'active': cre == creSeleccionado }"
+                    *ngFor="let resEsperados of encuesta.resultados_esperados" (click)="selectedResEsp = resEsperados">
+                    <td>{{resEsperados.descripcion}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ui-g-8" *ngIf="selectedResEsp">
+            <div *ngFor="let atributo of encuesta.atributos; let i2 =index">
+                <div *ngIf="atributo.idResultadoEsperado == selectedResEsp.idResultadoEsperado"
+                >
+                    <p-panel>
+                        <p-header>
+                            <h4>{{atributo.idAtributo}} {{atributo.nombre}}</h4>
+                            <button pButton type="button" label="Editar" class="ui-button-info"
+                                    (click)="editarAtributo(atributo)"></button>
+                        </p-header>
+                        <p class="descripcion">
+                            <b>Descripcion del atributo: {{atributo.descripcion}}</b>
+                        </p>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Comportamiento</th>
+                                <th>Reactivo</th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>C</th>
+                                <th>D</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <template let-cre ngFor [ngForOf]="encuesta.listaCRE" let-i="index">
+                                <tr [ngClass]="{'active': cre == creSeleccionado }"
+                                    *ngIf="cre.idAtributo == atributo.idAtributo"
+                                    (click)="creSeleccionado  = cre">
+
+                                    <td>{{(i+ 1)}}</td>
+                                    <td>{{cre.comportamiento}}</td>
+                                    <td>{{cre.reactivo}}</td>
+                                    <td>{{cre.escala_a}}</td>
+                                    <td>{{cre.escala_b}}</td>
+                                    <td>{{cre.escala_c}}</td>
+                                    <td>{{cre.escala_d}}</td>
+                                </tr>
+                            </template>
+                            </tbody>
+                        </table>
+                        <button pButton type="button" label="Agregar" class="ui-button-success"
+                                (click)="agregarCRE(atributo.idAtributo)"></button>
+                        <button pButton type="button" label="Eliminar" class="ui-button-danger"
+                                (click)="quitarCRE(atributo.idAtributo)">
+                        </button>
+                        <button pButton type="button" label="Editar" class="ui-button-info"
+                                (click)="mostrarPanelEdicion(atributo.idAtributo)">
+                        </button>
+                    </p-panel>
+                    <p-messages [value]="msgs"></p-messages>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-info" type="button" (click)="guardarEncuesta()"
+    >
+        Guardar Nueva revision
+    </button>
+</p-panel>
+<p-dialog header="Editar" [(visible)]="display" *ngIf="creSeleccionado" showEffect="fade" modal="true"
+          [resizable]="false" [responsive]="true" [minWidth]="300">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <b>Comportamiento</b><br>
+                <textarea rows="5" cols="30" style="width:100%;" pInputTextarea
+                          [(ngModel)]="creSeleccionado.comportamiento"
+                          autoResize="autoResize"></textarea>
+            </div>
+            <div class="ui-grid-col-6">
+                <b>Reactivo</b><br>
+                <textarea rows="5" cols="30" style="width:100%;" pInputTextarea [(ngModel)]="creSeleccionado.reactivo"
+                          autoResize="autoResize"></textarea>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12">
+                <b>Escalas</b>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>D</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input class="form-control" [(ngModel)]="creSeleccionado.escala_a"></td>
+                        <td><input class="form-control" [(ngModel)]="creSeleccionado.escala_b"></td>
+                        <td><input class="form-control" [(ngModel)]="creSeleccionado.escala_c"></td>
+                        <td><input class="form-control" [(ngModel)]="creSeleccionado.escala_d"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button type="button" pButton (click)="guardarCRE()" label="Guardar"></button>
+        </div>
+    </footer>
+</p-dialog>
+
+<p-dialog header="Atributo" [(visible)]="displayEditarAtributo" *ngIf="atributoSeleccionado" showEffect="fade"
+          [modal]="true"
+          [resizable]="false" [responsive]="true" [minWidth]="300">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <b>Nombre</b><br>
+                <textarea rows="5" cols="30" pInputTextarea style="width:100%;"
+                          [(ngModel)]="atributoSeleccionado.nombre"
+                          autoResize="autoResize"></textarea>
+            </div>
+            <div class="ui-grid-col-6">
+                <b>Descripcion</b><br>
+                <textarea rows="5" cols="30" pInputTextarea style="width:100%;"
+                          [(ngModel)]="atributoSeleccionado.descripcion"
+                          autoResize="autoResize"></textarea>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button type="button" pButton (click)="guardarAtributo()" label="Guardar"></button>
+        </div>
+    </footer>
+</p-dialog>

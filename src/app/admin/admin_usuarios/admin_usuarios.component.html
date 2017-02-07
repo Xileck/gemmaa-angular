@@ -1,0 +1,205 @@
+<div class="ui-g home-content ui-grid ui-grid-responsive ui-grid-pad">
+    <div class="ui-g-12">
+        <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none;color:black;">
+
+        </div>
+        <div>
+            <p-dataTable [value]="usuarios" [rows]="10" [paginator]="true" [responsive]="true">
+                <p-header>
+                    <button type="button" pButton icon="fa-refresh"
+                            (click)="actualizar()"></button>
+                    <button [disabled]="mostrarFotos" type="button" pButton icon="fa-camera"
+                            (click)="mostrarFotosFuncion()"
+                            label=" Mostrar con fotos"></button>
+                    <button type="button" pButton icon="fa-search"
+                            (click)="abrirModalAgregarUsuario()"
+                            label=" Agregar usuario"></button>
+                </p-header>
+                <p-column [style]="{'width':'10%','text-align':'center', 'min-width':'50px'}">
+                    <template let-usuario="rowData" pTemplate="body">
+                        <button type="button" pButton (click)="selectUsuario($event,usuario,op1);"
+                                icon="fa-edit"></button>
+                        <button type="button" pButton icon="fa-close" [style]="{'margin':'5px 3px 5px 3px;'}"
+                                (click)="eliminarUsuario(usuario)">
+                        </button>
+                    </template>
+                </p-column>
+                <p-column field="foto" header="Foto" *ngIf="mostrarFotos"
+                          [style]="{'width':'10%','text-align':'center', 'min-width':'80px'}">
+                    <template let-usuario="rowData" pTemplate="body">
+                        <img *ngIf="usuario.foto"
+                             [src]="'data:image/jpeg;base64,'+ utilService.convertArrayBytesToBase64(usuario.foto)"
+                             style="max-height: 70px; vertical-align: middle;"/>
+                    </template>
+                </p-column>
+                <p-column field="nombreCompleto" header="Nombre" [filter]="true" filterPlaceholder="Search"
+                          filterMatchMode="contains"></p-column>
+                <p-column field="area" header="Area" [filter]="true" filterPlaceholder="Search"
+                          filterMatchMode="contains"></p-column>
+                <p-column field="rol" header="Rol" [filter]="true" filterPlaceholder="Search"
+                          [style]="{'width':'10%','text-align':'center', 'min-width':'80px'}"></p-column>
+                <p-column field="rpe" header="RPE" [filter]="true" filterPlaceholder="Search"
+                          [style]="{'width':'10%','text-align':'center', 'min-width':'80px'}"></p-column>
+                <p-column field="passwordIntra" header="Contraseña"
+                          [style]="{'width':'10%','text-align':'center', 'min-width':'100px'}">
+                    <template let-usuario="rowData" pTemplate="body">
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-row showhim">
+                                <div class="ui-grid-col-12 showme">{{usuario.passwordIntra != null ?
+                                    usuario.passwordIntra :
+                                    usuario.passwordUsuariosRol}}
+                                </div>
+                                <div class="ui-grid-col-12 ok">*******</div>
+                            </div>
+                        </div>
+                    </template>
+                </p-column>
+            </p-dataTable>
+        </div>
+        <p-messages [value]="msgsPanelUsuarios"></p-messages>
+    </div>
+</div>
+
+<p-confirmDialog width="425"></p-confirmDialog>
+<p-overlayPanel #op1>
+    <div *ngIf="selectedUser != null">
+        <div class="ui-grid ui-grid-responsive ui-grid-pad">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4">
+                    <img [src]="'data:image/jpeg;base64,'+ utilService.convertArrayBytesToBase64(selectedUser.empleado?.foto)"
+                         style="max-height: 70px;margin:auto;"/>
+                </div>
+                <div class="ui-grid-col-8">
+                    {{selectedUser.empleado?.nombreCompleto}}<br>
+                    <span style="font-size: 10px"><b>RPE: </b>{{selectedUser?.empleado?.rpe}}</span>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    Modificar rol:
+                </div>
+                <div class="ui-grid-col-6">
+                    <p-dropdown [options]="roles" [(ngModel)]="selectedUser.rol.clave" [autoWidth]="false"></p-dropdown>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    Modificar Contraseña:
+                </div>
+                <div class="ui-grid-col-6">
+                    <input [disabled]="selectedUser.empleado.password != null && selectedUser.empleado.password.length > 0"
+                           type="text" pInputText [(ngModel)]="(selectedUser.empleado.password != null && selectedUser.empleado.password.length>0) ?
+                                    selectedUser.empleado.password :
+                                    selectedUser.password"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                    <button type="button" pButton icon="fa-check" (click)="modificarUsuario();op1.hide();"
+                            label="Guardar"></button>
+                </div>
+                <div class="ui-grid-col-6">
+                    <button type="button" pButton icon="fa-close"
+                            (click)="op1.hide();selectedUser=null;selectedRol = null;"
+                            label="Cancelar"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</p-overlayPanel>
+
+
+<div align="center" *ngIf="agregarUsr" class="modal2 show in danger home-content" #myModal2 id="myModal2"
+     role="dialog">
+    <div class="modal2-dialog home-content">
+        <div class="modal2-content">
+            <span class="close2" style="color: black; text-align: right;"
+                  (click)="cerrarModal()">x</span>
+            <p-panel header="Buscar usuario">
+                <div *ngIf="blockedDocument" class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <form *ngIf="(busqueda == null && !blockedDocument)
+                                                || (busqueda?.length ==0 && !blockedDocument)"
+                      (ngSubmit)="buscarEmpleados()"
+                      #busquedaForm="ngForm">
+                    <div class="form-group">
+                        <label for="name">Buscar: </label>
+                        <input type="text" (keyup)="busquedaInput = busquedaInput?.toUpperCase();"
+                               [(ngModel)]="busquedaInput" class="form-control" id="name"
+                               required placeholder="Ingresa nombre o rpe" name="test" #inputRef>
+                        <br>
+                        <button type="submit" class="btn btn-info"
+                                label="Buscar">Buscar
+                        </button>
+                    </div>
+                </form>
+                <div *ngIf="empleadoSeleccionado">
+                    <legend>Empleado seleccionado</legend>
+                    <div style="border: solid .2px;border-color: gray;padding: 20px">
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-3">
+                                <img *ngIf="empleadoSeleccionado?.foto"
+                                     [src]="'data:image/jpeg;base64,'+ empleadoSeleccionado.empleadoFoto"
+                                     style="max-height: 70px;margin:auto;"/>
+                            </div>
+                            <div class="ui-grid-col-9">
+                                {{empleadoSeleccionado.nombreCompleto}}<br>
+                                <span style="font-size: 10px"><b>Puesto: </b>{{empleadoSeleccionado.perfil}}</span><br>
+                                <span style="font-size: 10px"><b>Area: </b>{{empleadoSeleccionado.areaTrabajo.descripcion}}({{empleadoSeleccionado.areaTrabajo.clave}})</span>
+                                <span style="font-size: 10px"><b>RPE: </b>{{empleadoSeleccionado.rpe}}</span>
+                            </div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-12">
+                                <p-dropdown [options]="roles"
+                                            [(ngModel)]="selectedRol"></p-dropdown>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-6">
+                                <button type="button" pButton icon="fa-plus" (click)="darDeAltaUsuario()"
+                                        label="Agregar" style="margin:auto;"></button>
+                            </div>
+                            <div class="ui-grid-col-6">
+                                <button type="button" pButton icon="fa-ban" class="ui-button-danger"
+                                        (click)="empleadoSeleccionado = null;"
+                                        label="Cancelar" style="margin:auto;"></button>
+                            </div>
+                        </div>
+                        <hr>
+
+                    </div>
+
+                </div>
+                <div *ngIf="busqueda && busqueda.length >0 && !empleadoSeleccionado && !blockedDocument">
+                    <legend>Busqueda de empleados</legend>
+                    <div style="max-height:200px;overflow:auto;">
+                        <table class="table table-bordered table-hover ">
+                            <thead></thead>
+                            <tbody>
+                            <tr *ngFor="let e of busqueda"
+                                (click)="seleccionarEmpleado(e.rpe)"
+                                [ngClass]="{'active': empleadoSeleccionado?.rpe == e?.rpe}">
+                                <td>
+                                    {{e.nombreCompleto}}<br>
+                                    <span style="font-size: 10px"><b>Area: </b>{{e.area}}</span>
+                                    <span style="font-size: 10px"><b>RPE: </b>{{e.rpe}}</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <button type="button" pButton icon="fa-ban" class="ui-button-danger"
+                            (click)="busqueda = null; busquedaInput = null;"
+                            label="Cancelar" style="margin:auto;"></button>
+                </div>
+                <p-messages [value]="msgsBuscar"></p-messages>
+            </p-panel>
+        </div>
+    </div>
+</div>

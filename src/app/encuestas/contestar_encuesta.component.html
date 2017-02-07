@@ -1,0 +1,176 @@
+<p-blockUI [blocked]="blockedDocument"></p-blockUI>
+<div *ngIf="encuesta && aceptoInstrucciones && utilService.app_dialogo_argumentos.display == false">
+    <p-panel header="Encuesta: {{encuesta.nombre}}">
+        <p-steps [model]="items" [readonly]="true"
+                 [(activeIndex)]="activeIndex" styleClass="steps-basic">
+        </p-steps>
+        <p-fieldset
+                legend="{{encuesta.resultados_esperados[activeIndex].descripcion}}">
+            <div *ngFor="let atr of encuesta.atributos">
+                <div *ngIf="encuesta.resultados_esperados[activeIndex].idResultadoEsperado == atr.idResultadoEsperado">
+                    <p-fieldset styleClass="custom-fieldset" legend="{{atr.nombre}}">
+                        <p class="descripcion">
+                            <b>Descripción del atributo:</b> {{atr.descripcion}}
+                        </p>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="background-color: lightgrey">Comportamiento</th>
+                                <th style="background-color: lightgrey">Reactivo</th>
+                                <th style="background-color: lightgrey">A</th>
+                                <th style="background-color: lightgrey">B</th>
+                                <th style="background-color: lightgrey">C</th>
+                                <th style="background-color: lightgrey">D</th>
+                                <th style="background-color: lightgrey">°</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <template let-cre ngFor [ngForOf]="encuesta.listaCRE" let-i="index">
+                                <tr [ngClass]="{'error': cre.contestado == false }"
+                                    *ngIf="cre.idAtributo == atr.idAtributo">
+                                    <td>
+                                        <i *ngIf=" cre.contestado == false" class="fa fa-times fa-2x"
+                                           style="color:red"></i>{{cre.comportamiento}}
+                                    </td>
+                                    <td>{{cre.reactivo}}</td>
+                                    <td>
+                                        <p-radioButton value="A" name="'{{i}}"
+                                                       (click)="respuestaContestada(cre)"
+                                                       [(ngModel)]="cre.respuesta"></p-radioButton>
+                                    </td>
+                                    <td>
+                                        <p-radioButton value="B" name="{{i}}"
+                                                       (click)="respuestaContestada(cre)"
+                                                       [(ngModel)]="cre.respuesta"></p-radioButton>
+                                    </td>
+                                    <td>
+                                        <p-radioButton value="C" name="{{i}}"
+                                                       (click)="respuestaContestada(cre)"
+                                                       [(ngModel)]="cre.respuesta"></p-radioButton>
+                                    </td>
+                                    <td>
+                                        <p-radioButton value="D" name="{{i}}"
+                                                       (click)="respuestaContestada(cre)"
+                                                       [(ngModel)]="cre.respuesta"></p-radioButton>
+                                    </td>
+                                    <td *ngIf="cre.respuesta">{{cre.respuesta}}</td>
+                                </tr>
+                            </template>
+                            </tbody>
+                        </table>
+                    </p-fieldset>
+                </div>
+            </div>
+            <button class="btn btn-info btn-lg" style="float: left;font-size:25px;" (click)="anteriorPagina()"
+                    *ngIf="activeIndex > 0">
+                Anterior
+            </button>
+            <!--<div *ngIf="loginService.emplHasAccess('admin')">-->
+            <button *ngIf="loginService.godlike" class="btn btn-warning btn-lg" style="float: left;font-size:15px;"
+                    (click)="botonMagico()">
+                Boton magico
+            </button>
+            <button class="btn btn-info btn-lg" style="float: right;font-size:25px;" (click)="siguientePagina()"
+                    *ngIf="activeIndex < items.length-1">Siguiente
+            </button>
+        </p-fieldset>
+        <button class="btn btn-success btn-lg btn-block" style="font-size:25px;" (click)="terminarEvaluacion()"
+                *ngIf="activeIndex == items.length -1">Terminar y guardar evaluacion.
+        </button>
+    </p-panel>
+</div>
+
+<div *ngIf="encuesta && !aceptoInstrucciones">
+    <p-panel header="Encuesta: {{encuesta.nombre}}">
+
+
+        <p-fieldset legend="Instrucciones">
+            <div class="ui-g" style="border: solid; border-color:lightgrey">
+                <div class="ui-g-9" style="font-size: 13px;">
+                    <div class="ui-g-2">
+                        <img [src]="'data:image/jpeg;base64,'+ evaluacionSeleccionada.evaluado.empleadoFoto"
+                             style="max-height: 100px;display:block;margin:0 auto 0 auto;"/>
+                    </div>
+                    <div class="ui-g-10" style="border:solid;border-color:lightgrey;">
+                        <div class="ui-g">
+                            <div class="ui-g-10">
+                                Nombre: {{evaluacionSeleccionada.evaluado.nombre}}
+                                {{evaluacionSeleccionada.evaluado.apellidopaterno}}
+                                {{evaluacionSeleccionada.evaluado.apellidomaterno}}
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-10">
+                                Puesto: {{evaluacionSeleccionada.evaluado.perfil}}
+                            </div>
+                        </div>
+                        <div class="ui-g">
+                            <div class="ui-g-10">
+                                Rol del evaluador: {{evaluacionSeleccionada.tipo_de_evaluador}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-g-3" style="font-size: 13px;">
+                    Fecha: {{currentTime | date : 'medium'}}
+                </div>
+            </div>
+            <p class="instrucciones">
+                <b>Instrucciones:</b><br>
+                Con base en lo señalado en el INPO 15-005 "Atributos de Efectividad del Liderazgo y Equipos" y
+                tomando en
+                cuenta la siguiente escala de medicion,
+                califique el grado que Ud. observa que el lider evaluado manifiesta los comportamientos asociados a
+                cada
+                atributo de efectividad del Liderazgo
+            </p>
+
+            <p class="">
+                <b>Escalas:</b><br>
+                Para la evaluación usaras las siguientes clasificaciones para calificar cada reactivo:
+            </p>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>
+                        Clasificación
+                    </th>
+                    <th>
+                        Descripción
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="background-color: red;">D</td>
+                    <td>
+                        El comportamiento <u>no esta desarrollado o se encuentra por debajo de lo requerido.</u>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: orange;">C</td>
+                    <td>
+                        El comportamiento se encuentra en un nivel <u>Minimo necesario para el puesto.</u>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: yellow;">B</td>
+                    <td>
+                        El comportamiento se encuentra en un nivel <u>Muy bueno por encima del promedio.</u>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: lawngreen;">A</td>
+                    <td>
+                        El comportamiento <u>esta desarrollado y contribuye a un Desempeño superior y destacado.</u>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <button class="btn btn-info btn-lg btn-block" style="font-size:25px;float: right;"
+                    (click)="aceptoInstrucciones = true;">Aceptar y Continuar
+            </button>
+        </p-fieldset>
+    </p-panel>
+</div>

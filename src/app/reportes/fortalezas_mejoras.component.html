@@ -1,0 +1,187 @@
+<p-accordionTab header="{{titulo}}">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad"
+         style="border:solid 3px;border-color:gray;max-width:70%;margin-bottom:10px">
+        <div class="ui-grid-row">
+            <p style="margin:auto;">Fortalezas y áreas de mejoras por:</p>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4">
+                <p-radioButton name="group1" value="resultados_esperados" label="Resultados Esperados"
+                               [(ngModel)]="eleccion"></p-radioButton>
+            </div>
+            <div class="ui-grid-col-4">
+                <p-radioButton name="group1" value="atributos" label="Atributos"
+                               [(ngModel)]="eleccion"></p-radioButton>
+            </div>
+            <div class="ui-grid-col-4">
+                <p-radioButton name="group1" value="comportamientos" label="Comportamientos"
+                               [(ngModel)]="eleccion"></p-radioButton>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultados Esperados -->
+    <table class="table table-bordered" *ngIf="eleccion=='resultados_esperados'">
+        <thead>
+        <tr style="background: darkgreen; color: whitesmoke;">
+            <th>+</th>
+            <th>FORTALEZAS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let fortaleza of fortalezas.re" (click)="seleccion = fortaleza;opATR.toggle($event)"
+            [ngClass]="{'seleccion' : seleccion == fortaleza}">
+            <td>{{fortaleza.promedio.toFixed(2)}}</td>
+            <td>{{fortaleza.descripcion}}</td>
+        </tr>
+        <tr style="background: dodgerblue;color: whitesmoke;">
+            <th>-</th>
+            <th>AREAS DE MEJORA</th>
+        </tr>
+        <tr *ngFor="let mejora of mejoras.re" (click)="seleccion = mejora;opATR.toggle($event)"
+            [ngClass]="{'seleccion' : seleccion == mejora}">
+            <td>{{mejora.promedio.toFixed(2)}}</td>
+            <td>{{mejora.descripcion}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- Atributos -->
+    <table class="table table-bordered" *ngIf="eleccion=='atributos'">
+
+        <thead>
+        <tr style="background: darkgreen;color: whitesmoke;">
+            <th>Resultado Esperado</th>
+            <th>+</th>
+            <th>FORTALEZAS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let fortaleza of fortalezas.atr"
+            (click)="seleccion = fortaleza;opCRE.toggle($event)"
+            [ngClass]="{'seleccion' : seleccion == fortaleza}">
+            <th>{{getResultadoEsperado(fortaleza.idResultadoEsperado, encuesta)}}</th>
+            <td>{{fortaleza.promedio.toFixed(2)}}</td>
+            <td>{{fortaleza.nombre}}</td>
+        </tr>
+        <tr style="background: dodgerblue;color: whitesmoke;">
+            <th>Resultado Esperado</th>
+            <th>-</th>
+            <th>AREAS DE MEJORA</th>
+        </tr>
+        <tr *ngFor="let mejora of mejoras.atr"
+            (click)="seleccion = mejora;opCRE.toggle();"
+            [ngClass]="{'seleccion' : seleccion == mejora}">
+            <th>{{getResultadoEsperado(mejora.idResultadoEsperado, encuesta)}}</th>
+            <td>{{mejora.promedio.toFixed(2)}}</td>
+            <td>{{mejora.nombre}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- CRE -->
+    <table class="table table-bordered" *ngIf="eleccion=='comportamientos'">
+        <thead>
+        <tr style="background: darkgreen;color: whitesmoke;">
+            <th>Atributo</th>
+            <th>+</th>
+            <th>FORTALEZAS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let fortaleza of fortalezas.cre"
+            (click)="seleccion = fortaleza;"
+            [ngClass]="{'seleccion' : seleccion == fortaleza}">
+            <th>{{getAtributo(fortaleza.idAtributo, encuesta)}}</th>
+            <td>{{fortaleza.promedio.toFixed(2)}}</td>
+            <td>{{fortaleza.reactivo}}</td>
+        </tr>
+        <tr style="background: dodgerblue;color: whitesmoke;">
+            <th>Atributo</th>
+            <th>-</th>
+            <th>AREAS DE MEJORA</th>
+        </tr>
+        <tr *ngFor="let mejora of mejoras.cre" (click)="seleccion = mejora;"
+            [ngClass]="{'seleccion' : seleccion == mejora}">
+            <th>{{getAtributo(mejora.idAtributo, encuesta)}}</th>
+            <td>{{mejora.promedio.toFixed(2)}}</td>
+            <td>{{mejora.reactivo}}</td>
+        </tr>
+        </tbody>
+    </table>
+</p-accordionTab>
+
+<p-overlayPanel #opATR>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12">
+                <h4>Atributos de este resultado esperado:</h4>
+                <table class="table table-bordered" *ngIf="seleccion">
+                    <thead>
+                    <tr style="background: darkgreen;color: whitesmoke;">
+                        <th>ID</th>
+                        <th>+</th>
+                        <th>FORTALEZAS</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let fortaleza of getFortalezas(seleccion, 'atr')"
+                        [ngClass]="{'seleccion' : seleccion == fortaleza}">
+                        <td>{{fortaleza.idAtributo}}</td>
+                        <td>{{fortaleza.promedio.toFixed(2)}}</td>
+                        <td>{{fortaleza.nombre}}</td>
+                    </tr>
+                    <tr style="background: dodgerblue;color: whitesmoke;">
+                        <th>ID</th>
+                        <th>-</th>
+                        <th>AREAS DE MEJORA</th>
+                    </tr>
+                    <tr *ngFor="let mejora of getMejoras(seleccion, 'atr')"
+                        [ngClass]="{'seleccion' : seleccion == mejora}">
+                        <td>{{mejora.idAtributo}}</td>
+                        <td>{{mejora.promedio.toFixed(2)}}</td>
+                        <td>{{mejora.nombre}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</p-overlayPanel>
+
+<p-overlayPanel #opCRE>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12">
+                <h4>Reactivos de este Atributo:</h4>
+                <table class="table table-bordered" *ngIf="seleccion">
+                    <thead>
+                    <tr style="background: darkgreen;color: whitesmoke;">
+                        <th>ID</th>
+                        <th>+</th>
+                        <th>FORTALEZAS</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let fortaleza of getFortalezas(seleccion, 'cre')"
+                        [ngClass]="{'seleccion' : seleccion == fortaleza}">
+                        <td>{{fortaleza.idCRE}}</td>
+                        <td>{{fortaleza.promedio.toFixed(2)}}</td>
+                        <td>{{fortaleza.reactivo}}</td>
+                    </tr>
+                    <tr style="background: dodgerblue;color: whitesmoke;">
+                        <th>ID</th>
+                        <th>-</th>
+                        <th>AREAS DE MEJORA</th>
+                    </tr>
+                    <tr *ngFor="let mejora of getMejoras(seleccion, 'cre')"
+                        [ngClass]="{'seleccion' : seleccion == mejora}">
+                        <td>{{mejora.idCRE}}</td>
+                        <td>{{mejora.promedio.toFixed(2)}}</td>
+                        <td>{{mejora.reactivo}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</p-overlayPanel>

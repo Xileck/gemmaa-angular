@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <base href="./">
+    <title>GEMMAA</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/style-responsive.css">
+    <link rel="stylesheet" href="resources/css/animate.min.css">
+    <link rel="stylesheet" href="resources/css/vertical-rhythm.min.css">
+    <link rel="stylesheet" href="resources/css/owl.carousel.css">
+    <link rel="stylesheet" href="resources/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/primeng/resources/themes/kasper/theme.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/primeng/resources/primeng.min.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="resources/js/Chart.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script language="javascript" src="http://localhost:8080/weborb/WebORB.js"></script>
+
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+</head>
+
+<!-- 3. Display the application -->
+<body class="appear-animate bg-dark-alfa-70" background="resources/arbol_2.jpg">
+<gemmaa-app>
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</gemmaa-app>
+
+</body>
+</html>

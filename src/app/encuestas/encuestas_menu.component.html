@@ -1,0 +1,97 @@
+<div class="ui-grid ui-grid-responsive ui-grid-pad" *ngIf="evaluadosDatos.length > 0">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-4" *ngIf="evaluadoSeleccionado">
+            <p-fieldset legend="Empleado a Evaluar">
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12"><img
+                            [src]="'data:image/jpeg;base64,'+ evaluadoSeleccionado.evaluado.empleadoFoto"
+                            style="max-height: 150px;display:block;margin:0 auto 0 auto;"/>
+                    </div>
+                </div>
+                <table class="table table-bordered table-responsive" style="font-size:12px;">
+                    <tbody>
+                    <tr>
+                        <th>Nombre</th>
+                        <td>{{evaluadoSeleccionado.evaluado.nombre}}
+                            {{evaluadoSeleccionado.evaluado.apellidopaterno}}
+                            {{evaluadoSeleccionado.evaluado.apellidomaterno}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>RPE</th>
+                        <td>{{evaluadoSeleccionado.evaluado.rpe}}</td>
+                    </tr>
+                    <tr>
+                        <th>Puesto</th>
+                        <td>{{evaluadoSeleccionado.evaluado.perfil}}</td>
+                    </tr>
+                    <tr>
+                        <th>Area</th>
+                        <td>{{evaluadoSeleccionado.evaluado.areaTrabajo.descripcion}}</td>
+                    </tr>
+                    <tr>
+                        <th> Id evaluacion</th>
+                        <td>{{evaluadoSeleccionado.id_evaluacion}}</td>
+                    </tr>
+                    <tr>
+                        <th>Encuesta</th>
+                        <td>{{evaluadoSeleccionado.nombre_encuesta}}</td>
+                    </tr>
+                    <tr>
+                        <th>Tu rol como evaluador:</th>
+                        <td>{{evaluadoSeleccionado.tipo_de_evaluador}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                        <button class="btn btn-success btn-lg btn-block" style="font-size:25px;"
+                                (click)="iniciarEvaluacion()">Evaluar
+                        </button>
+                    </div>
+                </div>
+            </p-fieldset>
+        </div>
+        <div class="ui-grid-col-4" *ngIf="evaluadoSeleccionado == null">
+            <p-fieldset legend="Empleado a Evaluar">
+                <h2>Selecciona una evaluación pendiente del panel Evaluaciónes Pendientes.</h2>
+            </p-fieldset>
+        </div>
+        <div class="ui-grid-col-8">
+            <p-fieldset legend="Evaluaciónes Pendientes">
+                <div style="max-height:500px;overflow:auto;">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Foto</th>
+                            <th>Persona a Evaluar</th>
+                            <th>Tipo de Encuesta</th>
+                            <th>Tu rol como evaluador</th>
+                        </tr>
+                        </thead>
+                        <tbody *ngFor="let evaluado of evaluadosDatos">
+                        <tr *ngIf="evaluado.finalizo != 't'"
+                            [ngClass]="{'emplSeleccionado' : evaluadoSeleccionado == evaluado}"
+                            (click)="seleccionarEvaluado(evaluado)">
+                            <td>{{evaluado.id_evaluacion}}</td>
+                            <td><img
+                                    [src]="'data:image/jpeg;base64,'+ evaluado.evaluado.empleadoFoto"
+                                    style="max-height: 70px"/></td>
+                            <td>{{evaluado.evaluado.nombre}} {{evaluado.evaluado.apellidopaterno}}
+                                {{evaluado.evaluado.apellidomaterno}}
+                            </td>
+                            <td>{{evaluado.nombre_encuesta}}</td>
+                            <td>{{evaluado.tipo_de_evaluador}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </p-fieldset>
+
+        </div>
+    </div>
+</div>
+<p-fieldset legend="Evaluaciónes Pendientes" *ngIf="evaluadosDatos.length == 0">
+    <h2 style="text-align: center;">No cuentas con evaluaciones pendientes</h2>
+</p-fieldset>

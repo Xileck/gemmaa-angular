@@ -1,0 +1,39 @@
+.error {
+    border-left: solid;
+    border-left-color: red;
+}
+
+.ui-steps .ui-steps-item {
+    width: 20%;
+}
+
+.ui-steps .ui-steps-title {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+.ui-fieldset.custom-fieldset .ui-fieldset-legend {
+    font-size: 15px;
+}
+
+.descripcion {
+    border-left: solid 5px;
+    border-left-color: #204d74;
+    background-color: lightcyan;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    padding: 10px 0px 10px 0px;
+    font-style: oblique;
+}
+
+.instrucciones {
+    border-left: solid 5px;
+    border-left-color: #204d74;
+    background-color: lightcyan;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    padding: 10px 0px 10px 0px;
+    font-style: oblique;
+}

@@ -1,0 +1,214 @@
+<div class="ui-grid ui-grid-responsive ui-grid-pad">
+    <div class="ui-grid-row">
+        <!-- Informe del reporte -->
+        <div class="ui-grid-col-12">
+            <p-fieldset legend="Evaluacion de {{grupoSeleccionado?.evaluado?.nombreCompleto}}"
+                        *ngIf="grupoSeleccionado">
+                <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                            <!-- Empleado evaluado -->
+                            <app-evaluadores [grupo]="grupoSeleccionado" [soloEvaluado]="true"></app-evaluadores>
+                        </div>
+                    </div>
+                </div>
+                <!-- Empleados que participan en la evaluación -->
+                <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                            <h4>Detalles del reporte:</h4>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                            <p class="instrucciones">La evaluación de 360° utiliza el promedio de 5 encuestas para
+                                identificar los
+                                aspectos mas fuertes y los mas debiles de un líder con el proposito de reconocer o
+                                mejorar dichas areas respectivamente.
+                                <br>
+                                <br>Las 5 encuestas son contestadas por 5 empleados:
+
+                            </p>
+                            <ul>
+                                <li>Evaluado: El líder evaluado se evalua a si mismo.</li>
+                                <li>Par: Un empleado con el mismo nivel del líder.</li>
+                                <li>Jefe: El jefe del líder.</li>
+                                <li>Colaborador: Un empleado que trabaje con el líder.</li>
+                                <li>Cliente: Un empleado al que el evaluado presta sus servicios.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                            <h4>Valores de las escalas:</h4>
+                            <p class="instrucciones">Los valores de las escalas se muestran a continuación:</p>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        Clasificación
+                                    </th>
+                                    <th>
+                                        Descripción
+                                    </th>
+                                    <th>Valor</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td style="background-color: red;">D</td>
+                                    <td>
+                                        El comportamiento <u>no esta desarrollado o se encuentra por debajo de lo
+                                        requerido.</u>
+                                    </td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: orange;">C</td>
+                                    <td>
+                                        El comportamiento se encuentra en un nivel <u>Minimo necesario para el
+                                        puesto.</u>
+                                    </td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: yellow;">B</td>
+                                    <td>
+                                        El comportamiento se encuentra en un nivel <u>Muy bueno por encima del
+                                        promedio.</u>
+                                    </td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: lawngreen;">A</td>
+                                    <td>
+                                        El comportamiento <u>esta desarrollado y contribuye a un Desempeño superior
+                                        y destacado.</u>
+                                    </td>
+                                    <td>4</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                            <h4>Valores de los ponderados:</h4>
+                            <p class="instrucciones">Dependiendo el rol que tiene el evaluador sera el valor que
+                                tendra en el promedio, a continuación se muestran los porcentajes que tiene cada
+                                rol:</p>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Rol</th>
+                                    <th>Valor</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Evaluado</td>
+                                    <td>{{grupoSeleccionado.ponderados.evaluado}}%</td>
+                                </tr>
+                                <tr>
+                                    <td>Par</td>
+                                    <td>{{grupoSeleccionado.ponderados.par}}%</td>
+                                </tr>
+                                <tr>
+                                    <td>Jefe</td>
+                                    <td>{{grupoSeleccionado.ponderados.jefe}}%</td>
+                                </tr>
+                                <tr>
+                                    <td>Colaborador</td>
+                                    <td>{{grupoSeleccionado.ponderados.colaborador}}%</td>
+                                </tr>
+                                <tr>
+                                    <td>Cliente</td>
+                                    <td>{{grupoSeleccionado.ponderados.cliente}}%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <h4>Graficas:</h4>
+                <p (click)="test($event);" class="instrucciones">A continuación se muestran las graficas
+                    representando el promedio de las
+                    encuestas realizadas por cara rol, y categorizadas por atributos y resultados esperados:</p>
+                <div style="max-width: 50%; border: solid .5px;border-color: #0b0b0b; margin: auto;"
+                     *ngIf="dataResultadosEsperados">
+                    <p-chart type="radar" [data]="dataResultadosEsperados" [options]="optionsRadarRE"></p-chart>
+                </div>
+
+                <div *ngIf="dataAtributos" style=" border: solid .5px;border-color: #0b0b0b; scale(.7);">
+                    <p-chart style="overflow: scroll;" type="radar" [data]="dataAtributos"
+                             [options]="optionsRadarRE"></p-chart>
+                </div>
+
+
+                <h4>Fortalezas y mejoras:</h4>
+                <p class="instrucciones">A continuación se muestran las fortalezas y mejoras que se
+                    detectaron deacuerdo a cada evaluación:</p>
+                <p-accordion>
+                    <app-fortalezas-mejoras [mejoras]="mejoras.total" [fortalezas]="fortalezas.total"
+                                            [titulo]="'Promedio de fortalezas y mejoras'"
+                                            [encuesta]="grupoSeleccionado.evaluadores[0].encuesta"></app-fortalezas-mejoras>
+                    <app-fortalezas-mejoras
+                            [evaluador]="grupoSeleccionado.evaluadores[0]"></app-fortalezas-mejoras>
+                    <app-fortalezas-mejoras
+                            [evaluador]="grupoSeleccionado.evaluadores[1]"></app-fortalezas-mejoras>
+                    <app-fortalezas-mejoras
+                            [evaluador]="grupoSeleccionado.evaluadores[2]"></app-fortalezas-mejoras>
+                    <app-fortalezas-mejoras
+                            [evaluador]="grupoSeleccionado.evaluadores[3]"></app-fortalezas-mejoras>
+                    <app-fortalezas-mejoras
+                            [evaluador]="grupoSeleccionado.evaluadores[4]"></app-fortalezas-mejoras>
+                </p-accordion>
+                <br>
+                <h4>Fortalezas y mejoras:</h4>
+                <p class="instrucciones">A continuación se muestran las fortalezas y mejoras que se
+                    detectaron deacuerdo a cada evaluación:</p>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-6" style="margin:auto;">
+                        <p-chart type="bar" [options]="optionsBarGraphs" [data]="promediosData.total"
+                                 *ngIf="promediosData.total"></p-chart>
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <p-chart type="bar" [options]="optionsBarGraphs"
+                                 [data]="promediosData.evaluador" *ngIf="promediosData.evaluador"></p-chart>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-6">
+                        <p-chart type="bar" [options]="optionsBarGraphs" [data]="promediosData.jefe"
+                                 *ngIf="promediosData.jefe"></p-chart>
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <p-chart type="bar" [options]="optionsBarGraphs" [data]="promediosData.par"
+                                 *ngIf="promediosData.par"></p-chart>
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-6">
+                        <p-chart type="bar" [options]="optionsBarGraphs"
+                                 [data]="promediosData.cliente" *ngIf="promediosData.cliente"></p-chart>
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <p-chart type="bar" [options]="optionsBarGraphs"
+                                 [data]="promediosData.colaborador" *ngIf="promediosData.colaborador"></p-chart>
+                    </div>
+                </div>
+            </p-fieldset>
+
+        </div>
+    </div>
+</div>

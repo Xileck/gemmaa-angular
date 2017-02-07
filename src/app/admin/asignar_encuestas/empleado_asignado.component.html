@@ -1,0 +1,31 @@
+<div *ngIf="empleado" style="padding: 10px;background: rgba(30,144,255,.6)">
+    <td>
+        <div class="ui-grid-row">
+            <legend style="text-align:center;">{{titulo}}</legend>
+        </div>
+        <div class="ui-grid-row">
+            <button type="text" pButton label="Eliminar"
+                    (click)="empleadoEliminado.emit(empleado);"></button>
+        </div>
+    </td>
+    <td>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4">
+                <img [src]="'data:image/jpeg;base64,'+ empleado?.empleadoFoto"
+                     style="max-height: 70px;margin:auto;"/>
+            </div>
+            <div class="ui-grid-col-8">
+                {{empleado?.nombreCompleto}}<br>
+                <span style="font-size: 10px"><b>Puesto: </b>{{empleado?.perfil}}</span><br>
+                <span style="font-size: 10px"><b>Area: </b>{{empleado?.areaTrabajo.descripcion}}({{empleado?.areaTrabajo.clave}})</span>
+                <span style="font-size: 10px"><b>RPE: </b>{{empleado?.rpe}}</span>
+            </div>
+        </div>
+    </td>
+</div>
+<div *ngIf="!empleado" style="padding: 5px;"
+     [ngClass]="{'error': empleado?.rpe }">
+    <td>
+        <legend>Selecciona un {{titulo}}</legend>
+    </td>
+</div>

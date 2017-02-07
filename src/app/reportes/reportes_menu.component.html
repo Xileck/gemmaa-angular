@@ -1,0 +1,69 @@
+<p-fieldset legend="Reportes de evaluaciones">
+
+
+    <hr>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4">
+                <p-fieldset legend="Estado del reporte">
+                    <div *ngIf="!evaluacionSeleccionada">
+                        <h3>Escoge un reporte.</h3>
+                    </div>
+                    <div *ngIf="evaluacionSeleccionada">
+                        <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                            <div *ngFor="let evaluador of evaluacionSeleccionada?.evaluadores" class="ui-grid-row">
+                                <div class="ui-grid-col-6">
+                                    <b>{{evaluador.tipo_de_evaluador}}</b>
+                                </div>
+                                <div class="ui-grid-col-4">
+                                    {{evaluador.finalizo =='t' ? 'Finalizo' : 'Sin contestar'}}
+                                </div>
+                                <div class="ui-grid-col-2">
+                                    {{evaluador.finalizo =='t' ? '✓' : '✕'}}
+                                </div>
+                            </div>
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-12">
+                                    <hr style="color:black;">
+                                    <button [disabled]="getProgress(evaluacionSeleccionada)!=100" pButton
+                                            type="button"
+                                            class="ui-button-success" style="float:right;" label="Cargar Reporte"
+                                            (click)="router.navigate(['/reporte_evaluacion',evaluacionSeleccionada.id_evaluacion])"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </p-fieldset>
+            </div>
+            <div class="ui-grid-col-8">
+                <p-fieldset legend="Reportes">
+                    <div *ngIf="evaluaciones" style="max-height:400px;overflow:auto;">
+                        <table class="table table-hover table-bordered table-responsive">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo encuesta</th>
+                                <th>Estado</th>
+                                <th>Fecha que se asigno</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let evaluacion of evaluaciones" (click)="evaluacionSeleccionada = evaluacion"
+                                [ngClass]="{'active' : evaluacion == evaluacionSeleccionada}">
+                                <td>{{evaluacion.id_evaluacion}}</td>
+                                <td>{{evaluacion.descripcionEncuesta}}</td>
+                                <td>
+                                    <p-progressBar [value]="getProgress(evaluacion)"></p-progressBar>
+                                </td>
+                                <td>{{evaluacion.fecha| date:'mediumDate'}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </p-fieldset>
+            </div>
+        </div>
+    </div>
+    <br>
+</p-fieldset>

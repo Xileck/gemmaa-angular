@@ -1,0 +1,39 @@
+<section class="home-section">
+  <div>
+    <div class="home-content container">
+      <div class="home-text">
+                <span *ngIf="loginService.godlike == true" style="color:red;"
+                      class="footer-copy font-alt">Modo dios habilitado</span>
+        <br><br><br><br><br><br><br>
+        <h1 class="hs-line-13 font-alt mb-50 mb-xs-30">
+          GEMMAA360
+        </h1>
+        <p-inplace>
+                   <span pInplaceDisplay>
+                   <a class="btn btn-mod btn-border-w btn-medium btn-round">Login</a>
+                   </span>
+          <span pInplaceContent>
+                      <div class="container center_div">
+                         <p-panel header="Login">
+                            <form (ngSubmit)="loginBoton()">
+                               <div class="form-group">
+                                  <input id="rpe" class="form-control" maxlength="5"
+                                         (keypress)="soloMayusculas($event);"
+                                         [(ngModel)]="usuarioInput" name="rpe"
+                                         placeholder="Ingresa RPE" required>
+                                  <br>
+                                  <input id="password" class="form-control" type="password" maxlength="25"
+                                         [(ngModel)]="contraseniaInput" name="password"
+                                         placeholder="Ingresa contraseña" required>
+                                  <br>
+                                  <button type="submit" pButton label="Ingresar" style="margin:auto;"></button>
+                               </div>
+                            </form>
+                         </p-panel>
+                      </div>
+                   </span>
+        </p-inplace>
+      </div>
+    </div>
+  </div>
+</section>

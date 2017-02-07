@@ -1,0 +1,142 @@
+
+.ui-fieldset.busqueda-fieldset {
+    border: solid 2px;
+    border-color: dodgerblue;
+}
+
+.ui-fieldset.busqueda-fieldset .ui-fieldset-legend {
+    border: solid 2px;
+    background: dodgerblue;
+}
+
+.encuestaSeleccionada {
+    background: dodgerblue;
+    font-size: 120%;
+}
+
+.encuestaSeleccionada:hover {
+    background: dodgerblue;
+    font-size: 120%;
+}
+
+#table-wrapper {
+    position: relative;
+}
+
+#table-scroll {
+    height: 150px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+#table-wrapper table {
+    width: 100%;
+
+}
+
+#table-wrapper table * {
+    background: white;
+    color: black;
+}
+
+#table-wrapper table tbody tr :hover {
+    background: gray;
+}
+
+#table-wrapper table tbody tr .active {
+    background: gray;
+}
+
+legend {
+    text-align: left;
+
+}
+
+/* The modal2 (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1500; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* modal2 Content/Box */
+.modal2-content {
+    margin: 5% auto; /* 15% from the top and centered */
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close2 {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .7;
+    margin: 10px 15px 0px 0px;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: 1;
+}
+
+.spinner {
+    margin: 10px auto 0;
+    width: 70px;
+    text-align: center;
+}
+
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}

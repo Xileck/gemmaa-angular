@@ -1,0 +1,80 @@
+{
+  "project": {
+    "version": "1.0.0-beta.28.3",
+    "name": "gemmaa360"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "gemmaa360",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "./resources/arbol_2.jpg",
+        "./resources/js/Chart.js"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css",
+        "../node_modules/primeng/resources/themes/kasper/theme.css",
+        "../node_modules/primeng/resources/primeng.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "./resources/css/bootstrap.min.css",
+        "./resources/css/style.css",
+        "./resources/css/style-responsive.css",
+        "./resources/css/animate.min.css",
+        "./resources/css/vertical-rhythm.min.css",
+        "./resources/css/owl.carousel.css",
+        "./resources/css/magnific-popup.css"
+      ],
+      "scripts": [
+      ],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "files": "src/**/*.ts",
+      "project": "src/tsconfig.json"
+    },
+    {
+      "files": "e2e/**/*.ts",
+      "project": "e2e/tsconfig.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<br><br><br><br>
+<div class="container">
+    <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
+        <li (click)="cargarEvaluaciones()">
+            <a data-toggle="tab">
+                <div class="alt-tabs-icon">
+                    <span class="icon-document fa-1x"></span>
+                </div>
+                Evaluar
+            </a>
+        </li>
+        <li>
+            <a routerLink="/reportes" data-toggle="tab">
+
+                <div class="alt-tabs-icon">
+                    <span class="icon-bargraph fa-1x"></span>
+                </div>
+                Reportes
+            </a>
+        </li>
+        <li *ngIf="loginService.usuarioValidado() && loginService.emplHasAccess('admin')">
+            <a routerLink="/admin" data-toggle="tab">
+
+                <div class="alt-tabs-icon">
+                    <span class="icon-gears fa-1x"></span>
+                </div>
+                Administración
+            </a>
+        </li>
+    </ul>
+</div>

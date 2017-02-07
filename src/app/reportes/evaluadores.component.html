@@ -1,0 +1,63 @@
+<div class="ui-grid-row" *ngIf="soloEvaluado == true">
+    <template let-evaluador ngFor [ngForOf]="grupo.evaluadores">
+        <div class="ui-grid-col-12"
+             style="font-size:100%;"
+             *ngIf="evaluador.tipo_de_evaluador.indexOf('EVALUADO') != -1">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12">
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr>
+                            <td rowspan="2" style="min-width: 70px;"><img
+                                    [src]="'data:image/jpeg;base64,'+ utilService.convertArrayBytesToBase64(evaluador?.empleado?.foto)"
+                                    style="max-height: 80px; min-height: 30px;"/>
+                            </td>
+                            <td><b>Nombre del líder evaluado:</b> {{evaluador.empleado.nombreCompleto}}</td>
+                            <td rowspan="2">Fecha: <br> {{grupo.fecha|date:'longDate'}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Nombre del puesto del evaluado:</b> {{evaluador.empleado.perfil}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+<div class="ui-grid-row" *ngIf="soloEvaluado == false">
+    <template let-evaluador ngFor [ngForOf]="grupo.evaluadores">
+        <div class="ui-grid-col-4"
+             style="border: solid .3px; border-color: dimgray; font-size:100%; float:inherit;"
+             *ngIf="evaluador.tipo_de_evaluador.indexOf('EVALUADO') == -1"
+             [ngClass]="{'finalizada': evaluador.finalizo == 't','sinfinalizar': evaluador.finalizo != 't'}">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12">
+                    <img [src]="'data:image/jpeg;base64,'+ utilService.convertArrayBytesToBase64(evaluador?.empleado?.foto)"
+                         style="max-height: 70px"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12">
+                    <b>{{evaluador.tipo_de_evaluador}}</b>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12">
+                    {{evaluador.empleado.nombreCompleto}}
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12">
+                    <sub>{{evaluador.finalizo == 't' ? 'Finalizada el '+ evaluador.fecha +'.' :
+                        'No ha contestado.'}}</sub>
+                </div>
+            </div>
+            <div class="ui-grid-row" *ngIf="evaluador.finalizo == 't'">
+                <div class="ui-grid-col-12">
+                    <button class="btn btn-info">Checar encuesta</button>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>

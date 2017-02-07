@@ -1,0 +1,10 @@
+.instrucciones {
+    border-left: solid 5px;
+    border-left-color: #204d74;
+    background-color: lightcyan;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    padding: 10px 0px 10px 0px;
+    font-style: oblique;
+}
