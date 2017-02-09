@@ -37,16 +37,18 @@
 </div>
 
 <p-dialog header="Catalogo Encuestas" [(visible)]="display">
-    <p-dataList [value]="catalogoEncuestas" [paginator]="true" [rows]="5">
-        <!--<footer>Choose from the list.</footer>-->
-        <template pTemplate="encuesta" let-encuesta>
-            <div class="ui-grid ui-grid-responsive ui-fluid fade"
-                 style="font-size:14px;padding:10px;border-bottom:1px solid #D5D5D5; text-align: left">
-                <i class=" " style="cursor:pointer;float:left;" (click)="cargarEncuesta(encuesta.idte)">
-                    {{encuesta.descripcion}} </i>
-            </div>
-        </template>
-    </p-dataList>
+    <table class="table table-bordered table-hover"
+           *ngIf="catalogoEncuestas">
+        <tbody>
+        <tr *ngFor="let encuesta of catalogoEncuestas"
+            (click)="cargarEncuesta(encuesta.idte)"
+            [ngClass]="{'encuestaSeleccionada': encuestaSeleccionada == encuesta}">
+            <td>
+                {{encuesta.idEncuesta}} {{encuesta.descripcion}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
     <footer>
         <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
             <button type="button" pButton icon="fa-close" (click)="display=false" label="No"></button>

@@ -16,7 +16,7 @@ export var UtilService = (function () {
         this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.urlWebOrb, null, null);
         this.servicioIntra = webORB.bind("com.cfemex.lv.is.apps.intranet.EmplDAO", this.urlWebOrb, null, null);
         //Configuracion de proyecto
-        this.nombreProyecto = 'GEMMAA';
+        this.nombreProyecto = 'GEMMAA360';
         this.modoDios = false;
         this.app_dialogo_argumentos = {
             finalizo: false,
@@ -28,13 +28,14 @@ export var UtilService = (function () {
         };
         if (this.configuracion.toLowerCase().indexOf('local') >= 0) {
             this.modoDios = true;
+            this.nombreProyecto = 'GEMMAA';
         }
     }
     Object.defineProperty(UtilService.prototype, "configuracion", {
         //Cambiar dependiendo de donde se ubicara la direccion a webORB opciones:
         // -- productivo, tomcat, local
         get: function () {
-            return 'tomcat';
+            return 'local';
         },
         enumerable: true,
         configurable: true

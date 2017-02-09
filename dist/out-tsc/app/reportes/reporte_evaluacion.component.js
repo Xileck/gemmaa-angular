@@ -280,13 +280,14 @@ export var ReporteEvaluacionComponent = (function () {
                 }
             };
             _this.optionsRadarATR = {
+                maintainAspectRatio: false,
                 title: {
                     display: true,
                     text: 'Promedio por atributos',
                     fontSize: 16
                 },
-                label: {
-                    display: false
+                legend: {
+                    position: 'bottom'
                 },
                 scale: {
                     ticks: {

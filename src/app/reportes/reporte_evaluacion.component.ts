@@ -294,20 +294,21 @@ export class ReporteEvaluacionComponent {
                     }
                 };
                 this.optionsRadarATR = {
-                    title: {
-                        display: true,
-                        text: 'Promedio por atributos',
-                        fontSize: 16
-                    },
-                    label: {
-                        display: false
-                    },
-                    scale: {
-                        ticks: {
-                            beginAtZero: true,
-                            max: 4
-                        }
+                  maintainAspectRatio: false,
+                  title: {
+                    display: true,
+                    text: 'Promedio por atributos',
+                    fontSize: 16
+                  },
+                  legend: {
+                    position: 'bottom'
+                  },
+                  scale: {
+                    ticks: {
+                      beginAtZero: true,
+                      max: 4
                     }
+                  }
                 };
                 this.optionsBarGraphs = {
                     scales: {

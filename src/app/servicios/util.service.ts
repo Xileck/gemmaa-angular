@@ -15,13 +15,13 @@ export class UtilService {
     servicioIntra: any = webORB.bind("com.cfemex.lv.is.apps.intranet.EmplDAO", this.urlWebOrb, null, null);
 
     //Configuracion de proyecto
-    nombreProyecto: string = 'GEMMAA';
+    nombreProyecto: string = 'GEMMAA360';
     modoDios: boolean = false;
 
     //Cambiar dependiendo de donde se ubicara la direccion a webORB opciones:
     // -- productivo, tomcat, local
     get configuracion(): string {
-        return 'tomcat';
+        return 'local';
     }
 
     get urlWebOrb(): string {
@@ -43,6 +43,7 @@ export class UtilService {
     constructor(public router: Router) {
         if (this.configuracion.toLowerCase().indexOf('local') >= 0) {
             this.modoDios = true;
+            this.nombreProyecto = 'GEMMAA';
         }
     }
 
