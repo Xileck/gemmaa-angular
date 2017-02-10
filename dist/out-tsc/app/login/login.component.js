@@ -11,6 +11,7 @@ import { UtilService } from "../servicios/util.service";
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from './login.service';
+import { environment } from "../../environments/environment";
 export var LoginComponent = (function () {
     function LoginComponent(loginService, router, utilService) {
         this.loginService = loginService;
@@ -18,9 +19,10 @@ export var LoginComponent = (function () {
         this.utilService = utilService;
         this.usuarioInput = '';
         this.contraseniaInput = '';
+        this.environment = environment;
         if (this.loginService.usuarioValidado())
             this.router.navigate(['principal']);
-        if (this.loginService.godlike) {
+        if (environment.modoDios) {
             this.usuarioInput = '174P6';
             this.contraseniaInput = '123';
         }

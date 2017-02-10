@@ -16,6 +16,7 @@ import { EvaluacionService } from "../servicios/evaluacion.service";
 import { WindowRef } from "../servicios/WindowRef";
 import { DatosEvaluacion } from "../clases/DatosEvaluacion";
 import { Empleado } from "../clases/Usuario/Empleado";
+import { environment } from "../../environments/environment";
 export var EncuestasComponent = (function () {
     function EncuestasComponent(loginService, router, utilService, adminService, evaluacionService, winRef) {
         this.loginService = loginService;
@@ -24,10 +25,10 @@ export var EncuestasComponent = (function () {
         this.adminService = adminService;
         this.evaluacionService = evaluacionService;
         this.winRef = winRef;
-        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", this.utilService.urlWebOrb, null, null);
-        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.utilService.urlWebOrb, null, null);
-        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
-        this.servicioUtil = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.UtilBO", this.utilService.urlWebOrb, null, null);
+        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", environment.rutaWebORB, null, null);
+        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", environment.rutaWebORB, null, null);
+        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
+        this.servicioUtil = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.UtilBO", environment.rutaWebORB, null, null);
         this.evaluacionesPendientes = [];
         this.evaluadosDatos = [];
         this.fadingPhase = 'end';

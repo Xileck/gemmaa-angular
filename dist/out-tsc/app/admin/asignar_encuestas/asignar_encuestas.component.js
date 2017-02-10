@@ -19,6 +19,7 @@ import { AsignarEvaluador } from "../../clases/AsignarEvaluador";
 import { SeguridadService } from "../../servicios/seguridad.service";
 import { Ponderados } from "../../clases/Reportes/Ponderados";
 import { EncuestaService } from "../../servicios/encuesta.service";
+import { environment } from "../../../environments/environment";
 export var AsignarEncuestasComponent = (function () {
     function AsignarEncuestasComponent(loginService, adminService, confirmationService, utilService, router, seguridadService, encuestaService) {
         this.loginService = loginService;
@@ -33,6 +34,7 @@ export var AsignarEncuestasComponent = (function () {
         this.evaluacionGuardada = false;
         this.focus = false;
         this.encuestaSeleccionada = null;
+        this.environment = environment;
         this.blockedDocument = false;
         //Lista de evaluadores
         this.evaluadores = [];
@@ -493,28 +495,28 @@ export var AsignarEncuestasComponent = (function () {
         scroll(0, 0);
         var t0 = performance.now();
         setTimeout(function () {
-            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.evaluado.rpe, _this.utilService.nombreProyecto))
+            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.evaluado.rpe, environment.nombreProyecto))
                 .then(function (existe) {
                 if (!existe)
                     _this.insertarUsuarioRol(_this.evaluado);
             });
-            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.par.rpe, _this.utilService.nombreProyecto))
+            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.par.rpe, environment.nombreProyecto))
                 .then(function (existe) {
                 if (!existe)
                     _this.insertarUsuarioRol(_this.par);
             });
-            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.jefe.rpe, _this.utilService.nombreProyecto))
+            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.jefe.rpe, environment.nombreProyecto))
                 .then(function (existe) {
                 if (!existe)
                     _this.insertarUsuarioRol(_this.jefe);
             });
-            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.colaborador.rpe, _this.utilService.nombreProyecto))
+            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.colaborador.rpe, environment.nombreProyecto))
                 .then(function (existe) {
                 if (!existe)
                     _this.insertarUsuarioRol(_this.colaborador);
             });
             if (_this.cliente && _this.cliente.rpe) {
-                Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.cliente.rpe, _this.utilService.nombreProyecto))
+                Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(_this.cliente.rpe, environment.nombreProyecto))
                     .then(function (existe) {
                     if (!existe)
                         _this.insertarUsuarioRol(_this.cliente);

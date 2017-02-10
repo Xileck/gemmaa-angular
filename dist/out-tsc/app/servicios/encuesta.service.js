@@ -9,10 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Injectable } from '@angular/core';
 import { UtilService } from "./util.service";
+import { environment } from "../../environments/environment";
 export var EncuestaService = (function () {
     function EncuestaService(utilService) {
         this.utilService = utilService;
-        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
+        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
     }
     EncuestaService.prototype.getEncuesta = function (idEncuesta) {
         return this.servicioEncuesta.getEncuesta(idEncuesta);

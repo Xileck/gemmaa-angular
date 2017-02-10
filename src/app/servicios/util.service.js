@@ -20,8 +20,6 @@ var UtilService = (function () {
         this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.urlWebOrb, null, null);
         this.servicioIntra = webORB.bind("com.cfemex.lv.is.apps.intranet.EmplDAO", this.urlWebOrb, null, null);
         //Configuracion de proyecto
-        this.nombreProyecto = 'GEMMAA';
-        this.modoDios = false;
         this.app_dialogo_argumentos = {
             finalizo: false,
             display: false,
@@ -30,12 +28,6 @@ var UtilService = (function () {
             timer: null,
             tipo: 'info'
         };
-        if (this.configuracion.toLowerCase().indexOf('local') >= 0) {
-            this.modoDios = true;
-        }
-        else if (this.configuracion.toLowerCase().indexOf('tomcat') >= 0) {
-            this.modoDios = true;
-        }
     }
     Object.defineProperty(UtilService.prototype, "configuracion", {
         get: function () {

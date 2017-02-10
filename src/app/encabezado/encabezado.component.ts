@@ -1,6 +1,6 @@
 import {UtilService} from "../servicios/util.service";
 declare var webORB: any;
-import {Component, ViewEncapsulation} from "@angular/core";
+import {Component} from "@angular/core";
 import {LoginService} from "../login/login.service";
 import {Router} from "@angular/router";
 

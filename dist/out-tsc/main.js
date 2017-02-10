@@ -5,5 +5,5 @@ import { AppModule } from './app/app.module';
 if (environment.production) {
     enableProdMode();
 }
-platformBrowserDynamic().bootstrapModule(AppModule).then();
+platformBrowserDynamic().bootstrapModule(AppModule);
 //# sourceMappingURL=C:/GEMMAA/GEMMAA_CLI/src/main.js.map

@@ -19,7 +19,7 @@ var AdminComponent = (function () {
         this.router = router;
         this.utilService = utilService;
         this.display = false;
-        this.servicio = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
+        this.servicio = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
         this.dialogo = {
             finalizo: false,
             display: false,

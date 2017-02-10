@@ -9,13 +9,14 @@ import {Evaluador} from "../clases/Evaluador";
 import {AsignarEvaluador} from "../clases/AsignarEvaluador";
 import {UtilService} from "./util.service";
 import {Usuario} from "../clases/Usuario/Usuario";
+import {environment} from "../../environments/environment";
 
 @Injectable()
 export class AdminService {
-    servicioUsuarioRol: any = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", this.utilService.urlWebOrb, null, null);
-    servicioEmpleadoDAO: any = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.utilService.urlWebOrb, null, null);
-    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
-    servicioEvaluacion: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", this.utilService.urlWebOrb, null, null);
+    servicioUsuarioRol: any = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", environment.rutaWebORB, null, null);
+    servicioEmpleadoDAO: any = webORB.bind("com.cfemex.lv.EmpleadoDAO", environment.rutaWebORB, null, null);
+    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
+    servicioEvaluacion: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", environment.rutaWebORB, null, null);
 
     constructor(public router: Router, private loginService: LoginService, private utilService: UtilService) {
 
@@ -43,11 +44,11 @@ export class AdminService {
             var userCascaron: any = {
                 clave: usuario.empleado.rpe,
                 claveArea: usuario.empleado.areaTrabajo.clave,
-                claveProyecto: this.utilService.nombreProyecto,
+                claveProyecto: environment.nombreProyecto,
                 cuentaGenerica: 'N',
                 empleado: {nip: usuario.empleado.nip},
                 password: usuario.empleado.password != null && usuario.empleado.password > 0 ? usuario.empleadopassword : usuario.password,
-                rol: {clave: usuario.rol.clave, proyecto: this.loginService.nombreProyecto}
+                rol: {clave: usuario.rol.clave, proyecto: environment.nombreProyecto}
             }
             this.servicioUsuarioRol.actulizarUsuarioRol(userCascaron);
         } else if (usuario.empleado == null) {
@@ -64,11 +65,11 @@ export class AdminService {
             var userCascaron: any = {
                 clave: empleado.rpe,
                 claveArea: empleado.areaTrabajo.clave,
-                claveProyecto: this.utilService.nombreProyecto,
+                claveProyecto: environment.nombreProyecto,
                 cuentaGenerica: 'N',
                 empleado: {nip: empleado.nip},
                 password: empleado.rpe,
-                rol: {clave: empleado.permiso, proyecto: this.loginService.nombreProyecto}
+                rol: {clave: empleado.permiso, proyecto: environment.nombreProyecto}
             }
             this.servicioUsuarioRol.insertarUsuarioRol(userCascaron);
         } else if (empleado == null) {

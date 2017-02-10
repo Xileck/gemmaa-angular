@@ -6,6 +6,7 @@ import {EvaluacionService} from "../servicios/evaluacion.service";
 import {UtilService} from "../servicios/util.service";
 import {DatosEvaluacion} from "../clases/DatosEvaluacion";
 import {Encuesta} from "../clases/Encuesta/encuesta";
+import {environment} from "../../environments/environment";
 
 @Component({
     selector: "app-prueba",
@@ -14,8 +15,8 @@ import {Encuesta} from "../clases/Encuesta/encuesta";
     encapsulation: ViewEncapsulation.None
 })
 export class ContestarEncuestaComponent implements OnInit {
-
-    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
+    environment = environment;
+    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
     encuesta: Encuesta;
     private items: MenuItem[];
     activeIndex: number = 0;

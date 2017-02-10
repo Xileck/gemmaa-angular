@@ -11,6 +11,7 @@ import { Component } from "@angular/core";
 import { LoginService } from "../login/login.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { UtilService } from "../servicios/util.service";
+import { environment } from "../../environments/environment";
 export var MenuAdminComponent = (function () {
     function MenuAdminComponent(route, loginService, router, utilService) {
         this.route = route;
@@ -18,7 +19,7 @@ export var MenuAdminComponent = (function () {
         this.router = router;
         this.utilService = utilService;
         this.display = false;
-        this.servicio = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
+        this.servicio = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
         this.dialogo = {
             finalizo: false,
             display: false,

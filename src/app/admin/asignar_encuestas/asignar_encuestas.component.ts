@@ -10,6 +10,7 @@ import {AsignarEvaluador} from "../../clases/AsignarEvaluador";
 import {SeguridadService} from "../../servicios/seguridad.service";
 import {Ponderados} from "../../clases/Reportes/Ponderados";
 import {EncuestaService} from "../../servicios/encuesta.service";
+import {environment} from "../../../environments/environment";
 
 @Component({
     selector: "app-asignar-encuestas",
@@ -123,7 +124,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
     catalogoEncuestas: any;
     selectedRolEvaluador: string;
     selectedPermisoUsuario: string;
-
+    environment = environment;
     blockedDocument: boolean = false;
 
     //Evaluadores y sus permisos por si no se encuentran en la base de datos son los permisos o rol con los que se agregaran.
@@ -320,12 +321,12 @@ export class AsignarEncuestasComponent implements AfterViewInit {
     buscarEmpleados() {
         this.msgsBuscar = [];
         this.blockedDocument = true;
-        var t0 = performance.now();
+        let t0 = performance.now();
         setTimeout(() => {
             if (this.busquedaInput != null && this.busquedaInput.length > 3)
                 Promise.resolve(this.utilService.buscarEmpleados(this.busquedaInput)).then(result => {
-                    this.busqueda = result
-                    var t1 = performance.now();
+                    this.busqueda = result;
+                    let t1 = performance.now();
                     console.log("Funcion buscarEmpleados('" + this.busquedaInput + "') tardo " + Math.round(t1 - t0) + " milisegundos.")
                 });
             else if (this.busquedaInput != null && this.busquedaInput.length <= 3) {
@@ -362,7 +363,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
             setTimeout(() => {
                 Promise.resolve(this.utilService.buscarEmpleado(rpe)).then(emp => {
                     this.empleadoSeleccionado = new Empleado();
-                    Object.assign(this.empleadoSeleccionado, emp)
+                    Object.assign(this.empleadoSeleccionado, emp);
                     this.blockedDocument = false;
                     document.body.style.cursor = 'auto';
                 });
@@ -538,28 +539,28 @@ export class AsignarEncuestasComponent implements AfterViewInit {
         scroll(0, 0);
         var t0 = performance.now();
         setTimeout(() => {
-            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.evaluado.rpe, this.utilService.nombreProyecto))
+            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.evaluado.rpe, environment.nombreProyecto))
                 .then(existe => {
                     if (!existe)
                         this.insertarUsuarioRol(this.evaluado);
                 });
-            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.par.rpe, this.utilService.nombreProyecto))
+            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.par.rpe, environment.nombreProyecto))
                 .then(existe => {
                     if (!existe)
                         this.insertarUsuarioRol(this.par);
                 });
-            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.jefe.rpe, this.utilService.nombreProyecto))
+            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.jefe.rpe, environment.nombreProyecto))
                 .then(existe => {
                     if (!existe)
                         this.insertarUsuarioRol(this.jefe);
                 });
-            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.colaborador.rpe, this.utilService.nombreProyecto))
+            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.colaborador.rpe, environment.nombreProyecto))
                 .then(existe => {
                     if (!existe)
                         this.insertarUsuarioRol(this.colaborador);
                 });
             if (this.cliente && this.cliente.rpe) {
-                Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.cliente.rpe, this.utilService.nombreProyecto))
+                Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.cliente.rpe, environment.nombreProyecto))
                     .then(existe => {
                         if (!existe)
                             this.insertarUsuarioRol(this.cliente);

@@ -16,6 +16,7 @@ import { UtilService } from "../../servicios/util.service";
 import { LoginService } from "../../login/login.service";
 import { SeguridadService } from "../../servicios/seguridad.service";
 import { AdminService } from "../../servicios/administracion.service";
+import { environment } from "../../../environments/environment";
 export var AdminUsuariosComponent = (function () {
     function AdminUsuariosComponent(seguridadService, loginService, confirmationService, router, utilService, adminService) {
         this.seguridadService = seguridadService;
@@ -33,7 +34,7 @@ export var AdminUsuariosComponent = (function () {
         if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
             this.router.navigate(['login']);
         else {
-            Object.assign(this.usuarios, this.seguridadService.getUsuariosProyecto(this.loginService.nombreProyecto));
+            Object.assign(this.usuarios, this.seguridadService.getUsuariosProyecto(environment.nombreProyecto));
             this.roles = [];
             this.roles.push({ label: 'Selecciona un rol.', value: null });
             this.roles.push({ label: 'Evaluador', value: 'EVAL' });
@@ -46,7 +47,7 @@ export var AdminUsuariosComponent = (function () {
         if (!this.mostrarFotos) {
             this.utilService.displayDialogo('Cargando fotos', 'info');
             setTimeout(function () {
-                Object.assign(_this.usuarios, _this.seguridadService.getUsuariosProyectoConFoto(_this.loginService.nombreProyecto));
+                Object.assign(_this.usuarios, _this.seguridadService.getUsuariosProyectoConFoto(environment.nombreProyecto));
                 _this.mostrarFotos = true;
                 _this.utilService.reiniciarDialogo();
             }, 100);
@@ -60,7 +61,7 @@ export var AdminUsuariosComponent = (function () {
         if (this.empleadoSeleccionado && this.selectedRol) {
             this.empleadoSeleccionado.permiso = this.selectedRol;
             try {
-                Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.empleadoSeleccionado.rpe, this.utilService.nombreProyecto))
+                Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.empleadoSeleccionado.rpe, environment.nombreProyecto))
                     .then(function (existe) {
                     if (!existe) {
                         Promise.resolve(_this.adminService.insertarUsuarioRol(_this.empleadoSeleccionado)).then(function (o) {
@@ -154,7 +155,7 @@ export var AdminUsuariosComponent = (function () {
         var _this = this;
         this.utilService.displayDialogo('Refrescando', 'info');
         setTimeout(function () {
-            _this.usuarios = _this.seguridadService.getUsuariosProyecto(_this.utilService.nombreProyecto);
+            _this.usuarios = _this.seguridadService.getUsuariosProyecto(environment.nombreProyecto);
             _this.mostrarFotos = false;
             _this.utilService.reiniciarDialogo();
         }, 100);
@@ -186,7 +187,7 @@ export var AdminUsuariosComponent = (function () {
                             break;
                         }
                     }
-                    _this.adminService.eliminarUsuarioRol(_this.utilService.nombreProyecto, usuario.rpe);
+                    _this.adminService.eliminarUsuarioRol(environment.nombreProyecto, usuario.rpe);
                     _this.loginService.mensajesGlobales = [];
                     _this.loginService.mensajesGlobales.push({
                         severity: 'info',
@@ -250,14 +251,14 @@ export var AdminUsuariosComponent = (function () {
     AdminUsuariosComponent.prototype.selectUsuario = function (event, usr, overlaypanel) {
         this.selectedUser = new Usuario();
         this.selectedUsuario = usr;
-        Object.assign(this.selectedUser, this.adminService.seleccionarUsuario(usr.rpe, this.utilService.nombreProyecto));
+        Object.assign(this.selectedUser, this.adminService.seleccionarUsuario(usr.rpe, environment.nombreProyecto));
         overlaypanel.toggle(event);
     };
     AdminUsuariosComponent.prototype.seleccionarEmpleado = function (rpe) {
         var _this = this;
         this.msgsBuscar = [];
         setTimeout(function () {
-            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(rpe, _this.utilService.nombreProyecto))
+            Promise.resolve(_this.seguridadService.empleadoExisteEnProyecto(rpe, environment.nombreProyecto))
                 .then(function (existe) {
                 if (!existe) {
                     _this.blockedDocument = true;
@@ -273,7 +274,7 @@ export var AdminUsuariosComponent = (function () {
                     _this.msgsBuscar.push({
                         severity: 'error',
                         summary: 'Error:',
-                        detail: 'Este usuario ya esta dado de alta en ' + _this.utilService.nombreProyecto + '.'
+                        detail: 'Este usuario ya esta dado de alta en ' + environment.nombreProyecto + '.'
                     });
                 }
             });

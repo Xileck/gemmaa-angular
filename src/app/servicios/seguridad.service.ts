@@ -6,22 +6,23 @@ import {Injectable} from '@angular/core';
 import {UtilService} from "./util.service";
 import {Empleado} from "../clases/Usuario/Empleado";
 import {AdminService} from "./administracion.service";
+import {environment} from "../../environments/environment";
 
 @Injectable()
 export class SeguridadService {
-    servicioSeguridadBO: any = webORB.bind("com.cfemex.lv.is.seguridad.BO.SeguridadBO", this.utilService.urlWebOrb, null, null);
-    servicioUtilidadesBO: any = webORB.bind("com.cfemex.lv.is.seguridad.BO.UtilBO", this.utilService.urlWebOrb, null, null);
-    servicioUtilidadesDAO: any = webORB.bind("com.cfemex.lv.is.seguridad.DAO.UtilDAO", this.utilService.urlWebOrb, null, null);
+    servicioSeguridadBO: any = webORB.bind("com.cfemex.lv.is.seguridad.BO.SeguridadBO", environment.rutaWebORB, null, null);
+    servicioUtilidadesBO: any = webORB.bind("com.cfemex.lv.is.seguridad.BO.UtilBO", environment.rutaWebORB, null, null);
+    servicioUtilidadesDAO: any = webORB.bind("com.cfemex.lv.is.seguridad.DAO.UtilDAO", environment.rutaWebORB, null, null);
 
     constructor(public router: Router, private utilService: UtilService) {
     }
 
     getInfoEmpleado(nip: number): any {
-        return this.servicioUtilidadesDAO.getInfoEmpleado(nip, this.utilService.nombreProyecto)
+        return this.servicioUtilidadesDAO.getInfoEmpleado(nip, environment.nombreProyecto)
     }
 
     getInfoEmpleadoFoto(nip: number): any {
-        return this.servicioUtilidadesDAO.getInfoEmpleadoFoto(nip, this.utilService.nombreProyecto)
+        return this.servicioUtilidadesDAO.getInfoEmpleadoFoto(nip, environment.nombreProyecto)
     }
 
     /** Checar si el empleado existe en el proyecto usando rpe. */

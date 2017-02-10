@@ -10,19 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Router } from "@angular/router";
 import { Injectable } from '@angular/core';
 import { UtilService } from "./util.service";
+import { environment } from "../../environments/environment";
 export var SeguridadService = (function () {
     function SeguridadService(router, utilService) {
         this.router = router;
         this.utilService = utilService;
-        this.servicioSeguridadBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.SeguridadBO", this.utilService.urlWebOrb, null, null);
-        this.servicioUtilidadesBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.UtilBO", this.utilService.urlWebOrb, null, null);
-        this.servicioUtilidadesDAO = webORB.bind("com.cfemex.lv.is.seguridad.DAO.UtilDAO", this.utilService.urlWebOrb, null, null);
+        this.servicioSeguridadBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.SeguridadBO", environment.rutaWebORB, null, null);
+        this.servicioUtilidadesBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.UtilBO", environment.rutaWebORB, null, null);
+        this.servicioUtilidadesDAO = webORB.bind("com.cfemex.lv.is.seguridad.DAO.UtilDAO", environment.rutaWebORB, null, null);
     }
     SeguridadService.prototype.getInfoEmpleado = function (nip) {
-        return this.servicioUtilidadesDAO.getInfoEmpleado(nip, this.utilService.nombreProyecto);
+        return this.servicioUtilidadesDAO.getInfoEmpleado(nip, environment.nombreProyecto);
     };
     SeguridadService.prototype.getInfoEmpleadoFoto = function (nip) {
-        return this.servicioUtilidadesDAO.getInfoEmpleadoFoto(nip, this.utilService.nombreProyecto);
+        return this.servicioUtilidadesDAO.getInfoEmpleadoFoto(nip, environment.nombreProyecto);
     };
     /** Checar si el empleado existe en el proyecto usando rpe. */
     SeguridadService.prototype.empleadoExisteEnProyecto = function (rpe, proyecto) {

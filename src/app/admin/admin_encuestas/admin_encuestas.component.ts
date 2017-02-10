@@ -5,7 +5,6 @@ import {ConfirmationService, Message} from "primeng/components/common/api";
 import {Atributo} from "../../clases/Encuesta/Atributo";
 import {UtilService} from "../../servicios/util.service";
 import {EncuestaService} from "../../servicios/encuesta.service";
-declare var webORB: any;
 /**
  * Created by Jaime Carballo Diaz on 09/11/2016.
  */

@@ -8,6 +8,7 @@ import {LoginService} from "../../login/login.service";
 import {SeguridadService} from "../../servicios/seguridad.service";
 import {AdminService} from "../../servicios/administracion.service";
 import {OverlayPanel} from "primeng/components/overlaypanel/overlaypanel";
+import {environment} from "../../../environments/environment";
 
 @Component({
     selector: "app-admin-usuarios",
@@ -43,7 +44,7 @@ export class AdminUsuariosComponent implements OnChanges {
         if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
             this.router.navigate(['login']);
         else {
-            Object.assign(this.usuarios, this.seguridadService.getUsuariosProyecto(this.loginService.nombreProyecto));
+            Object.assign(this.usuarios, this.seguridadService.getUsuariosProyecto(environment.nombreProyecto));
             this.roles = [];
             this.roles.push({label: 'Selecciona un rol.', value: null});
             this.roles.push({label: 'Evaluador', value: 'EVAL'});
@@ -56,7 +57,7 @@ export class AdminUsuariosComponent implements OnChanges {
         if (!this.mostrarFotos) {
             this.utilService.displayDialogo('Cargando fotos', 'info');
             setTimeout(() => {
-                Object.assign(this.usuarios, this.seguridadService.getUsuariosProyectoConFoto(this.loginService.nombreProyecto));
+                Object.assign(this.usuarios, this.seguridadService.getUsuariosProyectoConFoto(environment.nombreProyecto));
                 this.mostrarFotos = true;
                 this.utilService.reiniciarDialogo();
             }, 100);
@@ -72,7 +73,7 @@ export class AdminUsuariosComponent implements OnChanges {
         if (this.empleadoSeleccionado && this.selectedRol) {
             this.empleadoSeleccionado.permiso = this.selectedRol;
             try {
-                Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.empleadoSeleccionado.rpe, this.utilService.nombreProyecto))
+                Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.empleadoSeleccionado.rpe, environment.nombreProyecto))
                     .then(existe => {
                         if (!existe) {
                             Promise.resolve(this.adminService.insertarUsuarioRol(this.empleadoSeleccionado)).then(o => {
@@ -163,7 +164,7 @@ export class AdminUsuariosComponent implements OnChanges {
     actualizar() {
         this.utilService.displayDialogo('Refrescando', 'info');
         setTimeout(() => {
-            this.usuarios = this.seguridadService.getUsuariosProyecto(this.utilService.nombreProyecto);
+            this.usuarios = this.seguridadService.getUsuariosProyecto(environment.nombreProyecto);
             this.mostrarFotos = false;
             this.utilService.reiniciarDialogo();
         }, 100);
@@ -198,7 +199,7 @@ export class AdminUsuariosComponent implements OnChanges {
                                 break;
                             }
                         }
-                        this.adminService.eliminarUsuarioRol(this.utilService.nombreProyecto, usuario.rpe);
+                        this.adminService.eliminarUsuarioRol(environment.nombreProyecto, usuario.rpe);
 
                         this.loginService.mensajesGlobales = [];
                         this.loginService.mensajesGlobales.push({
@@ -268,14 +269,14 @@ export class AdminUsuariosComponent implements OnChanges {
     selectUsuario(event, usr, overlaypanel: OverlayPanel) {
         this.selectedUser = new Usuario();
         this.selectedUsuario = usr;
-        Object.assign(this.selectedUser, this.adminService.seleccionarUsuario(usr.rpe, this.utilService.nombreProyecto));
+        Object.assign(this.selectedUser, this.adminService.seleccionarUsuario(usr.rpe, environment.nombreProyecto));
         overlaypanel.toggle(event);
     }
 
     seleccionarEmpleado(rpe: string) {
         this.msgsBuscar = [];
         setTimeout(() => {
-            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(rpe, this.utilService.nombreProyecto))
+            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(rpe, environment.nombreProyecto))
                 .then(existe => {
                     if (!existe) {
                         this.blockedDocument = true;
@@ -290,7 +291,7 @@ export class AdminUsuariosComponent implements OnChanges {
                         this.msgsBuscar.push({
                             severity: 'error',
                             summary: 'Error:',
-                            detail: 'Este usuario ya esta dado de alta en ' + this.utilService.nombreProyecto + '.'
+                            detail: 'Este usuario ya esta dado de alta en ' + environment.nombreProyecto + '.'
                         });
                     }
                 });

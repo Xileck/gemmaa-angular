@@ -2,10 +2,10 @@
 // cambiar minusculas a mayusculas cuando se esta escribiendo dinamicamente.
 // Arreglar que el usuario puede presionar multiple veces el boton.
 import {UtilService} from "../servicios/util.service";
-declare var webORB: any;
 import {Component} from '@angular/core';
 import {Router}      from '@angular/router';
 import {LoginService} from './login.service';
+import {environment} from "../../environments/environment";
 
 @Component({
     selector: 'login-app',
@@ -14,11 +14,11 @@ import {LoginService} from './login.service';
 export class LoginComponent {
     usuarioInput: string = '';
     contraseniaInput: string = '';
-
+    environment = environment;
     constructor(private loginService: LoginService, public router: Router, private utilService: UtilService) {
         if (this.loginService.usuarioValidado())
             this.router.navigate(['principal'])
-        if (this.loginService.godlike) {
+        if (environment.modoDios) {
             this.usuarioInput = '174P6';
             this.contraseniaInput = '123';
         }

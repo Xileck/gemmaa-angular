@@ -8,6 +8,7 @@ import {EvaluacionService} from "../servicios/evaluacion.service";
 import {WindowRef} from "../servicios/WindowRef";
 import {DatosEvaluacion} from "../clases/DatosEvaluacion";
 import {Empleado} from "../clases/Usuario/Empleado";
+import {environment} from "../../environments/environment";
 
 @Component({
     selector: "app-encuestas",
@@ -27,10 +28,10 @@ font-size: 20px;
     encapsulation: ViewEncapsulation.None
 })
 export class EncuestasComponent implements OnInit {
-    servicioEvaluacion: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", this.utilService.urlWebOrb, null, null);
-    servicioEmpleadoDAO: any = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.utilService.urlWebOrb, null, null);
-    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
-    servicioUtil: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.UtilBO", this.utilService.urlWebOrb, null, null);
+    servicioEvaluacion: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", environment.rutaWebORB, null, null);
+    servicioEmpleadoDAO: any = webORB.bind("com.cfemex.lv.EmpleadoDAO", environment.rutaWebORB, null, null);
+    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
+    servicioUtil: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.UtilBO", environment.rutaWebORB, null, null);
 
     evaluacionesPendientes: EvaluacionPendiente[] = [];
     evaluadosDatos: DatosEvaluacion[] = [];

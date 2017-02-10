@@ -20,10 +20,10 @@ var AdminService = (function () {
         this.router = router;
         this.loginService = loginService;
         this.utilService = utilService;
-        this.servicioUsuarioRol = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", this.utilService.urlWebOrb, null, null);
-        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.utilService.urlWebOrb, null, null);
-        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
-        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", this.utilService.urlWebOrb, null, null);
+        this.servicioUsuarioRol = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", environment.rutaWebORB, null, null);
+        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", environment.rutaWebORB, null, null);
+        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
+        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", environment.rutaWebORB, null, null);
     }
     //noinspection TypeScriptUnresolvedVariable
     //

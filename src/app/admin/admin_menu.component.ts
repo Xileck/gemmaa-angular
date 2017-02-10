@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {LoginService} from "../login/login.service";
 import {Router, ActivatedRoute} from "@angular/router";
 import {UtilService} from "../servicios/util.service";
+import {environment} from "../../environments/environment";
 
 @Component({
     selector: "app-admin",
@@ -13,7 +14,7 @@ export class MenuAdminComponent {
     display: boolean = false;
     encuesta: any;
     catalogoEncuestas: any;
-    servicio: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
+    servicio: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
     dialogo = {
         finalizo: false,
         display: false,

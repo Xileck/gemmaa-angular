@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-
+import {environment} from '../environments/environment';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -7,6 +7,8 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
     constructor() {
-      document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('contextmenu', event => event.preventDefault());
     }
+
+
 }

@@ -13,13 +13,15 @@ import { LoginService } from "../login/login.service";
 import { EvaluacionService } from "../servicios/evaluacion.service";
 import { UtilService } from "../servicios/util.service";
 import { DatosEvaluacion } from "../clases/DatosEvaluacion";
+import { environment } from "../../environments/environment";
 export var ContestarEncuestaComponent = (function () {
     function ContestarEncuestaComponent(router, loginService, evaluacionService, utilService) {
         this.router = router;
         this.loginService = loginService;
         this.evaluacionService = evaluacionService;
         this.utilService = utilService;
-        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
+        this.environment = environment;
+        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
         this.activeIndex = 0;
         this.evaluacionSeleccionada = new DatosEvaluacion();
         this.aceptoInstrucciones = false;

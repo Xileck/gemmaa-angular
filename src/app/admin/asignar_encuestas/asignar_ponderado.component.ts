@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from "@angular/core";
+import {Component} from "@angular/core";
 import {SelectItem, Message} from "primeng/components/common/api";
 import {Ponderados} from "../../clases/Reportes/Ponderados";
 import {EncuestaService} from "../../servicios/encuesta.service";

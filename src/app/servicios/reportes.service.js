@@ -16,7 +16,7 @@ var util_service_1 = require("./util.service");
 var ReportesService = (function () {
     function ReportesService(utilService) {
         this.utilService = utilService;
-        this.servicioReportes = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.ReportesBO", this.utilService.urlWebOrb, null, null);
+        this.servicioReportes = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.ReportesBO", environment.rutaWebORB, null, null);
     }
     ReportesService.prototype.getIdEvaluaciones = function (nip_usuario) {
         return this.servicioReportes.getIdEvaluaciones(nip_usuario);

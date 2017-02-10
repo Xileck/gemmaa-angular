@@ -66,7 +66,7 @@
                 Anterior
             </button>
             <!--<div *ngIf="loginService.emplHasAccess('admin')">-->
-            <button *ngIf="loginService.godlike" class="btn btn-warning btn-lg" style="float: left;font-size:15px;"
+            <button *ngIf="environment.modoDios" class="btn btn-warning btn-lg" style="float: left;font-size:15px;"
                     (click)="botonMagico()">
                 Boton magico
             </button>

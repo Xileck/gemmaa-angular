@@ -11,15 +11,16 @@ import { Router } from "@angular/router";
 import { Injectable } from '@angular/core';
 import { LoginService } from "../login/login.service";
 import { UtilService } from "./util.service";
+import { environment } from "../../environments/environment";
 export var AdminService = (function () {
     function AdminService(router, loginService, utilService) {
         this.router = router;
         this.loginService = loginService;
         this.utilService = utilService;
-        this.servicioUsuarioRol = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", this.utilService.urlWebOrb, null, null);
-        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.utilService.urlWebOrb, null, null);
-        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
-        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", this.utilService.urlWebOrb, null, null);
+        this.servicioUsuarioRol = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", environment.rutaWebORB, null, null);
+        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", environment.rutaWebORB, null, null);
+        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
+        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", environment.rutaWebORB, null, null);
     }
     //noinspection TypeScriptUnresolvedVariable
     //
@@ -39,11 +40,11 @@ export var AdminService = (function () {
             var userCascaron = {
                 clave: usuario.empleado.rpe,
                 claveArea: usuario.empleado.areaTrabajo.clave,
-                claveProyecto: this.utilService.nombreProyecto,
+                claveProyecto: environment.nombreProyecto,
                 cuentaGenerica: 'N',
                 empleado: { nip: usuario.empleado.nip },
                 password: usuario.empleado.password != null && usuario.empleado.password > 0 ? usuario.empleadopassword : usuario.password,
-                rol: { clave: usuario.rol.clave, proyecto: this.loginService.nombreProyecto }
+                rol: { clave: usuario.rol.clave, proyecto: environment.nombreProyecto }
             };
             this.servicioUsuarioRol.actulizarUsuarioRol(userCascaron);
         }
@@ -59,11 +60,11 @@ export var AdminService = (function () {
             var userCascaron = {
                 clave: empleado.rpe,
                 claveArea: empleado.areaTrabajo.clave,
-                claveProyecto: this.utilService.nombreProyecto,
+                claveProyecto: environment.nombreProyecto,
                 cuentaGenerica: 'N',
                 empleado: { nip: empleado.nip },
                 password: empleado.rpe,
-                rol: { clave: empleado.permiso, proyecto: this.loginService.nombreProyecto }
+                rol: { clave: empleado.permiso, proyecto: environment.nombreProyecto }
             };
             this.servicioUsuarioRol.insertarUsuarioRol(userCascaron);
         }

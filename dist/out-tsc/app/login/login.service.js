@@ -12,6 +12,7 @@ import { Injectable } from '@angular/core';
 import { Usuario } from "../clases/Usuario/Usuario";
 import { UtilService } from "../servicios/util.service";
 import { SeguridadService } from "../servicios/seguridad.service";
+import { environment } from "../../environments/environment";
 export var LoginService = (function () {
     function LoginService(router, utilService, seguridadService) {
         this.router = router;
@@ -19,19 +20,16 @@ export var LoginService = (function () {
         this.seguridadService = seguridadService;
         //noinspection TypeScriptUnresolvedVariable
         this.mensajesGlobales = [];
-        this.weborbUrl = utilService.urlWebOrb;
-        this.nombreProyecto = utilService.nombreProyecto;
-        this.godlike = utilService.modoDios;
     }
     LoginService.prototype.validarEmpleado = function (rpe, password) {
         var _this = this;
-        var servicioRoles = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", this.weborbUrl, null, null);
+        var servicioRoles = webORB.bind("com.cfemex.lv.libs.seguridad.roles.negocio.UsuarioRolBO", environment.rutaWebORB, null, null);
         try {
-            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(rpe, this.nombreProyecto)).then(function (empleadoExiste) {
+            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(rpe, environment.nombreProyecto)).then(function (empleadoExiste) {
                 if (empleadoExiste) {
-                    Promise.resolve((_this.seguridadService.passwordValido(rpe, password, _this.nombreProyecto))).then(function (passwordEsValida) {
+                    Promise.resolve((_this.seguridadService.passwordValido(rpe, password, environment.nombreProyecto))).then(function (passwordEsValida) {
                         if (passwordEsValida) {
-                            Promise.resolve(servicioRoles.seleccionarUsuario(rpe.toUpperCase(), _this.nombreProyecto)).then(function (ResultadoPromesa) {
+                            Promise.resolve(servicioRoles.seleccionarUsuario(rpe.toUpperCase(), environment.nombreProyecto)).then(function (ResultadoPromesa) {
                                 _this.mensajesGlobales = [];
                                 _this.usuario = new Usuario();
                                 Object.assign(_this.usuario, ResultadoPromesa);

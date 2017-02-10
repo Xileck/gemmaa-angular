@@ -4,11 +4,12 @@
 import {Injectable} from '@angular/core';
 import {UtilService} from "./util.service";
 import {Ponderados} from "../clases/Reportes/Ponderados";
+import {environment} from "../../environments/environment";
 
 @Injectable()
 export class EncuestaService {
 
-    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", this.utilService.urlWebOrb, null, null);
+    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
 
     constructor(private utilService: UtilService) {
 

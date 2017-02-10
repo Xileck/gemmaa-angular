@@ -17,7 +17,7 @@ var util_service_1 = require("./util.service");
 var EvaluacionService = (function () {
     function EvaluacionService(utilService) {
         this.utilService = utilService;
-        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", this.utilService.urlWebOrb, null, null);
+        this.servicioEvaluacion = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EvaluacionBO", environment.rutaWebORB, null, null);
         this.evaluacion = new DatosEvaluacion_1.DatosEvaluacion();
     }
     EvaluacionService.prototype.evaluadorFinalizoEncuesta = function (id_evaluador) {

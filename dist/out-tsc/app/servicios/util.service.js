@@ -9,15 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Router } from "@angular/router";
 import { Injectable } from '@angular/core';
+import { environment } from "../../environments/environment";
 export var UtilService = (function () {
     function UtilService(router) {
         this.router = router;
-        this.servicio = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.UtilBO", this.urlWebOrb, null, null);
-        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", this.urlWebOrb, null, null);
-        this.servicioIntra = webORB.bind("com.cfemex.lv.is.apps.intranet.EmplDAO", this.urlWebOrb, null, null);
-        //Configuracion de proyecto
-        this.nombreProyecto = 'GEMMAA360';
-        this.modoDios = false;
+        this.servicio = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.UtilBO", environment.rutaWebORB, null, null);
+        this.servicioEmpleadoDAO = webORB.bind("com.cfemex.lv.EmpleadoDAO", environment.rutaWebORB, null, null);
+        this.servicioIntra = webORB.bind("com.cfemex.lv.is.apps.intranet.EmplDAO", environment.rutaWebORB, null, null);
         this.app_dialogo_argumentos = {
             finalizo: false,
             display: false,
@@ -26,39 +24,7 @@ export var UtilService = (function () {
             timer: null,
             tipo: 'info'
         };
-        if (this.configuracion.toLowerCase().indexOf('local') >= 0) {
-            this.modoDios = true;
-            this.nombreProyecto = 'GEMMAA';
-        }
     }
-    Object.defineProperty(UtilService.prototype, "configuracion", {
-        //Cambiar dependiendo de donde se ubicara la direccion a webORB opciones:
-        // -- productivo, tomcat, local
-        get: function () {
-            return 'local';
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(UtilService.prototype, "urlWebOrb", {
-        get: function () {
-            if (this.configuracion.toLowerCase().indexOf('productivo') >= 0) {
-                return "http://gcnti.lv.cfemex.com/weborb/weborb.wo";
-            }
-            else if (this.configuracion.toLowerCase().indexOf('local') >= 0) {
-                return "http://localhost:8080/weborb/weborb.wo";
-            }
-            else if (this.configuracion.toLowerCase().indexOf('tomcat') >= 0) {
-                return "http://10.33.5.201:8080/weborb/weborb.wo";
-            }
-            else {
-                console.error('No se especifico una configuracion en util.service.ts, se puso local por default.');
-                return "http://localhost:8080/weborb/weborb.wo";
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
     //EmpleadoDAO
     UtilService.prototype.buscarEmpleado = function (rpeInput) {
         return this.servicioEmpleadoDAO.seleccionarEmpleado(rpeInput.toString().toUpperCase());

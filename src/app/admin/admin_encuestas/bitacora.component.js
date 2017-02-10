@@ -17,7 +17,7 @@ var Bitacora = (function () {
         this.loginService = loginService;
         this.router = router;
         this.utilService = utilService;
-        this.servicioBitacora = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.BitacoraBO", this.utilService.urlWebOrb, null, null);
+        this.servicioBitacora = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.BitacoraBO", environment.rutaWebORB, null, null);
         if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
             this.router.navigate(['login']);
         this.registros = this.servicioBitacora.getCatalogoEncuesta();

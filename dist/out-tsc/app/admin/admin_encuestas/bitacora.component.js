@@ -11,12 +11,13 @@ import { Component } from "@angular/core";
 import { LoginService } from "../../login/login.service";
 import { Router } from "@angular/router";
 import { UtilService } from "../../servicios/util.service";
+import { environment } from "../../../environments/environment";
 export var BitacoraComponent = (function () {
     function BitacoraComponent(loginService, router, utilService) {
         this.loginService = loginService;
         this.router = router;
         this.utilService = utilService;
-        this.servicioBitacora = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.BitacoraBO", this.utilService.urlWebOrb, null, null);
+        this.servicioBitacora = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.BitacoraBO", environment.rutaWebORB, null, null);
         if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
             this.router.navigate(['login']);
         this.registros = this.servicioBitacora.getCatalogoEncuesta();

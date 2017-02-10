@@ -18,9 +18,9 @@ var SeguridadService = (function () {
     function SeguridadService(router, utilService) {
         this.router = router;
         this.utilService = utilService;
-        this.servicioSeguridadBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.SeguridadBO", this.utilService.urlWebOrb, null, null);
-        this.servicioUtilidadesBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.UtilBO", this.utilService.urlWebOrb, null, null);
-        this.servicioUtilidadesDAO = webORB.bind("com.cfemex.lv.is.seguridad.DAO.UtilDAO", this.utilService.urlWebOrb, null, null);
+        this.servicioSeguridadBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.SeguridadBO", environment.rutaWebORB, null, null);
+        this.servicioUtilidadesBO = webORB.bind("com.cfemex.lv.is.seguridad.BO.UtilBO", environment.rutaWebORB, null, null);
+        this.servicioUtilidadesDAO = webORB.bind("com.cfemex.lv.is.seguridad.DAO.UtilDAO", environment.rutaWebORB, null, null);
     }
     SeguridadService.prototype.getInfoEmpleado = function (nip) {
         return this.servicioUtilidadesDAO.getInfoEmpleado(nip, this.utilService.nombreProyecto);

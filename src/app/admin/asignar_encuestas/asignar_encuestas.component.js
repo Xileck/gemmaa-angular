@@ -40,7 +40,7 @@ var AsignarEncuestasComponent = (function () {
         this.busquedaInput = '';
         this.busqueda = [];
         if (!loginService.usuarioValidado() || !loginService.emplHasAccess('admin'))
-            if (!loginService.godlike)
+            if (!environment.modoDios)
                 this.router.navigate(['login']);
         this.rolesPermisoUsuario = [];
         this.rolesPermisoUsuario.push({ label: 'Selecciona el permiso.', value: null });
