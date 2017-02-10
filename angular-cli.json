@@ -11,7 +11,8 @@
         "assets",
         "favicon.ico",
         "./resources/arbol_2.jpg",
-        "./resources/js/Chart.js"
+        "./resources/js/Chart.js",
+        "./resources/js/WebORB.js"
       ],
       "index": "index.html",
       "main": "main.ts",
