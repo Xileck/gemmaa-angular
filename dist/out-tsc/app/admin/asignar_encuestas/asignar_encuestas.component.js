@@ -335,21 +335,31 @@ export var AsignarEncuestasComponent = (function () {
     };
     AsignarEncuestasComponent.prototype.llenarEvaluadores = function () {
         var _this = this;
-        Promise.resolve(this.utilService.buscarEmpleado('174P6')).then(function (emp) {
-            _this.agregarEvaluador(emp, 'EVALUADO', 'EVALUADOR');
-        });
-        Promise.resolve(this.utilService.buscarEmpleado('171P6')).then(function (emp) {
-            _this.agregarEvaluador(emp, 'PAR', 'EVALUADOR');
-        });
-        Promise.resolve(this.utilService.buscarEmpleado('172P6')).then(function (emp) {
-            _this.agregarEvaluador(emp, 'JEFE', 'EVALUADOR');
-        });
-        Promise.resolve(this.utilService.buscarEmpleado('173P6')).then(function (emp) {
-            _this.agregarEvaluador(emp, 'COLABORADOR', 'EVALUADOR');
-        });
-        Promise.resolve(this.utilService.buscarEmpleado('175P6')).then(function (emp) {
-            _this.agregarEvaluador(emp, 'CLIENTE', 'EVALUADOR');
-        });
+        if (this.evaluado == null) {
+            Promise.resolve(this.utilService.buscarEmpleado('174P6')).then(function (emp) {
+                _this.agregarEvaluador(emp, 'EVALUADO', 'EVALUADOR');
+            });
+        }
+        if (this.par == null) {
+            Promise.resolve(this.utilService.buscarEmpleado('171P6')).then(function (emp) {
+                _this.agregarEvaluador(emp, 'PAR', 'EVALUADOR');
+            });
+        }
+        if (this.jefe == null) {
+            Promise.resolve(this.utilService.buscarEmpleado('172P6')).then(function (emp) {
+                _this.agregarEvaluador(emp, 'JEFE', 'EVALUADOR');
+            });
+        }
+        if (this.colaborador == null) {
+            Promise.resolve(this.utilService.buscarEmpleado('173P6')).then(function (emp) {
+                _this.agregarEvaluador(emp, 'COLABORADOR', 'EVALUADOR');
+            });
+        }
+        if (this.cliente == null) {
+            Promise.resolve(this.utilService.buscarEmpleado('175P6')).then(function (emp) {
+                _this.agregarEvaluador(emp, 'CLIENTE', 'EVALUADOR');
+            });
+        }
     };
     AsignarEncuestasComponent.prototype.checarSiEvaluadosEstanAsignados = function () {
         var roles = [];

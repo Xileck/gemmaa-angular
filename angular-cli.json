@@ -38,7 +38,7 @@
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts",
+        "productivo": "environments/environment.prod.ts",
         "tomcat": "environments/environment.tomcat.ts"
       }
     }
