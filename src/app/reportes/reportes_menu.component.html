@@ -1,6 +1,4 @@
 <p-fieldset legend="Reportes de evaluaciones">
-
-
     <hr>
     <div class="ui-grid ui-grid-responsive ui-grid-pad">
         <div class="ui-grid-row">
@@ -37,31 +35,66 @@
                 </p-fieldset>
             </div>
             <div class="ui-grid-col-8">
-                <p-fieldset legend="Reportes">
-                    <div *ngIf="evaluaciones" style="max-height:400px;overflow:auto;">
-                        <table class="table table-hover table-bordered table-responsive">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Tipo encuesta</th>
-                                <th>Estado</th>
-                                <th>Fecha que se asigno</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr *ngFor="let evaluacion of evaluaciones" (click)="evaluacionSeleccionada = evaluacion"
-                                [ngClass]="{'active' : evaluacion == evaluacionSeleccionada}">
-                                <td>{{evaluacion.id_evaluacion}}</td>
-                                <td>{{evaluacion.descripcionEncuesta}}</td>
-                                <td>
-                                    <p-progressBar [value]="getProgress(evaluacion)"></p-progressBar>
-                                </td>
-                                <td>{{evaluacion.fecha| date:'mediumDate'}}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </p-fieldset>
+                <p-tabView>
+                    <p-tabPanel header="Reportes de autoevaluaciones">
+                        <div *ngIf="evaluaciones" style="max-height:400px;overflow:auto;">
+                            <table class="table table-hover table-bordered table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tipo encuesta</th>
+                                    <th>Estado</th>
+                                    <th>Fecha que se asigno</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr *ngFor="let evaluacion of evaluaciones"
+                                    (click)="evaluacionSeleccionada = evaluacion"
+                                    [ngClass]="{'active' : evaluacion == evaluacionSeleccionada}">
+                                    <td>{{evaluacion.id_evaluacion}}</td>
+                                    <td>{{evaluacion.descripcionEncuesta}}</td>
+                                    <td>
+                                        <p-progressBar [value]="getProgress(evaluacion)"></p-progressBar>
+                                    </td>
+                                    <td>{{evaluacion.fecha| date:'mediumDate'}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </p-tabPanel>
+                    <p-tabPanel header="Reportes de colaboradores">
+                        <div *ngIf="evaluacionesJefe" style="max-height:400px;overflow:auto;">
+                            <table class="table table-hover table-bordered table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Foto</th>
+                                    <th>Nombre</th>
+                                    <th>Tipo encuesta</th>
+                                    <th>Estado</th>
+                                    <th>Fecha que se asigno</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr *ngFor="let evaluacion of evaluacionesJefe"
+                                    (click)="evaluacionSeleccionada = evaluacion"
+                                    [ngClass]="{'active' : evaluacion == evaluacionSeleccionada}">
+                                    <td>{{evaluacion.id_evaluacion}}</td>
+                                    <td><img *ngIf="evaluacion.evaluado?.foto"
+                                             [src]="'data:image/jpeg;base64,'+ utilService.convertArrayBytesToBase64(evaluacion.evaluado.foto)"
+                                             style="max-height: 70px; vertical-align: middle;"/></td>
+                                    <td>{{evaluacion.evaluado.nombreCompleto}}</td>
+                                    <td>{{evaluacion.descripcionEncuesta}}</td>
+                                    <td>
+                                        <p-progressBar [value]="getProgress(evaluacion)"></p-progressBar>
+                                    </td>
+                                    <td>{{evaluacion.fecha| date:'mediumDate'}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </p-tabPanel>
+                </p-tabView>
             </div>
         </div>
     </div>

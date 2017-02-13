@@ -11,16 +11,19 @@ import { Component } from "@angular/core";
 import { LoginService } from "../login/login.service";
 import { Router } from "@angular/router";
 import { ReportesService } from "../servicios/reportes.service";
+import { UtilService } from "../servicios/util.service";
 export var ReportesComponent = (function () {
-    function ReportesComponent(loginService, router, reportesService) {
+    function ReportesComponent(loginService, router, reportesService, utilService) {
         this.loginService = loginService;
         this.router = router;
         this.reportesService = reportesService;
+        this.utilService = utilService;
         if (!loginService.usuarioValidado())
             this.router.navigate(['login']);
         else {
             this.evaluaciones = [];
             this.evaluaciones = reportesService.getEvaluacionesUsuario(loginService.usuario.empleado.nip);
+            this.evaluacionesJefe = reportesService.getEvaluacionesParticipadasComoJefe(loginService.usuario.empleado.nip);
         }
     }
     ReportesComponent.prototype.getProgress = function (evaluacion) {
@@ -50,7 +53,7 @@ export var ReportesComponent = (function () {
             ],
             providers: [ReportesService]
         }), 
-        __metadata('design:paramtypes', [LoginService, Router, ReportesService])
+        __metadata('design:paramtypes', [LoginService, Router, ReportesService, UtilService])
     ], ReportesComponent);
     return ReportesComponent;
 }());

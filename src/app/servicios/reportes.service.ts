@@ -24,4 +24,8 @@ export class ReportesService {
     getEvaluacionesUsuario(nip: number) {
         return this.servicioReportes.getEvaluacionesDeUsuario(nip);
     }
+
+    getEvaluacionesParticipadasComoJefe(nip: number) {
+        return this.servicioReportes.getEvaluacionesParticipadas(nip);
+    }
 }

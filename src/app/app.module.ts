@@ -53,6 +53,7 @@ import {FortalezasMejorasComponent} from "./reportes/fortalezas_mejoras.componen
 import {ReporteEvaluacionComponent} from "./reportes/reporte_evaluacion.component";
 import {EvaluadoresComponent} from "./reportes/evaluadores.component";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
+import {AdminReportesComponent} from "./admin/admin_reportes/admin_reportes.component";
 
 @NgModule({
     declarations: [
@@ -75,7 +76,8 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
         ReportesComponent,
         FortalezasMejorasComponent,
         ReporteEvaluacionComponent,
-        EvaluadoresComponent
+        EvaluadoresComponent,
+        AdminReportesComponent
     ],
     imports: [
         BrowserModule,

@@ -3,12 +3,13 @@ import {LoginService} from "../login/login.service";
 import {Router} from "@angular/router";
 import {ReportesService} from "../servicios/reportes.service";
 import {GrupoEvaluacion} from "../clases/Reportes/GrupoEvaluacion";
+import {UtilService} from "../servicios/util.service";
 
 @Component({
-  selector: "app-reportes",
-  templateUrl: "./reportes_menu.component.html",
-  styles: [
-    `
+    selector: "app-reportes",
+    templateUrl: "./reportes_menu.component.html",
+    styles: [
+        `
             .dp
                 {
                     border:10px solid #eee;
@@ -23,39 +24,44 @@ import {GrupoEvaluacion} from "../clases/Reportes/GrupoEvaluacion";
                     /*-webkit-font-smoothing:antialiased;*/
                 }
             `
-  ],
-  providers: [ReportesService]
+    ],
+    providers: [ReportesService]
 })
 export class ReportesComponent {
 
-  evaluaciones: GrupoEvaluacion[];
-  evaluacionSeleccionada: GrupoEvaluacion;
+    evaluaciones: GrupoEvaluacion[];
+    evaluacionesJefe: GrupoEvaluacion[];
+    evaluacionSeleccionada: GrupoEvaluacion;
 
-  constructor(public loginService: LoginService, public router: Router, private reportesService: ReportesService) {
-    if (!loginService.usuarioValidado())
-      this.router.navigate(['login']);
-    else {
-      this.evaluaciones = [];
-      this.evaluaciones = reportesService.getEvaluacionesUsuario(loginService.usuario.empleado.nip);
+    constructor(public loginService: LoginService,
+                public router: Router,
+                private reportesService: ReportesService,
+                private utilService: UtilService) {
+        if (!loginService.usuarioValidado())
+            this.router.navigate(['login']);
+        else {
+            this.evaluaciones = [];
+            this.evaluaciones = reportesService.getEvaluacionesUsuario(loginService.usuario.empleado.nip);
+            this.evaluacionesJefe = reportesService.getEvaluacionesParticipadasComoJefe(loginService.usuario.empleado.nip);
+        }
     }
-  }
 
-  getProgress(evaluacion: GrupoEvaluacion): number {
-    let countFinalized: number = 0;
-    let countTotal: number = 0;
-    for (let e of evaluacion.evaluadores) {
-      countTotal++;
-      if (e.finalizo != null && e.finalizo == 't') {
-        countFinalized++;
-      }
+    getProgress(evaluacion: GrupoEvaluacion): number {
+        let countFinalized: number = 0;
+        let countTotal: number = 0;
+        for (let e of evaluacion.evaluadores) {
+            countTotal++;
+            if (e.finalizo != null && e.finalizo == 't') {
+                countFinalized++;
+            }
+        }
+        return this.progressPercent(countFinalized, countTotal);
     }
-    return this.progressPercent(countFinalized, countTotal);
-  }
 
-  progressPercent(countFinalized, countTotal): number {
-    if (countFinalized == 0)
-      return 0;
-    else
-      return (countFinalized * 100) / countTotal;
-  }
+    progressPercent(countFinalized, countTotal): number {
+        if (countFinalized == 0)
+            return 0;
+        else
+            return (countFinalized * 100) / countTotal;
+    }
 }

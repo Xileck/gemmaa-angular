@@ -1,10 +1,10 @@
 {
   "name": "gemmaa360",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "productivo": "ng build --env=productivo -bh /weborb/apps/gemmaa360/",
+    "productivo": "ng build --env=productivo -bh /weborb/apps/gemmaaP/",
     "tomcat": "ng build --env=tomcat -bh /weborb/apps/gemmaa360/",
     "ng": "ng",
     "start": "ng serve",

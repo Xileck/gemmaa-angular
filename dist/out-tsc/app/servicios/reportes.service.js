@@ -24,6 +24,9 @@ export var ReportesService = (function () {
     ReportesService.prototype.getEvaluacionesUsuario = function (nip) {
         return this.servicioReportes.getEvaluacionesDeUsuario(nip);
     };
+    ReportesService.prototype.getEvaluacionesParticipadasComoJefe = function (nip) {
+        return this.servicioReportes.getEvaluacionesParticipadas(nip);
+    };
     ReportesService = __decorate([
         Injectable(), 
         __metadata('design:paramtypes', [UtilService])

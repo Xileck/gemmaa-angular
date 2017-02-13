@@ -335,29 +335,35 @@ export var AsignarEncuestasComponent = (function () {
     };
     AsignarEncuestasComponent.prototype.llenarEvaluadores = function () {
         var _this = this;
+        var empleado = new Empleado();
         if (this.evaluado == null) {
             Promise.resolve(this.utilService.buscarEmpleado('174P6')).then(function (emp) {
-                _this.agregarEvaluador(emp, 'EVALUADO', 'EVALUADOR');
+                Object.assign(empleado, emp);
+                _this.agregarEvaluador(emp, 'EVALUADO', 'EVAL');
             });
         }
         if (this.par == null) {
             Promise.resolve(this.utilService.buscarEmpleado('171P6')).then(function (emp) {
-                _this.agregarEvaluador(emp, 'PAR', 'EVALUADOR');
+                Object.assign(empleado, emp);
+                _this.agregarEvaluador(emp, 'PAR', 'EVAL');
             });
         }
         if (this.jefe == null) {
             Promise.resolve(this.utilService.buscarEmpleado('172P6')).then(function (emp) {
-                _this.agregarEvaluador(emp, 'JEFE', 'EVALUADOR');
+                Object.assign(empleado, emp);
+                _this.agregarEvaluador(emp, 'JEFE', 'EVAL');
             });
         }
         if (this.colaborador == null) {
             Promise.resolve(this.utilService.buscarEmpleado('173P6')).then(function (emp) {
-                _this.agregarEvaluador(emp, 'COLABORADOR', 'EVALUADOR');
+                Object.assign(empleado, emp);
+                _this.agregarEvaluador(emp, 'COLABORADOR', 'EVAL');
             });
         }
         if (this.cliente == null) {
             Promise.resolve(this.utilService.buscarEmpleado('175P6')).then(function (emp) {
-                _this.agregarEvaluador(emp, 'CLIENTE', 'EVALUADOR');
+                Object.assign(empleado, emp);
+                _this.agregarEvaluador(emp, 'CLIENTE', 'EVAL');
             });
         }
     };

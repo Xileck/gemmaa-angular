@@ -7,9 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
+import { Component, Compiler } from '@angular/core';
 export var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(_compiler) {
+        this._compiler = _compiler;
+        // this._compiler.clearCache();
         document.addEventListener('contextmenu', function (event) { return event.preventDefault(); });
     }
     AppComponent = __decorate([
@@ -18,7 +20,7 @@ export var AppComponent = (function () {
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [Compiler])
     ], AppComponent);
     return AppComponent;
 }());
