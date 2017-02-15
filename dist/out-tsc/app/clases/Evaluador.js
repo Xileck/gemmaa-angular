@@ -2,7 +2,7 @@
  * Created by Jaime Carballo Diaz on 01/12/2016.
  */
 export var Evaluador = (function () {
-    function Evaluador(nip_evaluador, tipo_de_evaluador, finalizo, id_evaluador, id_evaluacion, fecha, empleado, encuesta) {
+    function Evaluador(nip_evaluador, tipo_de_evaluador, finalizo, id_evaluador, id_evaluacion, fecha, empleado, encuesta, nombre_completo) {
         this.nip_evaluador = nip_evaluador;
         this.tipo_de_evaluador = tipo_de_evaluador;
         this.finalizo = finalizo;
@@ -11,6 +11,7 @@ export var Evaluador = (function () {
         this.fecha = fecha;
         this.empleado = empleado;
         this.encuesta = encuesta;
+        this.nombre_completo = nombre_completo;
     }
     return Evaluador;
 }());

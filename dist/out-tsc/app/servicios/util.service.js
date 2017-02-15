@@ -32,6 +32,9 @@ export var UtilService = (function () {
     UtilService.prototype.buscarEmpleados = function (empleado) {
         return this.servicioIntra.buscaEmpleados(empleado.toUpperCase());
     };
+    UtilService.prototype.getNombreCompleto = function (nip) {
+        return this.servicio.getNombreCompleto(nip);
+    };
     UtilService.prototype.convertArrayBytesToBase64 = function (byte) {
         var binary = '';
         var bytes = new Uint8Array(byte);

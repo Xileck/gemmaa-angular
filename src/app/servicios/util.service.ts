@@ -36,6 +36,9 @@ export class UtilService {
         return this.servicioIntra.buscaEmpleados(empleado.toUpperCase());
     }
 
+    getNombreCompleto(nip: number): string {
+        return this.servicio.getNombreCompleto(nip);
+    }
 
     convertArrayBytesToBase64(byte: any): string {
         var binary = '';

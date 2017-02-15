@@ -27,6 +27,9 @@ export var ReportesService = (function () {
     ReportesService.prototype.getEvaluacionesParticipadasComoJefe = function (nip) {
         return this.servicioReportes.getEvaluacionesParticipadas(nip);
     };
+    ReportesService.prototype.getGruposEvaluacionEmpleado = function (nombre_rpe) {
+        return Promise.resolve(this.servicioReportes.getGruposEvaluacionEmpleado(nombre_rpe));
+    };
     ReportesService = __decorate([
         Injectable(), 
         __metadata('design:paramtypes', [UtilService])

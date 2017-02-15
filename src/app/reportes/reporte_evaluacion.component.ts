@@ -289,26 +289,26 @@ export class ReporteEvaluacionComponent {
                     scale: {
                         ticks: {
                             beginAtZero: true,
-                            max: 4
+                            max: 100
                         }
                     }
                 };
                 this.optionsRadarATR = {
-                  maintainAspectRatio: false,
-                  title: {
-                    display: true,
-                    text: 'Promedio por atributos',
-                    fontSize: 16
-                  },
-                  legend: {
-                    position: 'bottom'
-                  },
-                  scale: {
-                    ticks: {
-                      beginAtZero: true,
-                      max: 4
+                    maintainAspectRatio: false,
+                    title: {
+                        display: true,
+                        text: 'Promedio por atributos',
+                        fontSize: 16
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    scale: {
+                        ticks: {
+                            beginAtZero: true,
+                            max: 100
+                        }
                     }
-                  }
                 };
                 this.optionsBarGraphs = {
                     scales: {
@@ -319,7 +319,7 @@ export class ReporteEvaluacionComponent {
                         },],
                         yAxes: [{
                             ticks: {
-                                suggestedMax: 4,
+                                suggestedMax: 100,
                                 suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
                                 // OR //
                                 beginAtZero: true   // min
@@ -457,12 +457,12 @@ export class ReporteEvaluacionComponent {
         let promedio: any = [];
         if (choice.toLowerCase().indexOf('atr') >= 0) {
             for (let atr of this.grupoSeleccionado.promedios.atributos) {
-                promedio.push(atr.promedio);
+                promedio.push(((atr.promedio * 100) / 4).toFixed(2));
             }
         }
         else if (choice.toLowerCase().indexOf('res') >= 0) {
             for (let re of this.grupoSeleccionado.promedios.resultados_esperados) {
-                promedio.push(re.promedio);
+                promedio.push(((re.promedio * 100) / 4).toFixed(2));
             }
         }
         else if (choice.toLowerCase().indexOf('cre') >= 0) {
@@ -470,7 +470,7 @@ export class ReporteEvaluacionComponent {
                 promedio.push(cre.promedio);
             }
         }
-        return promedio
+        return promedio;
     }
 
     getNombresResultadosEsperados(): string [] {
@@ -494,7 +494,7 @@ export class ReporteEvaluacionComponent {
         for (let evaluador of this.grupoSeleccionado.evaluadores) {
             for (let re of evaluador.encuesta.resultados_esperados) {
                 if (evaluador.tipo_de_evaluador.indexOf(tipo_evaluador.toUpperCase()) >= 0)
-                    promedios.push(re.promedio.toFixed(2));
+                    promedios.push(((re.promedio * 100) / 4).toFixed(2));
             }
         }
         return promedios;
@@ -505,7 +505,7 @@ export class ReporteEvaluacionComponent {
         for (let evaluador of this.grupoSeleccionado.evaluadores) {
             for (let atr of evaluador.encuesta.atributos) {
                 if (evaluador.tipo_de_evaluador.indexOf(tipo_evaluador.toUpperCase()) >= 0)
-                    promedios.push(atr.promedio.toFixed(2));
+                    promedios.push(((atr.promedio * 100) / 4).toFixed(2));
             }
         }
         return promedios;
@@ -534,7 +534,7 @@ export class ReporteEvaluacionComponent {
                         }
                     }
                 }
-                re.promedio = re.promedio / count;
+                re.promedio = (re.promedio / count);
             }
         }
         for (let evaluador of evaluadores) {
@@ -546,7 +546,7 @@ export class ReporteEvaluacionComponent {
                         count++;
                     }
                 }
-                atr.promedio = atr.promedio / count;
+                atr.promedio = (atr.promedio / count);
             }
         }
     }

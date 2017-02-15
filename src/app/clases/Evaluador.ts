@@ -11,6 +11,7 @@ export class Evaluador {
                 public id_evaluacion: number,
                 public fecha: string,
                 public empleado: Empleado,
-                public encuesta: Encuesta) {
+                public encuesta: Encuesta,
+                public nombre_completo: string) {
     }
 }

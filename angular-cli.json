@@ -1,12 +1,12 @@
 {
   "project": {
     "version": "1.0.0-beta.28.3",
-    "name": "gemmaa360"
+    "name": "GEMMAA360"
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "C:\\Tomcat\\webapps\\weborb\\apps\\gemmaa360",
+      "outDir": "C:\\Tomcat\\webapps\\weborb\\apps\\gemmaaP",
       "assets": [
         "assets",
         "favicon.ico",

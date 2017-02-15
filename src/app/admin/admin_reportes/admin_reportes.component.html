@@ -1,3 +1,89 @@
 <p-fieldset legend="Administracion de reportes">
 
+
+    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4">
+                <p-fieldset legend="Estado del reporte">
+                    <div *ngIf="!grupoSeleccionado">
+                        <h3>Escoge un reporte.</h3>
+                    </div>
+                    <div *ngIf="grupoSeleccionado">
+                        <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                            <div *ngFor="let evaluador of grupoSeleccionado?.evaluadores" class="ui-grid-row">
+                                <div class="ui-grid-col-6">
+                                    <b>{{evaluador.tipo_de_evaluador}}</b>
+                                </div>
+                                <div class="ui-grid-col-4">
+                                    {{evaluador.finalizo =='t' ? 'Finalizo' : 'Sin contestar'}}
+                                </div>
+                                <div class="ui-grid-col-2">
+                                    {{evaluador.finalizo =='t' ? '✓' : '✕'}}
+                                </div>
+                            </div>
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-12">
+                                    <hr style="color:black;">
+                                    <button [disabled]="getProgress(grupoSeleccionado)!=100" pButton
+                                            type="button"
+                                            class="ui-button-success" style="float:right;" label="Cargar Reporte"
+                                            (click)="router.navigate(['/reporte_evaluacion',grupoSeleccionado.id_evaluacion])"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </p-fieldset>
+            </div>
+            <div class="ui-grid-col-8">
+                <div *ngIf="buscando" class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <form (ngSubmit)="buscarEvaluaciones()" *ngIf="!buscando">
+                    <div class="form-group">
+                        <label for="name">Buscar: </label>
+                        <input type="text"
+                               [(ngModel)]="busquedaInput" class="form-control" id="name"
+                               required placeholder="Ingresa nombre, rpe o grupo de evaluacion" name="test" #inputRef>
+                        <br>
+                        <button type="submit" pButton icon="fa-search"
+                                label="Buscar" style="margin:auto;"></button>
+                    </div>
+                </form>
+                <div style="max-height:400px;overflow:auto;">
+                    <table class="table table-bordered table-responsive table-hover" style="font-size:12px;"
+                           *ngIf="gruposEvaluacion">
+                        <thead style="background: rgb(55,76,97);color:white;">
+                        <tr>
+                            <th rowspan="2">ID</th>
+                            <th rowspan="2">Evaluado</th>
+                            <th rowspan="2">Fecha</th>
+                            <th colspan="4">Evaluadores</th>
+                        </tr>
+                        <tr>
+                            <th>Jefe</th>
+                            <th>Par</th>
+                            <th>Colaborador</th>
+                            <th>Cliente</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let grupo of gruposEvaluacion" (click)="grupoSeleccionado = grupo"
+                            [ngClass]="{'active' : grupo == grupoSeleccionado}">
+                            <th>{{grupo.id_evaluacion}}</th>
+                            <th>{{utilService.getNombreCompleto(grupo.nip_de_evaluado)}}</th>
+                            <th>{{grupo.fecha | date:'medium'}}</th>
+                            <th>{{getNombreTipoEvaluador(grupo,'JEFE')}}</th>
+                            <th>{{getNombreTipoEvaluador(grupo,'PAR')}}</th>
+                            <th>{{getNombreTipoEvaluador(grupo,'COLABORADOR')}}</th>
+                            <th>{{getNombreTipoEvaluador(grupo,'CLIENTE')}}</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </p-fieldset>

@@ -7,7 +7,7 @@ import {environment} from "../../environments/environment";
 
 @Injectable()
 export class ReportesService {
-    servicioReportes: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.ReportesBO", environment.rutaWebORB, null, null);
+    private servicioReportes: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.ReportesBO", environment.rutaWebORB, null, null);
 
     constructor(private utilService: UtilService) {
 
@@ -27,5 +27,9 @@ export class ReportesService {
 
     getEvaluacionesParticipadasComoJefe(nip: number) {
         return this.servicioReportes.getEvaluacionesParticipadas(nip);
+    }
+
+    getGruposEvaluacionEmpleado(nombre_rpe: string): Promise<any> {
+        return Promise.resolve(this.servicioReportes.getGruposEvaluacionEmpleado(nombre_rpe));
     }
 }

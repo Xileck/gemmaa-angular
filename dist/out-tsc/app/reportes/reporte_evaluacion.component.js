@@ -275,7 +275,7 @@ export var ReporteEvaluacionComponent = (function () {
                 scale: {
                     ticks: {
                         beginAtZero: true,
-                        max: 4
+                        max: 100
                     }
                 }
             };
@@ -292,7 +292,7 @@ export var ReporteEvaluacionComponent = (function () {
                 scale: {
                     ticks: {
                         beginAtZero: true,
-                        max: 4
+                        max: 100
                     }
                 }
             };
@@ -305,7 +305,7 @@ export var ReporteEvaluacionComponent = (function () {
                         },],
                     yAxes: [{
                             ticks: {
-                                suggestedMax: 4,
+                                suggestedMax: 100,
                                 suggestedMin: 0,
                                 // OR //
                                 beginAtZero: true // min
@@ -444,13 +444,13 @@ export var ReporteEvaluacionComponent = (function () {
         if (choice.toLowerCase().indexOf('atr') >= 0) {
             for (var _i = 0, _a = this.grupoSeleccionado.promedios.atributos; _i < _a.length; _i++) {
                 var atr = _a[_i];
-                promedio.push(atr.promedio);
+                promedio.push(((atr.promedio * 100) / 4).toFixed(2));
             }
         }
         else if (choice.toLowerCase().indexOf('res') >= 0) {
             for (var _b = 0, _c = this.grupoSeleccionado.promedios.resultados_esperados; _b < _c.length; _b++) {
                 var re = _c[_b];
-                promedio.push(re.promedio);
+                promedio.push(((re.promedio * 100) / 4).toFixed(2));
             }
         }
         else if (choice.toLowerCase().indexOf('cre') >= 0) {
@@ -484,7 +484,7 @@ export var ReporteEvaluacionComponent = (function () {
             for (var _b = 0, _c = evaluador.encuesta.resultados_esperados; _b < _c.length; _b++) {
                 var re = _c[_b];
                 if (evaluador.tipo_de_evaluador.indexOf(tipo_evaluador.toUpperCase()) >= 0)
-                    promedios.push(re.promedio.toFixed(2));
+                    promedios.push(((re.promedio * 100) / 4).toFixed(2));
             }
         }
         return promedios;
@@ -496,7 +496,7 @@ export var ReporteEvaluacionComponent = (function () {
             for (var _b = 0, _c = evaluador.encuesta.atributos; _b < _c.length; _b++) {
                 var atr = _c[_b];
                 if (evaluador.tipo_de_evaluador.indexOf(tipo_evaluador.toUpperCase()) >= 0)
-                    promedios.push(atr.promedio.toFixed(2));
+                    promedios.push(((atr.promedio * 100) / 4).toFixed(2));
             }
         }
         return promedios;
@@ -527,7 +527,7 @@ export var ReporteEvaluacionComponent = (function () {
                         }
                     }
                 }
-                re.promedio = re.promedio / count;
+                re.promedio = (re.promedio / count);
             }
         }
         for (var _g = 0, evaluadores_2 = evaluadores; _g < evaluadores_2.length; _g++) {
@@ -542,7 +542,7 @@ export var ReporteEvaluacionComponent = (function () {
                         count++;
                     }
                 }
-                atr.promedio = atr.promedio / count;
+                atr.promedio = (atr.promedio / count);
             }
         }
     };
