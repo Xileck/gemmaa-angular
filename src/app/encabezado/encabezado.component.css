@@ -1,0 +1,20 @@
+li { cursor: pointer; cursor: hand; }
+#left{float:left;display:inline-block;}
+#right{float:right;display:inline-block;}
+#center{margin:0 auto;}
+h5{
+    margin:0;
+    padding:0;
+}
+h6{
+    margin:0;
+    padding:0;
+}
+
+
+small {
+    display: block;
+    line-height: 1.428571429;
+
+    color: #999;
+}
