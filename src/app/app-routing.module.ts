@@ -12,7 +12,6 @@ import {ContestarEncuestaComponent} from "./encuestas/contestar_encuesta.compone
 import {ReportesComponent} from "./reportes/reportes_menu.component";
 import {ReporteEvaluacionComponent} from "./reportes/reporte_evaluacion.component";
 import {AdminReportesComponent} from "./admin/admin_reportes/admin_reportes.component";
-import {NavegadorComponent} from "./not-found/not-found";
 
 const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -28,7 +27,7 @@ const routes: Routes = [
     {path: 'admin_usuarios', component: AdminUsuariosComponent},
     {path: 'admin_reportes', component: AdminReportesComponent},
     {path: 'reporte_evaluacion/:id', component: ReporteEvaluacionComponent},
-    {path: '**', component: NavegadorComponent}
+    {path: '**', component: PrincipalComponent}
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
