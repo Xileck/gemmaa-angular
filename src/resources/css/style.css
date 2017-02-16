@@ -2797,7 +2797,7 @@ a.logo:hover {
     z-index: -1;
     top: 0;
     left: 0;
-    background: rgba(17, 17, 17, .60);
+    /*background: rgba(17, 17, 17, .60);*/
 }
 
 .bg-dark-alfa-90:before,

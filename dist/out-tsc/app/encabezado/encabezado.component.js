@@ -36,7 +36,7 @@ export var EncabezadoComponent = (function () {
         Component({
             selector: "app-encabezado",
             templateUrl: "./encabezado.component.html",
-            styles: ["\n                li { cursor: pointer; cursor: hand; }\n                            #left{float:left;display:inline-block;}\n                            #right{float:right;display:inline-block;}\n                            #center{margin:0 auto;}\n                            h5{\n                    margin:0;\n                    padding:0;\n                }\n                h6{\n                    margin:0;\n                    padding:0;\n                }\n                body{padding-top:30px;}\n                \n                    .glyphicon {  margin-bottom: 10px;margin-right: 10px;}\n                \n                small {\n                    display: block;\n                    line-height: 1.428571429;\n                \n                color: #999;\n                } "]
+            styleUrls: ['./encabezado.component.css'],
         }), 
         __metadata('design:paramtypes', [LoginService, Router, UtilService])
     ], EncabezadoComponent);

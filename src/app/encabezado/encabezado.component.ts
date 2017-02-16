@@ -7,29 +7,7 @@ import {Router} from "@angular/router";
 @Component({
     selector: "app-encabezado",
     templateUrl: "./encabezado.component.html",
-    styles: [`
-                li { cursor: pointer; cursor: hand; }
-                            #left{float:left;display:inline-block;}
-                            #right{float:right;display:inline-block;}
-                            #center{margin:0 auto;}
-                            h5{
-                    margin:0;
-                    padding:0;
-                }
-                h6{
-                    margin:0;
-                    padding:0;
-                }
-                body{padding-top:30px;}
-                
-                    .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
-                
-                small {
-                    display: block;
-                    line-height: 1.428571429;
-                
-                color: #999;
-                } `]
+    styleUrls: ['./encabezado.component.css'],
 })
 export class EncabezadoComponent {
     public isCollapsed: boolean = true;

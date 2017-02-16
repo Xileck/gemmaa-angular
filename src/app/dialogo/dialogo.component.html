@@ -6,14 +6,16 @@
                 <h4 class="modal-title">{{title}}</h4>
             </div>
             <div class="modal-body">
-                <div *ngIf="!finalizo" class="spinner">
+                <div *ngIf="!finalizo" class="spinner" style="width:100%">
                     <div class="bounce1"></div>
                     <div class="bounce2"></div>
                     <div class="bounce3"></div>
                 </div>
+                <br>
                 <i *ngIf="finalizo" class="fa fa-check fa-2x"></i>
                 <h1>{{msg}}</h1>
-                <button *ngIf="finalizo" class="btn btn-info btn-large" (click)="utilService.reiniciarDialogo();router.navigate(['principal']);">Regresar al menu
+                <button *ngIf="finalizo" class="btn btn-info btn-large"
+                        (click)="utilService.reiniciarDialogo();router.navigate(['principal']);">Regresar al menu
                     principal
                 </button>
             </div>
