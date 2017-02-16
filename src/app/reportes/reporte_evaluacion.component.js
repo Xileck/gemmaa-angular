@@ -65,7 +65,7 @@ var ReporteEvaluacionComponent = (function () {
                 Promise.resolve(_this.getPromedioTotal()).then(function (op) {
                     _this.getMejorasFortalezasPromedio(_this.fortalezas.total, _this.mejoras.total, _this.grupoSeleccionado.promedios);
                     _this.dataResultadosEsperados = {
-                        labels: _this.getNombresResultadosEsperados(),
+                        labels: _this.getNombresResultadosEsperadosAbreviado(),
                         datasets: [
                             {
                                 label: 'Promedio',
@@ -130,7 +130,7 @@ var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.dataAtributos = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Promedio',
@@ -195,7 +195,7 @@ var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.evaluador = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Evaluador',
@@ -206,7 +206,7 @@ var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.par = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Par',
@@ -217,7 +217,7 @@ var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.jefe = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Jefe',
@@ -228,7 +228,7 @@ var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.cliente = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Cliente',
@@ -239,7 +239,7 @@ var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.colaborador = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Colaborador',
@@ -250,7 +250,7 @@ var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.total = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Promedio',
@@ -461,7 +461,7 @@ var ReporteEvaluacionComponent = (function () {
         }
         return promedio;
     };
-    ReporteEvaluacionComponent.prototype.getNombresResultadosEsperados = function () {
+    ReporteEvaluacionComponent.prototype.getNombresResultadosEsperadosAbreviado = function () {
         var nombres = [];
         for (var _i = 0, _a = this.grupoSeleccionado.evaluadores[0].encuesta.resultados_esperados; _i < _a.length; _i++) {
             var re = _a[_i];
@@ -469,7 +469,7 @@ var ReporteEvaluacionComponent = (function () {
         }
         return nombres;
     };
-    ReporteEvaluacionComponent.prototype.getNombresAtributos = function () {
+    ReporteEvaluacionComponent.prototype.getNombresAtributosAbreviado = function () {
         var nombres = [];
         for (var _i = 0, _a = this.grupoSeleccionado.evaluadores[0].encuesta.atributos; _i < _a.length; _i++) {
             var atr = _a[_i];

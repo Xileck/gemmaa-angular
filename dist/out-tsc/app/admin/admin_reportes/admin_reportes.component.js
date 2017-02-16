@@ -12,6 +12,7 @@ import { Router } from "@angular/router";
 import { UtilService } from "../../servicios/util.service";
 import { LoginService } from "../../login/login.service";
 import { ReportesService } from "../../servicios/reportes.service";
+import { environment } from "../../../environments/environment";
 export var AdminReportesComponent = (function () {
     function AdminReportesComponent(loginService, router, reportesService, utilService) {
         this.loginService = loginService;
@@ -20,8 +21,9 @@ export var AdminReportesComponent = (function () {
         this.utilService = utilService;
         this.gruposEvaluacion = null;
         this.buscando = false;
-        //if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
-        // this.router.navigate(['login']);
+        if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
+            this.router.navigate(['login']);
+        this.modoDios = environment.modoDios;
     }
     AdminReportesComponent.prototype.buscarEvaluaciones = function () {
         var _this = this;

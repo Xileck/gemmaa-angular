@@ -18,6 +18,7 @@ export var LoginService = (function () {
         this.router = router;
         this.utilService = utilService;
         this.seguridadService = seguridadService;
+        this.extencion = "numero_extension_de_IS";
         //noinspection TypeScriptUnresolvedVariable
         this.mensajesGlobales = [];
     }
@@ -54,7 +55,7 @@ export var LoginService = (function () {
                     _this.mensajesGlobales.push({
                         severity: 'error',
                         summary: 'Error:',
-                        detail: 'Usuario no encontrado en la lista de usuarios de GEMMAA.'
+                        detail: 'Usuario no encontrado en la lista de usuarios de ' + environment.nombreProyecto + ".\n Ext: " + _this.extencion + " para mayores informes."
                     });
                 }
             });

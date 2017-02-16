@@ -1,47 +1,57 @@
-<br><br><br><br>
-<div class="container">
-    <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
-        <li>
-            <a routerLink="/asignar_encuestas" data-toggle="tab">
-                <div class="alt-tabs-icon">
-                    <i class="icon-scope"></i>
-                </div>
-                Asignar Encuestas
-            </a>
-        </li>
-        <li (click)="display = true">
-            <a data-toggle="tab">
-                <div class="alt-tabs-icon">
-                    <i class="icon-documents"></i>
-                </div>
-                Administrar Encuestas
-            </a>
-        </li>
-        <li (click)="cargarAdminUsuarios()">
-            <a ata-toggle="tab">
-                <div class="alt-tabs-icon">
-                    <span class="icon-profile-male"></span>
-                </div>
-                Administrar Usuarios
-            </a>
-        </li>
-        <li>
-            <a routerLink="/admin_reportes" data-toggle="tab">
-                <div class="alt-tabs-icon">
-                    <span class="icon-book-open"></span>
-                </div>
-                Administrar reportes
-            </a>
-        </li>
-        <!--  <li>
-              <a routerLink="/bitacora" data-toggle="tab">
-                  <div class="alt-tabs-icon">
-                      <span class="icon-book-open"></span>
-                  </div>
-                  BitacoraComponent
-              </a>
-          </li>-->
-    </ul>
+<br><br>
+<div class="ui-grid ui-grid-responsive ui-grid-pad">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-3">
+            <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
+                <li>
+                    <a routerLink="/asignar_encuestas" data-toggle="tab">
+                        <div class="alt-tabs-icon">
+                            <i class="icon-scope"></i>
+                        </div>
+                        Asignar Encuestas
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-grid-col-3">
+            <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
+                <li (click)="display = true">
+                    <a data-toggle="tab">
+                        <div class="alt-tabs-icon">
+                            <i class="icon-documents"></i>
+                        </div>
+                        Administrar Encuestas
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="ui-grid-col-3">
+            <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
+                <li (click)="cargarAdminUsuarios()">
+                    <a ata-toggle="tab">
+                        <div class="alt-tabs-icon">
+                            <span class="icon-profile-male"></span>
+                        </div>
+                        Administrar Usuarios
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="ui-grid-col-3">
+            <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-30 pt-sm-0 pb-30 pb-sm-0">
+                <li>
+                    <a routerLink="/admin_reportes" data-toggle="tab">
+                        <div class="alt-tabs-icon">
+                            <span class="icon-book-open"></span>
+                        </div>
+                        Administrar reportes
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <p-dialog header="Catalogo Encuestas" [(visible)]="display">

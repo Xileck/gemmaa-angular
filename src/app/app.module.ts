@@ -54,6 +54,8 @@ import {ReporteEvaluacionComponent} from "./reportes/reporte_evaluacion.componen
 import {EvaluadoresComponent} from "./reportes/evaluadores.component";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {AdminReportesComponent} from "./admin/admin_reportes/admin_reportes.component";
+import { NavegadorComponent } from './not-found/not-found';
+import {NavbarModule} from "./navbar/navbar.module";
 
 @NgModule({
     declarations: [
@@ -77,7 +79,8 @@ import {AdminReportesComponent} from "./admin/admin_reportes/admin_reportes.comp
         FortalezasMejorasComponent,
         ReporteEvaluacionComponent,
         EvaluadoresComponent,
-        AdminReportesComponent
+        AdminReportesComponent,
+        NavegadorComponent
     ],
     imports: [
         BrowserModule,
@@ -107,7 +110,8 @@ import {AdminReportesComponent} from "./admin/admin_reportes/admin_reportes.comp
         ProgressBarModule,
         TooltipModule,
         InputTextModule,
-        GrowlModule
+        GrowlModule,
+        NavbarModule
     ],
     providers: [
         LoginService,

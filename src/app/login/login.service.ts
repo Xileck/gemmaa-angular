@@ -9,6 +9,7 @@ import {environment} from "../../environments/environment";
 @Injectable()
 export class LoginService {
     usuario: Usuario;
+    extencion: string = "numero_extension_de_IS";
 
     constructor(public router: Router,
                 private utilService: UtilService,
@@ -54,7 +55,7 @@ export class LoginService {
                         this.mensajesGlobales.push({
                             severity: 'error',
                             summary: 'Error:',
-                            detail: 'Usuario no encontrado en la lista de usuarios de GEMMAA.'
+                            detail: 'Usuario no encontrado en la lista de usuarios de ' + environment.nombreProyecto + ".\n Ext: " + this.extencion + " para mayores informes."
                         });
                     }
                 })

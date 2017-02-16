@@ -34,7 +34,8 @@ export class ReporteEvaluacionComponent {
     optionsRadarRE: any;
     optionsRadarATR: any;
     optionsBarGraphs: any;
-
+    nombresRE: string[];
+    nombresATR: string[];
 
     constructor(private reportesService: ReportesService,
                 private router: Router,
@@ -53,6 +54,7 @@ export class ReporteEvaluacionComponent {
     }
 
     cargarEvaluacion(id_eval: number): void {
+
         Promise.resolve(this.reportesService.getGrupoEvaluacion(id_eval))
             .then(resultadoPromesa => {
                 this.grupoSeleccionado = resultadoPromesa;
@@ -69,11 +71,13 @@ export class ReporteEvaluacionComponent {
                             else if (cre.respuesta == 'D')
                                 cre.promedio = cre.escala_d;
                         }
+                        this.nombresATR = this.getNombresAtributos();
+                        this.nombresRE = this.getNombresResultadosEsperados();
                     }
                     Promise.resolve(this.getPromedioTotal()).then(op => {
                             this.getMejorasFortalezasPromedio(this.fortalezas.total, this.mejoras.total, this.grupoSeleccionado.promedios);
                             this.dataResultadosEsperados = {
-                                labels: this.getNombresResultadosEsperados(),
+                                labels: this.getNombresResultadosEsperadosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Promedio',
@@ -141,7 +145,7 @@ export class ReporteEvaluacionComponent {
                                 ]
                             };
                             this.dataAtributos = {
-                                labels: this.getNombresAtributos(),
+                                labels: this.getNombresAtributosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Promedio',
@@ -207,7 +211,7 @@ export class ReporteEvaluacionComponent {
                                 ]
                             };
                             this.promediosData.evaluador = {
-                                labels: this.getNombresAtributos(),
+                                labels: this.getNombresAtributosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Evaluador',
@@ -218,7 +222,7 @@ export class ReporteEvaluacionComponent {
                                 ]
                             };
                             this.promediosData.par = {
-                                labels: this.getNombresAtributos(),
+                                labels: this.getNombresAtributosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Par',
@@ -229,7 +233,7 @@ export class ReporteEvaluacionComponent {
                                 ]
                             };
                             this.promediosData.jefe = {
-                                labels: this.getNombresAtributos(),
+                                labels: this.getNombresAtributosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Jefe',
@@ -240,7 +244,7 @@ export class ReporteEvaluacionComponent {
                                 ]
                             };
                             this.promediosData.cliente = {
-                                labels: this.getNombresAtributos(),
+                                labels: this.getNombresAtributosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Cliente',
@@ -251,7 +255,7 @@ export class ReporteEvaluacionComponent {
                                 ]
                             };
                             this.promediosData.colaborador = {
-                                labels: this.getNombresAtributos(),
+                                labels: this.getNombresAtributosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Colaborador',
@@ -262,7 +266,7 @@ export class ReporteEvaluacionComponent {
                                 ]
                             };
                             this.promediosData.total = {
-                                labels: this.getNombresAtributos(),
+                                labels: this.getNombresAtributosAbreviado(),
                                 datasets: [
                                     {
                                         label: 'Promedio',
@@ -284,6 +288,7 @@ export class ReporteEvaluacionComponent {
                         fontSize: 16
                     },
                     legend: {
+                        display: true,
                         position: 'bottom'
                     },
                     scale: {
@@ -473,18 +478,34 @@ export class ReporteEvaluacionComponent {
         return promedio;
     }
 
-    getNombresResultadosEsperados(): string [] {
+    getNombresResultadosEsperadosAbreviado(): string [] {
         let nombres: string[] = [];
         for (let re of this.grupoSeleccionado.evaluadores[0].encuesta.resultados_esperados) {
-            nombres.push(re.descripcion);
+            nombres.push(re.idResultadoEsperado + ". " + re.descripcion.split(" ")[0]);
         }
         return nombres;
     }
 
-    getNombresAtributos() {
-        let nombres: any = [];
+    getNombresAtributosAbreviado(): string [] {
+        let nombres: string [] = [];
         for (let atr of this.grupoSeleccionado.evaluadores[0].encuesta.atributos) {
-            nombres.push(atr.nombre);
+            nombres.push(atr.idAtributo + ". " + atr.nombre.split(" ")[0]);
+        }
+        return nombres;
+    }
+
+    getNombresResultadosEsperados(): string [] {
+        let nombres: string[] = [];
+        for (let re of this.grupoSeleccionado.evaluadores[0].encuesta.resultados_esperados) {
+            nombres.push(re.idResultadoEsperado + ". " + re.descripcion);
+        }
+        return nombres;
+    }
+
+    getNombresAtributos(): string [] {
+        let nombres: string [] = [];
+        for (let atr of this.grupoSeleccionado.evaluadores[0].encuesta.atributos) {
+            nombres.push(atr.idAtributo + ". " + atr.nombre);
         }
         return nombres;
     }

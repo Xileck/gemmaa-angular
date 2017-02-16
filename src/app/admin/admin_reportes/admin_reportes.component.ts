@@ -1,16 +1,10 @@
-import {Component, ViewChild, OnChanges, Input} from "@angular/core";
-import {SelectItem, ConfirmationService, Message} from "primeng/components/common/api";
+import {Component} from "@angular/core";
 import {Router} from "@angular/router";
-import {Empleado} from "../../clases/Usuario/Empleado";
-import {Usuario} from "../../clases/Usuario/Usuario";
 import {UtilService} from "../../servicios/util.service";
 import {LoginService} from "../../login/login.service";
-import {SeguridadService} from "../../servicios/seguridad.service";
-import {AdminService} from "../../servicios/administracion.service";
-import {OverlayPanel} from "primeng/components/overlaypanel/overlaypanel";
-import {environment} from "../../../environments/environment";
 import {ReportesService} from "../../servicios/reportes.service";
 import {GrupoEvaluacion} from "../../clases/Reportes/GrupoEvaluacion";
+import {environment} from "../../../environments/environment";
 
 @Component({
     selector: "app-admin-reportes",
@@ -19,7 +13,7 @@ import {GrupoEvaluacion} from "../../clases/Reportes/GrupoEvaluacion";
     providers: [ReportesService, UtilService]
 })
 export class AdminReportesComponent {
-
+    modoDios;
     gruposEvaluacion: GrupoEvaluacion[] = null;
     busquedaInput: string;
     grupoSeleccionado: GrupoEvaluacion;
@@ -29,8 +23,9 @@ export class AdminReportesComponent {
                 private router: Router,
                 private reportesService: ReportesService,
                 private utilService: UtilService) {
-        //if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
-        // this.router.navigate(['login']);
+        if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
+            this.router.navigate(['login']);
+        this.modoDios = environment.modoDios;
     }
 
     buscarEvaluaciones() {

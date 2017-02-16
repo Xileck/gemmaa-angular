@@ -21,6 +21,7 @@ import { ContestarEncuestaComponent } from "./encuestas/contestar_encuesta.compo
 import { ReportesComponent } from "./reportes/reportes_menu.component";
 import { ReporteEvaluacionComponent } from "./reportes/reporte_evaluacion.component";
 import { AdminReportesComponent } from "./admin/admin_reportes/admin_reportes.component";
+import { NavegadorComponent } from "./not-found/not-found";
 var routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'principal', component: PrincipalComponent },
@@ -34,7 +35,8 @@ var routes = [
     { path: 'bitacora', component: BitacoraComponent },
     { path: 'admin_usuarios', component: AdminUsuariosComponent },
     { path: 'admin_reportes', component: AdminReportesComponent },
-    { path: 'reporte_evaluacion/:id', component: ReporteEvaluacionComponent }
+    { path: 'reporte_evaluacion/:id', component: ReporteEvaluacionComponent },
+    { path: '**', component: NavegadorComponent }
 ];
 export var AppRoutingModule = (function () {
     function AppRoutingModule() {

@@ -24,7 +24,7 @@ export var MenuAdminComponent = (function () {
             finalizo: false,
             display: false,
             msg: 'Espera un momento',
-            title: 'Cargando panel de administracion de usuarios',
+            title: 'Cargando panel de administración de usuarios',
             timer: null,
             tipo: 'info'
         };
@@ -37,7 +37,7 @@ export var MenuAdminComponent = (function () {
     };
     MenuAdminComponent.prototype.cargarAdminUsuarios = function () {
         var _this = this;
-        this.utilService.displayDialogo('Cargando panel de administracion de usuarios', 'info');
+        this.utilService.displayDialogo('Cargando panel de administración de usuarios', 'info');
         setTimeout(function () {
             _this.utilService.reiniciarDialogo();
             _this.router.navigate(['/admin_usuarios']);

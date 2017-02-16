@@ -60,11 +60,13 @@ export var ReporteEvaluacionComponent = (function () {
                         else if (cre.respuesta == 'D')
                             cre.promedio = cre.escala_d;
                     }
+                    _this.nombresATR = _this.getNombresAtributos();
+                    _this.nombresRE = _this.getNombresResultadosEsperados();
                 }
                 Promise.resolve(_this.getPromedioTotal()).then(function (op) {
                     _this.getMejorasFortalezasPromedio(_this.fortalezas.total, _this.mejoras.total, _this.grupoSeleccionado.promedios);
                     _this.dataResultadosEsperados = {
-                        labels: _this.getNombresResultadosEsperados(),
+                        labels: _this.getNombresResultadosEsperadosAbreviado(),
                         datasets: [
                             {
                                 label: 'Promedio',
@@ -129,7 +131,7 @@ export var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.dataAtributos = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Promedio',
@@ -194,7 +196,7 @@ export var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.evaluador = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Evaluador',
@@ -205,7 +207,7 @@ export var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.par = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Par',
@@ -216,7 +218,7 @@ export var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.jefe = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Jefe',
@@ -227,7 +229,7 @@ export var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.cliente = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Cliente',
@@ -238,7 +240,7 @@ export var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.colaborador = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Colaborador',
@@ -249,7 +251,7 @@ export var ReporteEvaluacionComponent = (function () {
                         ]
                     };
                     _this.promediosData.total = {
-                        labels: _this.getNombresAtributos(),
+                        labels: _this.getNombresAtributosAbreviado(),
                         datasets: [
                             {
                                 label: 'Promedio',
@@ -270,6 +272,7 @@ export var ReporteEvaluacionComponent = (function () {
                     fontSize: 16
                 },
                 legend: {
+                    display: true,
                     position: 'bottom'
                 },
                 scale: {
@@ -461,11 +464,27 @@ export var ReporteEvaluacionComponent = (function () {
         }
         return promedio;
     };
+    ReporteEvaluacionComponent.prototype.getNombresResultadosEsperadosAbreviado = function () {
+        var nombres = [];
+        for (var _i = 0, _a = this.grupoSeleccionado.evaluadores[0].encuesta.resultados_esperados; _i < _a.length; _i++) {
+            var re = _a[_i];
+            nombres.push(re.idResultadoEsperado + ". " + re.descripcion.split(" ")[0]);
+        }
+        return nombres;
+    };
+    ReporteEvaluacionComponent.prototype.getNombresAtributosAbreviado = function () {
+        var nombres = [];
+        for (var _i = 0, _a = this.grupoSeleccionado.evaluadores[0].encuesta.atributos; _i < _a.length; _i++) {
+            var atr = _a[_i];
+            nombres.push(atr.idAtributo + ". " + atr.nombre.split(" ")[0]);
+        }
+        return nombres;
+    };
     ReporteEvaluacionComponent.prototype.getNombresResultadosEsperados = function () {
         var nombres = [];
         for (var _i = 0, _a = this.grupoSeleccionado.evaluadores[0].encuesta.resultados_esperados; _i < _a.length; _i++) {
             var re = _a[_i];
-            nombres.push(re.descripcion);
+            nombres.push(re.idResultadoEsperado + ". " + re.descripcion);
         }
         return nombres;
     };
@@ -473,7 +492,7 @@ export var ReporteEvaluacionComponent = (function () {
         var nombres = [];
         for (var _i = 0, _a = this.grupoSeleccionado.evaluadores[0].encuesta.atributos; _i < _a.length; _i++) {
             var atr = _a[_i];
-            nombres.push(atr.nombre);
+            nombres.push(atr.idAtributo + ". " + atr.nombre);
         }
         return nombres;
     };

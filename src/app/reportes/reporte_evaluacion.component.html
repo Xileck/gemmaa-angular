@@ -144,16 +144,33 @@
                 <p (click)="test($event);" class="instrucciones">A continuación se muestran las graficas
                     representando el promedio de las
                     encuestas realizadas por cara rol, y categorizadas por atributos y resultados esperados:</p>
-                <div style="max-width: 50%; border: solid .5px;border-color: #0b0b0b; margin: auto;"
-                     *ngIf="dataResultadosEsperados">
-                    <p-chart type="radar" [data]="dataResultadosEsperados" [options]="optionsRadarRE"></p-chart>
+                <div class="ui-grid-row" style="min-width:300px">
+                    <div class="ui-grid-col-6">
+                        <div style=" border: solid .5px;border-color: #0b0b0b; margin: auto;"
+                             *ngIf="dataResultadosEsperados">
+                            <p-chart type="radar" [data]="dataResultadosEsperados" [options]="optionsRadarRE"></p-chart>
+                        </div>
+                        <div style="border: solid .5px;border-color: #0b0b0b; margin: auto;"
+                             *ngIf="dataResultadosEsperados">
+                            <ul *ngIf="nombresRE">
+                                <li *ngFor="let nombre of nombresRE">{{nombre}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ui-grid-col-6">
+                        <div *ngIf="dataAtributos"
+                             style="border: solid .5px;border-color: #0b0b0b; scale(.7);">
+                            <p-chart style="overflow: scroll;" type="radar" [data]="dataAtributos"
+                                     [options]="optionsRadarATR"></p-chart>
+                        </div>
+                        <div style="border: solid .5px;border-color: #0b0b0b; margin: auto;"
+                             *ngIf="dataResultadosEsperados">
+                            <ul *ngIf="nombresATR">
+                                <li *ngFor="let nombre of nombresATR">{{nombre}}</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
-                <div *ngIf="dataAtributos" style=" border: solid .5px;border-color: #0b0b0b; scale(.7);">
-                    <p-chart style="overflow: scroll;" type="radar" [data]="dataAtributos"
-                             [options]="optionsRadarATR"></p-chart>
-                </div>
-
 
                 <h4>Fortalezas y mejoras:</h4>
                 <p class="instrucciones">A continuación se muestran las fortalezas y mejoras que se

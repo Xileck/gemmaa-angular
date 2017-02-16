@@ -3155,7 +3155,8 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
     }
 
     .navbar-collapse.in {
-        overflow-y: visible
+        overflow-y: visible;
+        background: red;
     }
 
     .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {

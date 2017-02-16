@@ -44,12 +44,18 @@
                           [style]="{'width':'10%','text-align':'center', 'min-width':'100px'}">
                     <template let-usuario="rowData" pTemplate="body">
                         <div class="ui-grid-row">
-                            <div class="ui-grid-row showhim">
+                            <div class="ui-grid-row showhim" *ngIf="modoDios">
                                 <div class="ui-grid-col-12 showme">{{usuario.passwordIntra != null ?
                                     usuario.passwordIntra :
                                     usuario.passwordUsuariosRol}}
                                 </div>
                                 <div class="ui-grid-col-12 ok">*******</div>
+                            </div>
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-12 ">{{usuario.passwordIntra != null ?
+                                    "Intranet" :
+                                    "Usuariosrol"}}
+                                </div>
                             </div>
                         </div>
                     </template>

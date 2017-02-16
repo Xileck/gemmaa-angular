@@ -1,7 +1,13 @@
-<header>
-    <app-encabezado></app-encabezado>
-</header>
-<article>
-    <router-outlet></router-outlet>
-</article>
-
+<div *ngIf="compatible">
+    <header>
+        <app-encabezado></app-encabezado>
+    </header>
+    <article>
+        <router-outlet></router-outlet>
+    </article>
+</div>
+<div *ngIf="!compatible">
+    <h1 class="hs-line-13 font-alt mb-50 mb-xs-30">
+        Navegador no compatible.
+    </h1>
+</div>

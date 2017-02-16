@@ -47,7 +47,8 @@
 
 .modal-dialog {
     padding: 15px 0px 15px 0px;
-    magring: 30px 0px 30px 0px;
+    margin: auto;
+    top: 50%;
 }
 
 /* Modal Header */
@@ -62,13 +63,16 @@
     margin-top: auto;
     margin-left: auto;
     position: absolute;
-    left: 25%;
-    width: 50%;
+    width: 100%;
+    vertical-align: middle;
+    min-width: 250px;
+
 }
 
 /* Modal Body */
 .modal-body {
     padding: 2px 16px;
+
 }
 
 /* Modal Footer */

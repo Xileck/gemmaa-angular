@@ -19,7 +19,7 @@ export class MenuAdminComponent {
         finalizo: false,
         display: false,
         msg: 'Espera un momento',
-        title: 'Cargando panel de administracion de usuarios',
+        title: 'Cargando panel de administración de usuarios',
         timer: null,
         tipo: 'info'
     }
@@ -36,7 +36,7 @@ export class MenuAdminComponent {
     }
 
     cargarAdminUsuarios() {
-        this.utilService.displayDialogo('Cargando panel de administracion de usuarios', 'info');
+        this.utilService.displayDialogo('Cargando panel de administración de usuarios', 'info');
         setTimeout(() => {
             this.utilService.reiniciarDialogo();
             this.router.navigate(['/admin_usuarios']);
