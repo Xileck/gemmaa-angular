@@ -12,9 +12,6 @@ import { ReportesService } from "../servicios/reportes.service";
 import { WindowRef } from "../servicios/WindowRef";
 import { ActivatedRoute, Router } from "@angular/router";
 import { LoginService } from "../login/login.service";
-//TODO:
-//- Agregar promedios de mejoras y fortalezas.
-//-
 export var ReporteEvaluacionComponent = (function () {
     function ReporteEvaluacionComponent(reportesService, router, winRef, route, loginService) {
         var _this = this;

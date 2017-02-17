@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, OnInit} from "@angular/core";
+import {Component, ViewEncapsulation} from "@angular/core";
 import {ReportesService} from "../servicios/reportes.service";
 import {GrupoEvaluacion} from "../clases/Reportes/GrupoEvaluacion";
 import {WindowRef} from "../servicios/WindowRef";
@@ -8,9 +8,6 @@ import {Promedios} from "../clases/Reportes/Promedios";
 import {Params, ActivatedRoute, Router} from "@angular/router";
 import {LoginService} from "../login/login.service";
 
-//TODO:
-//- Agregar promedios de mejoras y fortalezas.
-//-
 
 @Component({
     selector: "app-prueba",

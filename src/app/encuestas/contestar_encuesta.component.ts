@@ -1,3 +1,6 @@
+/**
+ * Created by Jaime Carballo Diaz on 20/12/2016.
+ */
 import {Component, OnInit, ViewEncapsulation} from "@angular/core";
 import {Router} from "@angular/router";
 import {MenuItem} from "primeng/components/common/api";
@@ -7,16 +10,17 @@ import {UtilService} from "../servicios/util.service";
 import {DatosEvaluacion} from "../clases/DatosEvaluacion";
 import {Encuesta} from "../clases/Encuesta/encuesta";
 import {environment} from "../../environments/environment";
+import {EncuestaService} from "../servicios/encuesta.service";
 
 @Component({
-    selector: "app-prueba",
+    selector: "app-contestar-encuesta",
     templateUrl: "./contestar_encuesta.component.html",
     styleUrls: ['./contestar_encuesta.component.css'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    providers: [EncuestaService]
 })
 export class ContestarEncuestaComponent implements OnInit {
     environment = environment;
-    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
     encuesta: Encuesta;
     private items: MenuItem[];
     activeIndex: number = 0;
@@ -24,16 +28,16 @@ export class ContestarEncuestaComponent implements OnInit {
     aceptoInstrucciones: boolean = false;
     currentTime = new Date();
     blockedDocument: boolean = false;
-
+    servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
     constructor(private router: Router, private loginService: LoginService,
-                public evaluacionService: EvaluacionService, private  utilService: UtilService) {
+                public evaluacionService: EvaluacionService, private  utilService: UtilService, private encuestaService: EncuestaService) {
         if (!loginService.usuarioValidado())
             this.router.navigate(['principal']);
     }
 
     ngOnInit() {
         if (this.evaluacionService.evaluacion != null)
-            this.encuesta = this.servicioEncuesta.getEncuesta(this.evaluacionService.evaluacion.encuestaId);
+            this.encuesta = this.encuestaService.getEncuesta(this.evaluacionService.evaluacion.encuestaId);
         else
             this.router.navigate(['login']);
         this.items = [];
@@ -122,6 +126,7 @@ export class ContestarEncuestaComponent implements OnInit {
                 setTimeout(() => {
                     Promise.resolve(this.evaluacionService.evaluadorFinalizoEncuesta(this.evaluacionService.evaluacion.id_evaluador))
                         .then(evaluacionFinalizada => {
+                            this.evaluacionService.checarSiGrupoEvaluacionTermino(this.evaluacionService.evaluacion.id_evaluacion);
                             if (evaluacionFinalizada == false) {
                                 this.servicioEncuesta.guardarEncuestaContestada(this.encuesta.listaCRE, this.evaluacionSeleccionada.id_evaluador);
                                 this.utilService.mensajeExitoDialogo('Evaluacion guardada.')
@@ -139,6 +144,3 @@ export class ContestarEncuestaComponent implements OnInit {
         }
     }
 }
-/**
- * Created by Jaime Carballo Diaz on 20/12/2016.
- */

@@ -13,9 +13,7 @@ var reportes_service_1 = require("../servicios/reportes.service");
 var WindowRef_1 = require("../servicios/WindowRef");
 var router_1 = require("@angular/router");
 var login_service_1 = require("../login/login.service");
-//TODO:
-//- Agregar promedios de mejoras y fortalezas.
-//-
+
 var ReporteEvaluacionComponent = (function () {
     function ReporteEvaluacionComponent(reportesService, router, winRef, route, loginService) {
         var _this = this;

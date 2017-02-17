@@ -8,11 +8,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Injectable } from '@angular/core';
-import { UtilService } from "./util.service";
 import { environment } from "../../environments/environment";
 export var EncuestaService = (function () {
-    function EncuestaService(utilService) {
-        this.utilService = utilService;
+    function EncuestaService() {
         this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
     }
     EncuestaService.prototype.getEncuesta = function (idEncuesta) {
@@ -24,9 +22,12 @@ export var EncuestaService = (function () {
     EncuestaService.prototype.insertarPonderados = function (ponderado) {
         this.servicioEncuesta.insertarPonderados(ponderado);
     };
+    EncuestaService.prototype.guardarEncuestaContestada = function (listaCRE, idEvaluador) {
+        this.guardarEncuestaContestada(listaCRE, idEvaluador);
+    };
     EncuestaService = __decorate([
         Injectable(), 
-        __metadata('design:paramtypes', [UtilService])
+        __metadata('design:paramtypes', [])
     ], EncuestaService);
     return EncuestaService;
 }());

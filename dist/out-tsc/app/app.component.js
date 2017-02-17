@@ -34,17 +34,20 @@ export var AppComponent = (function () {
         var msie = ua.indexOf('MSIE ');
         if (msie > 0) {
             // IE 10 or older => return version number
+            this.versionIE = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
             return "Explorer " + parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
         }
         var trident = ua.indexOf('Trident/');
         if (trident > 0) {
             // IE 11 => return version number
             var rv = ua.indexOf('rv:');
+            this.versionIE = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
             return "Explorer " + parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
         }
         var edge = ua.indexOf('Edge/');
         if (edge > 0) {
             // Edge (IE 12+) => return version number
+            this.versionIE = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
             return false;
         }
         // other browser

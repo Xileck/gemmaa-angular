@@ -11,7 +11,7 @@ export class EncuestaService {
 
     servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
 
-    constructor(private utilService: UtilService) {
+    constructor() {
 
     }
 
@@ -23,8 +23,12 @@ export class EncuestaService {
         return this.servicioEncuesta.getListaPonderados();
     }
 
-    insertarPonderados(ponderado) {
+    insertarPonderados(ponderado): void {
         this.servicioEncuesta.insertarPonderados(ponderado);
+    }
+
+    guardarEncuestaContestada(listaCRE, idEvaluador): void {
+        this.guardarEncuestaContestada(listaCRE, idEvaluador)
     }
 
 }

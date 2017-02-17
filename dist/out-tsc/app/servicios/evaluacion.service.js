@@ -20,6 +20,9 @@ export var EvaluacionService = (function () {
     EvaluacionService.prototype.evaluadorFinalizoEncuesta = function (id_evaluador) {
         return this.servicioEvaluacion.evaluacionFinalizada(id_evaluador);
     };
+    EvaluacionService.prototype.checarSiGrupoEvaluacionTermino = function (id_evaluacion) {
+        return this.servicioEvaluacion.checarSiGrupoEvaluacionTermino(id_evaluacion);
+    };
     EvaluacionService = __decorate([
         Injectable(), 
         __metadata('design:paramtypes', [UtilService])

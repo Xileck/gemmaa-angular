@@ -93,11 +93,11 @@ legend {
     filter: alpha(opacity=50);
     opacity: 1;
 }
-
 .spinner {
     margin: 10px auto 0;
     width: 70px;
     text-align: center;
+    position: static;
 }
 
 .spinner > div {

@@ -64,6 +64,7 @@ import { EvaluadoresComponent } from "./reportes/evaluadores.component";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { AdminReportesComponent } from "./admin/admin_reportes/admin_reportes.component";
 import { NavbarModule } from "./navbar/navbar.module";
+import { WrongBrowserComponent } from './wrong-browser/wrong-browser.component';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -90,7 +91,8 @@ export var AppModule = (function () {
                 FortalezasMejorasComponent,
                 ReporteEvaluacionComponent,
                 EvaluadoresComponent,
-                AdminReportesComponent
+                AdminReportesComponent,
+                WrongBrowserComponent
             ],
             imports: [
                 BrowserModule,

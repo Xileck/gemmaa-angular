@@ -14,8 +14,12 @@ export class EvaluacionService {
     constructor(private utilService: UtilService) {
     }
 
-    evaluadorFinalizoEncuesta(id_evaluador) : boolean{
+    evaluadorFinalizoEncuesta(id_evaluador): boolean {
         return this.servicioEvaluacion.evaluacionFinalizada(id_evaluador);
+    }
+
+    checarSiGrupoEvaluacionTermino(id_evaluacion: number): boolean {
+        return this.servicioEvaluacion.checarSiGrupoEvaluacionTermino(id_evaluacion);
     }
 
 }

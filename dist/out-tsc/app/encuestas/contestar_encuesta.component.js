@@ -14,25 +14,27 @@ import { EvaluacionService } from "../servicios/evaluacion.service";
 import { UtilService } from "../servicios/util.service";
 import { DatosEvaluacion } from "../clases/DatosEvaluacion";
 import { environment } from "../../environments/environment";
+import { EncuestaService } from "../servicios/encuesta.service";
 export var ContestarEncuestaComponent = (function () {
-    function ContestarEncuestaComponent(router, loginService, evaluacionService, utilService) {
+    function ContestarEncuestaComponent(router, loginService, evaluacionService, utilService, encuestaService) {
         this.router = router;
         this.loginService = loginService;
         this.evaluacionService = evaluacionService;
         this.utilService = utilService;
+        this.encuestaService = encuestaService;
         this.environment = environment;
-        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
         this.activeIndex = 0;
         this.evaluacionSeleccionada = new DatosEvaluacion();
         this.aceptoInstrucciones = false;
         this.currentTime = new Date();
         this.blockedDocument = false;
+        this.servicioEncuesta = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
         if (!loginService.usuarioValidado())
             this.router.navigate(['principal']);
     }
     ContestarEncuestaComponent.prototype.ngOnInit = function () {
         if (this.evaluacionService.evaluacion != null)
-            this.encuesta = this.servicioEncuesta.getEncuesta(this.evaluacionService.evaluacion.encuestaId);
+            this.encuesta = this.encuestaService.getEncuesta(this.evaluacionService.evaluacion.encuestaId);
         else
             this.router.navigate(['login']);
         this.items = [];
@@ -122,6 +124,7 @@ export var ContestarEncuestaComponent = (function () {
                 setTimeout(function () {
                     Promise.resolve(_this.evaluacionService.evaluadorFinalizoEncuesta(_this.evaluacionService.evaluacion.id_evaluador))
                         .then(function (evaluacionFinalizada) {
+                        _this.evaluacionService.checarSiGrupoEvaluacionTermino(_this.evaluacionService.evaluacion.id_evaluacion);
                         if (evaluacionFinalizada == false) {
                             _this.servicioEncuesta.guardarEncuestaContestada(_this.encuesta.listaCRE, _this.evaluacionSeleccionada.id_evaluador);
                             _this.utilService.mensajeExitoDialogo('Evaluacion guardada.');
@@ -139,16 +142,14 @@ export var ContestarEncuestaComponent = (function () {
     };
     ContestarEncuestaComponent = __decorate([
         Component({
-            selector: "app-prueba",
+            selector: "app-contestar-encuesta",
             templateUrl: "./contestar_encuesta.component.html",
             styleUrls: ['./contestar_encuesta.component.css'],
-            encapsulation: ViewEncapsulation.None
+            encapsulation: ViewEncapsulation.None,
+            providers: [EncuestaService]
         }), 
-        __metadata('design:paramtypes', [Router, LoginService, EvaluacionService, UtilService])
+        __metadata('design:paramtypes', [Router, LoginService, EvaluacionService, UtilService, EncuestaService])
     ], ContestarEncuestaComponent);
     return ContestarEncuestaComponent;
 }());
-/**
- * Created by Jaime Carballo Diaz on 20/12/2016.
- */
 //# sourceMappingURL=C:/GEMMAA/GEMMAA_CLI/src/app/encuestas/contestar_encuesta.component.js.map
