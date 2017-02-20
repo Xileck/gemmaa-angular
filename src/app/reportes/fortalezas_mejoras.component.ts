@@ -26,10 +26,11 @@ export class FortalezasMejorasComponent implements OnInit {
         if (this.evaluador != null) {
             this.getMejorasFortalezasEvaluador(this.evaluador);
             this.encuesta = this.evaluador.encuesta;
+            if (this.titulo == null) {
+                this.titulo = "Fortalezas y mejoras del rol " + this.evaluador.tipo_de_evaluador.toLowerCase() + "";
+            }
         }
-        if (this.titulo == null) {
-            this.titulo = "Fortalezas y mejoras del rol " + this.evaluador.tipo_de_evaluador.toLowerCase() + "";
-        }
+
         this.eleccion = "resultados_esperados";
     }
 

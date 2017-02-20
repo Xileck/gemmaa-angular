@@ -30,6 +30,9 @@ export var ReportesService = (function () {
     ReportesService.prototype.getGruposEvaluacionEmpleado = function (nombre_rpe) {
         return Promise.resolve(this.servicioReportes.getGruposEvaluacionEmpleado(nombre_rpe));
     };
+    ReportesService.prototype.updatePonderado = function (id_evaluacion, id_ponderado) {
+        this.servicioReportes.updatePonderado(id_evaluacion, id_ponderado);
+    };
     ReportesService = __decorate([
         Injectable(), 
         __metadata('design:paramtypes', [UtilService])

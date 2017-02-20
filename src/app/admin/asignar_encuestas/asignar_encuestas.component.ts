@@ -66,6 +66,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                             });
 
                         }
+                        this.ponderadoSeleccionado = this.listaPonderadosDropdown[1].value;
                     }
                 }
             );
@@ -85,7 +86,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                             this.listaPonderadosDropdown.push({
                                 label: "ID: " + p.idp + " | Evaluado: " + p.evaluado + " | Jefe: "
                                 + p.jefe + " | Par: " + p.par + " | Colaborador: " + p.colaborador + " | Cliente: " + p.cliente,
-                                value: '' + p
+                                value: p
                             });
                             this.ponderadoSeleccionado = p;
                         }
@@ -154,6 +155,21 @@ export class AsignarEncuestasComponent implements AfterViewInit {
         this.displayPonderadoPanel = true;
     }
 
+    ponderadoEsValido(ponderado): boolean {
+        if (ponderado.evaluado == null || (ponderado.evaluado != null && ponderado.evaluado <= 0))
+            return false;
+        else if (ponderado.par == null || (ponderado.par != null && ponderado.par <= 0))
+            return false;
+        else if ((ponderado.colaborador == null || (ponderado.colaborador != null && ponderado.colaborador <= 0))
+            && (ponderado.cliente == null || (ponderado.cliente != null && ponderado.cliente <= 0)))
+            return false;
+        else if (ponderado.jefe == null || (ponderado.jefe != null && ponderado.jefe <= 0))
+            return false;
+        else if (this.ponderadoTotal == 100)
+            return true;
+
+    }
+
     agregarPonderado() {
         if (this.ponderadoEsValido(this.nuevoPonderado)) {
             Promise.resolve(this.encuestaService.insertarPonderados(this.nuevoPonderado))
@@ -176,7 +192,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
             this.msgsBuscarPonderado.push({
                 severity: 'error',
                 summary: 'Error:',
-                detail: 'Debes poner un valor en todos los campos (solo cliente es opcional).'
+                detail: 'Debes poner un valor en todos los campos (solo cliente y colaborador es opcional).'
             });
         }
     }
@@ -211,19 +227,6 @@ export class AsignarEncuestasComponent implements AfterViewInit {
         return total;
     }
 
-    ponderadoEsValido(ponderado): boolean {
-        if (ponderado.evaluado == null || (ponderado.evaluado != null && ponderado.evaluado <= 0))
-            return false;
-        else if (ponderado.par == null || (ponderado.par != null && ponderado.par <= 0))
-            return false;
-        else if (ponderado.colaborador == null || (ponderado.colaborador != null && ponderado.colaborador <= 0))
-            return false;
-        else if (ponderado.jefe == null || (ponderado.jefe != null && ponderado.jefe <= 0))
-            return false;
-        else if (this.ponderadoTotal == 100)
-            return true;
-
-    }
 
     buscarEmpleado(referencia: any, rol: string): void {
         this.msgsBuscar = [];
@@ -413,21 +416,27 @@ export class AsignarEncuestasComponent implements AfterViewInit {
         if (this.jefe == null) {
             roles.push('Necesitas seleccionar : jefe');
         }
-        if (this.par == null) {
+        else if (this.par == null) {
             roles.push('Necesitas seleccionar : par');
         }
-        if (this.colaborador == null) {
-            roles.push('Necesitas seleccionar : colaborador');
-        }
-        if (this.evaluado == null) {
+        else if (this.evaluado == null) {
             roles.push('Necesitas seleccionar : evaluado');
         }
 
-        if (this.cliente == null && this.ponderadoSeleccionado != null && this.ponderadoSeleccionado.cliente != 0) {
-            console.log(this.ponderadoSeleccionado.cliente)
+        else if (this.colaborador == null && this.cliente == null) {
+            roles.push('Se necesitan almenos 4 evaluadores, solo colaborador y cliente son opcionales.')
+        }
+
+        else if (this.cliente == null && this.ponderadoSeleccionado != null
+            && this.ponderadoSeleccionado.cliente != 0) {
             roles.push('Si no se va a seleccionar un cliente el ponderado del cliente debe tener el valor de 0.')
         }
 
+        else if (this.colaborador == null && this.ponderadoSeleccionado != null
+            && this.ponderadoSeleccionado.colaborador != 0) {
+            roles.push('Si no se va a seleccionar un colaborador el ponderado del colaborador debe tener el valor de 0.')
+        }
+        console.log(JSON.stringify(this.ponderadoSeleccionado));
         if (roles.length == 0)
             return null;
         else if (roles.length == 1)
@@ -482,9 +491,8 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                 summary: 'Error:',
                 detail: 'El rol de ' + this.checarSiRolYaEstaAsignado(rol) + 'ya esta asignado.'
             });
-            return;
         }
-        if (rol != null && persmiso != null) {
+        else if (rol != null && persmiso != null) {
             let evaluador: AsignarEvaluador = new AsignarEvaluador(empleado.nip, "", 'F', persmiso);
             if (rol == 'JEFE') {
                 evaluador.tipo_de_evaluador = 'JEFE';
@@ -567,11 +575,13 @@ export class AsignarEncuestasComponent implements AfterViewInit {
                     if (!existe)
                         this.insertarUsuarioRol(this.jefe);
                 });
-            Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.colaborador.rpe, environment.nombreProyecto))
-                .then(existe => {
-                    if (!existe)
-                        this.insertarUsuarioRol(this.colaborador);
-                });
+            if (this.colaborador && this.colaborador.rpe) {
+                Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.colaborador.rpe, environment.nombreProyecto))
+                    .then(existe => {
+                        if (!existe)
+                            this.insertarUsuarioRol(this.colaborador);
+                    });
+            }
             if (this.cliente && this.cliente.rpe) {
                 Promise.resolve(this.seguridadService.empleadoExisteEnProyecto(this.cliente.rpe, environment.nombreProyecto))
                     .then(existe => {

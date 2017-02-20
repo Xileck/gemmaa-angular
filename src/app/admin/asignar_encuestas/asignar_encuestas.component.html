@@ -38,7 +38,7 @@
                                                 (click)="buscarEmpleado(colaborador, 'COLABORADOR')">
                                                 <app-empleado-asignado [empleado]="colaborador"
                                                                        (empleadoEliminado)="eliminarUsuario('COLABORADOR')"
-                                                                       [titulo]="'Colaborador'"></app-empleado-asignado>
+                                                                       [titulo]="'Colaborador (Opcional)'"></app-empleado-asignado>
                                             </tr>
                                             <tr style="border: solid .3px;border-color: gray;"
                                                 (click)="buscarEmpleado(cliente, 'CLIENTE')">
@@ -53,7 +53,7 @@
                                 <div class="ui-grid-col-6">
                                     <div class="ui-grid-row">
                                         <div class="ui-grid-col-12">
-                                            <p-fieldset legend="Ponderado">
+                                            <p-fieldset legend="Ponderado" *ngIf="listaPonderados">
                                                 <p-dropdown [options]="listaPonderadosDropdown"
                                                             [style]="{'width':'100%'}"
                                                             [(ngModel)]="ponderadoSeleccionado"></p-dropdown>

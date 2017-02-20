@@ -18,7 +18,7 @@
                 <li [ngClass]="{ 'active': currentPath =='/encuestas' }"><a
                         (click)="cargarEvaluaciones()">Evaluar</a></li>
                 <li [ngClass]="{ 'active': currentPath =='/reportes' }"><a
-                        routerLink="/reportes">Reportes</a></li>
+                        (click)="cargarReportes()">Reportes</a></li>
                 <li [ngClass]="{ 'active': currentPath =='/admin' }"
                     *ngIf="loginService.emplHasAccess('admin')"><a routerLink="/admin">Administracion</a></li>
                 <li><a (click)="logout()" routerLink="">Logout</a></li>

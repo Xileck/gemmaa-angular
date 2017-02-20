@@ -32,4 +32,8 @@ export class ReportesService {
     getGruposEvaluacionEmpleado(nombre_rpe: string): Promise<any> {
         return Promise.resolve(this.servicioReportes.getGruposEvaluacionEmpleado(nombre_rpe));
     }
+
+    updatePonderado(id_evaluacion: number, id_ponderado: number) {
+        this.servicioReportes.updatePonderado(id_evaluacion, id_ponderado);
+    }
 }

@@ -19,10 +19,18 @@ export class PrincipalComponent {
     }
 
     cargarEvaluaciones() {
-        this.utilService.displayDialogo('Cargando evaluaciones pendientes', 'info');
+    this.utilService.displayDialogo('Cargando evaluaciones pendientes', 'info');
+    setTimeout(() => {
+        this.utilService.reiniciarDialogo();
+        this.router.navigate(['/encuestas']);
+    }, 100);
+}
+
+    cargarReportes() {
+        this.utilService.displayDialogo('Cargando reportes', 'info');
         setTimeout(() => {
             this.utilService.reiniciarDialogo();
-            this.router.navigate(['/encuestas']);
+            this.router.navigate(['/reportes']);
         }, 100);
     }
 }

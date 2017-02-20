@@ -65,6 +65,7 @@ import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { AdminReportesComponent } from "./admin/admin_reportes/admin_reportes.component";
 import { NavbarModule } from "./navbar/navbar.module";
 import { WrongBrowserComponent } from './wrong-browser/wrong-browser.component';
+import { EditarReporteComponent } from './admin/admin_reportes/editar-reporte/editar-reporte.component';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -92,7 +93,8 @@ export var AppModule = (function () {
                 ReporteEvaluacionComponent,
                 EvaluadoresComponent,
                 AdminReportesComponent,
-                WrongBrowserComponent
+                WrongBrowserComponent,
+                EditarReporteComponent
             ],
             imports: [
                 BrowserModule,

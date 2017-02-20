@@ -27,6 +27,14 @@ export var PrincipalComponent = (function () {
             _this.router.navigate(['/encuestas']);
         }, 100);
     };
+    PrincipalComponent.prototype.cargarReportes = function () {
+        var _this = this;
+        this.utilService.displayDialogo('Cargando reportes', 'info');
+        setTimeout(function () {
+            _this.utilService.reiniciarDialogo();
+            _this.router.navigate(['/reportes']);
+        }, 100);
+    };
     PrincipalComponent = __decorate([
         Component({
             selector: 'app-principal',

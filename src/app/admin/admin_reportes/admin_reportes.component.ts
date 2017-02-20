@@ -28,6 +28,8 @@ export class AdminReportesComponent {
         this.modoDios = environment.modoDios;
     }
 
+    mostrarDialogo: boolean;
+
     buscarEvaluaciones() {
         this.buscando = true;
         document.body.style.cursor = 'wait';
@@ -42,6 +44,14 @@ export class AdminReportesComponent {
                 document.body.style.cursor = 'auto';
             }), 100
         });
+    }
+
+    cargarReporte() {
+        this.utilService.displayDialogo('Cargando reportes', 'info');
+        setTimeout(() => {
+            this.utilService.reiniciarDialogo();
+            this.router.navigate(['/reporte_evaluacion', this.grupoSeleccionado.id_evaluacion])
+        }, 100);
     }
 
     getNombreTipoEvaluador(grupo: GrupoEvaluacion, tipo: string): string {

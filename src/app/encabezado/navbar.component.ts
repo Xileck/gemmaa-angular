@@ -37,4 +37,11 @@ export class NavbarComponent {
         }, 100);
     }
 
-} 
+    cargarReportes() {
+        this.utilService.displayDialogo('Cargando reportes', 'info');
+        setTimeout(() => {
+            this.utilService.reiniciarDialogo();
+            this.router.navigate(['/reportes']);
+        }, 100);
+    }
+}

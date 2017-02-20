@@ -15,6 +15,7 @@ export class MenuAdminComponent {
     encuesta: any;
     catalogoEncuestas: any;
     servicio: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
+
     dialogo = {
         finalizo: false,
         display: false,

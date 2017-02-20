@@ -41,6 +41,14 @@ export var AdminReportesComponent = (function () {
             }), 100;
         });
     };
+    AdminReportesComponent.prototype.cargarReporte = function () {
+        var _this = this;
+        this.utilService.displayDialogo('Cargando reportes', 'info');
+        setTimeout(function () {
+            _this.utilService.reiniciarDialogo();
+            _this.router.navigate(['/reporte_evaluacion', _this.grupoSeleccionado.id_evaluacion]);
+        }, 100);
+    };
     AdminReportesComponent.prototype.getNombreTipoEvaluador = function (grupo, tipo) {
         for (var _i = 0, _a = grupo.evaluadores; _i < _a.length; _i++) {
             var evaluador = _a[_i];

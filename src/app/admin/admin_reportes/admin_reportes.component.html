@@ -1,6 +1,4 @@
 <p-fieldset legend="Administración de reportes">
-
-
     <div class="ui-grid ui-grid-responsive ui-grid-pad">
         <div class="ui-grid-row">
             <div class="ui-grid-col-4">
@@ -27,7 +25,11 @@
                                     <button [disabled]="getProgress(grupoSeleccionado)!=100" pButton
                                             type="button"
                                             class="ui-button-success" style="float:right;" label="Cargar Reporte"
-                                            (click)="router.navigate(['/reporte_evaluacion',grupoSeleccionado.id_evaluacion])"></button>
+                                            icon="fa-spinner"
+                                            (click)="cargarReporte()"></button>
+                                    <button pButton type="button" class="ui-button-info" style="float:left;"
+                                            label="Editar Reporte" icon="fa-edit"
+                                            (click)="mostrarDialogo = true;"></button>
                                 </div>
                             </div>
                         </div>
@@ -87,3 +89,9 @@
         </div>
     </div>
 </p-fieldset>
+
+
+<p-dialog header="Catalogo Encuestas" [(visible)]="mostrarDialogo" *ngIf="grupoSeleccionado" showEffect="fade"
+          draggable="false" modal="true" [resizable]="false" [responsive]="true" [minWidth]="350" [minHeight]="500">
+    <app-editar-reporte [grupo]="grupoSeleccionado" (salir)="mostrarDialogo =($event)"></app-editar-reporte>
+</p-dialog>

@@ -1,0 +1,106 @@
+<div class="ui-grid ui-grid-responsive ui-grid-pad" *ngIf="grupo">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-12">
+            <h1>Editar Reporte:</h1>
+        </div>
+    </div>
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-12">
+            <p-dropdown [options]="listaPonderadosDropdown"
+                        [style]="{'width':'100%','z-index':'20'}"
+                        [(ngModel)]="ponderadoSeleccionado"></p-dropdown>
+            <hr>
+            <button style="float:right;" type="button" pButton icon="fa-plus"
+                    (click)="guardarCambios()"
+                    label="Guardar cambios"></button>
+        </div>
+    </div>
+</div>
+<!--
+
+<p-dialog header="Crear Nuevo Ponderado" [(visible)]="displayPonderadoPanel" *ngIf="displayPonderadoPanel"
+          showEffect="fade"
+          [modal]="true"
+          [resizable]="false" [responsive]="true" [minWidth]="300">
+    <div *ngIf="blockedDocument" class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+    <form (ngSubmit)="agregarPonderado()">
+        <div class="form-group">
+            <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                        <label for="evaluadoInput">Evaluado: </label>
+                        <input type="text" (keypress)="_keyPress($event)"
+                               (keyup)="totalDePonderado(nuevoPonderado)"
+                               [(ngModel)]="nuevoPonderado.evaluado" class="form-control" id="evaluadoInput"
+                               maxlength="3"
+                               required placeholder="evaluado" name="evaluadoInput"
+                               #evaluadoInput="ngModel">
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                        <label for="jefeInput">Jefe: </label>
+                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
+                               [(ngModel)]="nuevoPonderado.jefe" class="form-control" id="jefeInput"
+                               maxlength="3"
+                               (keypress)="_keyPress($event)"
+                               required placeholder="jefe" name="jefeInput">
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-row-12">
+                        <label for="parInput">Par: </label>
+                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)" style="width:100%"
+                               [(ngModel)]="nuevoPonderado.par" class="form-control" id="parInput"
+                               maxlength="3"
+                               (keypress)="_keyPress($event)"
+                               required placeholder="par" name="parInput">
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                        <label for="colInput">Colaborador: </label>
+                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
+                               [(ngModel)]="nuevoPonderado.colaborador" class="form-control" id="colInput"
+                               maxlength="3"
+                               (keypress)="_keyPress($event)"
+                               required placeholder="colaborador" name="colInput">
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                        <label for="clienteInput">Cliente: </label>
+                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
+                               [(ngModel)]="nuevoPonderado.cliente" class="form-control" id="clienteInput"
+                               maxlength="3"
+                               (keypress)="_keyPress($event)"
+                               required placeholder="cliente" name="clienteInput">
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                        <hr>
+                        <label for="clienteInput">Total: </label>
+                        <input type="text"
+                               [(ngModel)]="ponderadoTotal" class="form-control" id="ponderadoTotal"
+                               maxlength="3" [disabled]="true"
+                               required name="ponderadoTotal">
+                    </div>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                        <button style="float:right;" type="button" pButton icon="fa-plus"
+                                (click)="agregarPonderado()"
+                                label="Agregar"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <p-messages [value]="msgsBuscarPonderado"></p-messages>
+</p-dialog>
+-->
