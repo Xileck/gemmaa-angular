@@ -22,7 +22,8 @@ export var AdminReportesComponent = (function () {
         this.gruposEvaluacion = null;
         this.buscando = false;
         if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
-            this.router.navigate(['login']);
+            if (!environment.modoDios)
+                this.router.navigate(['login']);
         this.modoDios = environment.modoDios;
     }
     AdminReportesComponent.prototype.buscarEvaluaciones = function () {

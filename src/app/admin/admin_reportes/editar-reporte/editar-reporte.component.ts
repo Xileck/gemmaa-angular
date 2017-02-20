@@ -24,11 +24,18 @@ export class EditarReporteComponent implements OnInit {
     nuevoPonderado: Ponderados;
     @Input() grupo: GrupoEvaluacion;
     @Output() salir = new EventEmitter();
+    roles: SelectItem[];
 
     constructor(private encuestaService: EncuestaService,
                 private reportesService: ReportesService,
                 private loginService: LoginService) {
         this.cargarPonderados();
+        this.roles = [];
+        this.roles.push({label: 'EVALUADO', value: 'EVALUADO'});
+        this.roles.push({label: 'JEFE', value: 'JEFE'});
+        this.roles.push({label: 'PAR', value: 'PAR'});
+        this.roles.push({label: 'COLABORADOR', value: 'COLABORADOR'});
+        this.roles.push({label: 'CLIENTE', value: 'CLIENTE'});
     }
 
     ngOnInit() {

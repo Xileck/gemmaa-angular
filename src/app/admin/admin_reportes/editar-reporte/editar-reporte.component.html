@@ -15,6 +15,14 @@
                     label="Guardar cambios"></button>
         </div>
     </div>
+    <div class="ui-grid-row" *ngFor="let eval of grupo.evaluadores">
+
+        {{eval.nombre_completo}}
+
+        <p-dropdown *ngIf="roles && eval.tipo_de_evaluador" [options]="roles"
+                    [style]="{'width':'100%','z-index':'20'}"
+                    [(ngModel)]="eval.tipo_de_evaluador"></p-dropdown>
+    </div>
 </div>
 <!--
 

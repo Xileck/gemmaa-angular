@@ -20,6 +20,12 @@ export var EditarReporteComponent = (function () {
         this.displayPonderadoPanel = false;
         this.salir = new EventEmitter();
         this.cargarPonderados();
+        this.roles = [];
+        this.roles.push({ label: 'EVALUADO', value: 'EVALUADO' });
+        this.roles.push({ label: 'JEFE', value: 'JEFE' });
+        this.roles.push({ label: 'PAR', value: 'PAR' });
+        this.roles.push({ label: 'COLABORADOR', value: 'COLABORADOR' });
+        this.roles.push({ label: 'CLIENTE', value: 'CLIENTE' });
     }
     EditarReporteComponent.prototype.ngOnInit = function () {
     };

@@ -167,7 +167,7 @@
 
                 </div>
                 <div *ngIf="busqueda && busqueda.length >0 && !empleadoSeleccionado && !blockedDocument">
-                    <legend>Busqueda de empleados</legend>
+                    <legend>Busqueda de <b>{{busquedaInput.toUpperCase()}}</b></legend>
                     <div style="max-height:200px;overflow:auto;">
                         <table class="table table-bordered table-hover ">
                             <thead></thead>
