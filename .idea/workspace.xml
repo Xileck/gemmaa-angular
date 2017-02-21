@@ -2,540 +2,540 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feb420ba-665b-4e7d-83f7-d50eaf3309d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/icon-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-27.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/masonry.pkgd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/encuesta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.mb.YTPlayer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/WindowRef.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/ytp-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/seguridad.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/rev-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/AsignarEvaluador.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/AjaxLoader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Empleado.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/icon-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-9-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/team/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/apple-touch-icon-114x114.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/grabbing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/image-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/EvaluacionPendiente.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/signature.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/WindowRef.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-23.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/masonry/projects-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Promedios.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/magnific-popup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/ytp-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-3-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-7-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/vertical-rhythm.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-29.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/feature-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/et-line.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-32.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/icon-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/section-bg-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-6-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Empleado.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/autumn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/big-device-mockup.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluacion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/et-line.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/about-photo-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/service-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/AsignarEvaluador.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/owl.carousel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-39.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Usuario.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/pattern-bg-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/image-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/section-bg-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/login/login.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/environments/environment.tomcat.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-8-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/seguridad.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluador.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/typings.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.countTo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.js.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/arbol_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.parallax-1.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-21.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-4-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.appear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-4-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/gmap3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluacion.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/icon-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/DatosEvaluacion.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/sp-logo-dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/AsignarEvaluador.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.easing.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/Chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Ponderados.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.sticky.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-1-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/section-bg-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.viewport.mini.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-7-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/GrupoEvaluacion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/sp-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/user-avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/split-section-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-36.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/promo-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.fitvids.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-28.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/cv-resume/section-bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ResultadoEsperado.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-10-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/section-bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-34.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/et-line.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ResultadoEsperado.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Ponderados.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Promedios.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-5-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/simpletextrotator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/contact-form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.magnific-popup.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/summer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-21.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-2-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/spring.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-35.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/administracion.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/Atributo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/masonry/projects-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/bg-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/encuesta.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/encuesta.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.downCount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-31.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-8-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/masonry/projects-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-23.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/logo-footer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Usuario.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-10-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/split-section-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-3-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/icon-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/icon-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/seguridad.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ComportamientoReactivoEscala.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-6-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/contact-reservations-form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/banners/banner-300x250.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/image-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/rev-slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/service-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluacion.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/team/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-33.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/evaluacion.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/placeholder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/controls.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.backgroundvideo.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/section-bg-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluador.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Promedios.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/DatosEvaluacion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/et-line.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/map-marker.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/banners/banner-720x90.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/section-bg-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/tiltfx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/wow.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/WindowRef.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/EvaluacionPendiente.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/EvaluacionPendiente.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/GrupoEvaluacion.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.ajaxchimp.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/about-photo-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/apple-touch-icon-72x72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-5-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/logo-dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/reportes.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/mobile-video-placeholder.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/Atributo.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-1-preview.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/evaluacion.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/encuesta.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Ponderados.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/fm-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/bx_loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/image-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/AjaxLoader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/grabbing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/ytp-regular.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/ytp-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/SmoothScroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/bootstrap-rtl.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/DatosEvaluacion.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/feature-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.scrollTo.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-37.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/administracion.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/evaluacion.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/evaluadores.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery-1.11.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-26.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluador.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/feature-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/owl.carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/evaluadores.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Empleado.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/image-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Usuario.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/GrupoEvaluacion.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/imagesloaded.pkgd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/administracion.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-38.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/team/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/logo-construction.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/service-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/reportes.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/evaluadores.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/Atributo.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/logo-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/section-bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.simple-text-rotator.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/util.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-9-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/coming-soon/fm-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/style-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/ytp-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/et-line.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/et-line.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/et-line.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/apple-touch-icon-114x114.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/apple-touch-icon-72x72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/apple-touch-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/banners/banner-300x250.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/banners/banner-720x90.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/gallery/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/icon-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/icon-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/icon-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/image-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/image-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/image-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/split-section-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/split-section-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-2.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/util.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/util.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/previews/post-prev-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/bx_loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/client-6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/clients-logos/with-bg/client-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/coming-soon/fm-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/bg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/bg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/bg-3.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/bg-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/icons/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/logo-construction.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/promo-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/service-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/service-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/service-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/team/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/team/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/team/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/works/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/controls.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/cv-resume/image-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/cv-resume/section-bg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/autumn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/image-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/section-bg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/section-bg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/section-bg-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/spring.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/fashion/summer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/icon-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/icon-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/icon-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/image-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/section-bg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/section-bg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/section-bg-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/split-section-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/works/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-21.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-23.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-24.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-21.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-23.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-24.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-27.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-28.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-29.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-30.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-31.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-32.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-33.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-34.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-35.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-36.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-37.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-38.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-39.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/big-device-mockup.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/feature-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/feature-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/feature-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/landing/screenshots/screenshot-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/logo-dark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/logo-footer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/logo-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/map-marker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/mobile-video-placeholder.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/pattern-bg-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/fm-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-1-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-10-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/about-photo-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/about-photo-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/photo-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/sp-logo-dark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/sp-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2/works/photo-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-3-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-4-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-5-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-6-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-7-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-8-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-9-thumb.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-1-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-10-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-2-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-3-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-4-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-5-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-6-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-7-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-8-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/previews/photographer-9-preview.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/signature.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/full-project-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/masonry/projects-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/masonry/projects-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/masonry/projects-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/promo-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/gallery/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/image-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/section-bg-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/restaurant/section-bg-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/previews/shop-prev-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/shop/shop-prev-9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/team/team-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/user-avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/admin_encuestas.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_encuestas/bitacora.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_menu.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/AsignarEvaluador.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/AsignarEvaluador.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/AsignarEvaluador.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/DatosEvaluacion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/DatosEvaluacion.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/DatosEvaluacion.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/Atributo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/Atributo.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/Atributo.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ComportamientoReactivoEscala.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ComportamientoReactivoEscala.js.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ComportamientoReactivoEscala.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/intro/intro-0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Ponderados.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/full-width-images/section-bg-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/YTPlayer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/section-bg-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/owl.transitions.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.localScroll.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/reportes.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/post-prev-8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/blog/masonry/post-prev-10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/WebORB.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ResultadoEsperado.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ResultadoEsperado.js.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/ResultadoEsperado.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/photographer/photographer-2-thumb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/portfolio/projects-15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/finance/section-bg-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/construction/bg-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/barbershop/split-section-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/encuesta.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/images/cv-resume/image-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/encuesta.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/encuesta.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/encuesta.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Encuesta/encuesta.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluacion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluacion.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluacion.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/EvaluacionPendiente.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/EvaluacionPendiente.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/EvaluacionPendiente.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluador.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluador.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Evaluador.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Ponderados.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Ponderados.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/GrupoEvaluacion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/GrupoEvaluacion.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/GrupoEvaluacion.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Ponderados.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Ponderados.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Ponderados.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Promedios.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Promedios.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Reportes/Promedios.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Empleado.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Empleado.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Empleado.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Usuario.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Usuario.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/clases/Usuario/Usuario.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dialogo/dialogo.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/encabezado.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/footer.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encabezado/navbar.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/encuestas/encuestas_menu.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/login/login.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/principal/principal.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/evaluadores.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/evaluadores.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/evaluadores.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/fortalezas_mejoras.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reporte_evaluacion.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/reportes/reportes_menu.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/WindowRef.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/WindowRef.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/WindowRef.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/administracion.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/administracion.service.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/administracion.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/encuesta.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/encuesta.service.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/encuesta.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/evaluacion.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/evaluacion.service.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/evaluacion.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/reportes.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/reportes.service.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/reportes.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/seguridad.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/seguridad.service.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/seguridad.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/util.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/util.service.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/servicios/util.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/typings.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/environments/environment.tomcat.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/YTPlayer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/animate.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/bootstrap-rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/et-line.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/magnific-popup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/owl.carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/owl.transitions.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/rev-slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/simpletextrotator.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/style-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/css/vertical-rhythm.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/et-line.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/Chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/SmoothScroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/WebORB.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/contact-form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/contact-reservations-form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/gmap3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/imagesloaded.pkgd.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/isotope.pkgd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery-1.11.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.ajaxchimp.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.appear.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.backgroundvideo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.countTo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.downCount.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.easing.1.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.fitvids.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.localScroll.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.magnific-popup.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.mb.YTPlayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.parallax-1.1.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.scrollTo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.simple-text-rotator.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.sticky.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/jquery.viewport.mini.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/masonry.pkgd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/owl.carousel.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/placeholder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/rev-slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/tiltfx.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/js/wow.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/favicon.ico" afterPath="$PROJECT_DIR$/src/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-cli.json" afterPath="$PROJECT_DIR$/angular-cli.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.html" afterPath="$PROJECT_DIR$/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles.css" afterPath="$PROJECT_DIR$/src/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/polyfills.ts" afterPath="$PROJECT_DIR$/src/polyfills.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tsconfig.json" afterPath="$PROJECT_DIR$/src/tsconfig.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/favicon.ico" afterPath="$PROJECT_DIR$/src/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.ts" afterPath="$PROJECT_DIR$/src/main.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-cli.json" afterPath="$PROJECT_DIR$/angular-cli.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/environments/environment.ts" afterPath="$PROJECT_DIR$/src/environments/environment.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.ts" afterPath="$PROJECT_DIR$/src/main.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/polyfills.ts" afterPath="$PROJECT_DIR$/src/polyfills.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles.css" afterPath="$PROJECT_DIR$/src/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tsconfig.json" afterPath="$PROJECT_DIR$/src/tsconfig.json" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -555,37 +555,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="editar-reporte.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/admin/admin_reportes/editar-reporte/editar-reporte.component.ts">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="1338">
+              <caret line="122" column="20" lean-forward="false" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+                <marker date="1487712895668" expanded="true" signature="4025:5662" ph="{...}" />
+                <marker date="1487712895668" expanded="true" signature="5687:5690" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asignar_ponderado.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <file leaf-file-name="asignar_encuestas.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="172">
+              <caret line="169" column="68" lean-forward="true" selection-start-line="169" selection-start-column="68" selection-end-line="169" selection-end-column="101" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editar-reporte.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/admin/admin_reportes/editar-reporte/editar-reporte.component.html">
+      <file leaf-file-name="admin_usuarios.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-              <folding>
-                <marker date="1487626166819" expanded="false" signature="3035:3045" ph="..." />
-                <marker date="1487626166819" expanded="false" signature="5198:5210" ph="..." />
-              </folding>
+            <state relative-caret-position="206">
+              <caret line="131" column="45" lean-forward="true" selection-start-line="131" selection-start-column="45" selection-end-line="131" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_usuarios.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -620,11 +639,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Empleado.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Empleado.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/clases/Usuario/Empleado.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="498">
-              <caret line="54" column="1" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+              <caret line="54" column="1" lean-forward="false" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -644,8 +663,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>eva</find>
-      <find>***</find>
       <find>pbutto</find>
       <find>spinn</find>
       <find>checars</find>
@@ -674,6 +691,8 @@
       <find>busquedaInput</find>
       <find>console.lo</find>
       <find>too</find>
+      <find>busqueda</find>
+      <find>busquedainput</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -701,7 +720,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/styles.css" />
         <option value="$PROJECT_DIR$/src/app/encabezado/encabezado.component.css" />
         <option value="$PROJECT_DIR$/src/app/encabezado/encabezado.component.ts" />
         <option value="$PROJECT_DIR$/src/environments/environment.ts" />
@@ -739,19 +757,20 @@
         <option value="$PROJECT_DIR$/src/app/encabezado/navbar.component.html" />
         <option value="$PROJECT_DIR$/src/app/principal/principal.component.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/admin_reportes/editar-reporte/editar-reporte.component.html" />
-        <option value="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.html" />
-        <option value="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.html" />
         <option value="$PROJECT_DIR$/src/app/login/login.service.ts" />
         <option value="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.ts" />
         <option value="$PROJECT_DIR$/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/admin_reportes/admin_reportes.component.ts" />
         <option value="$PROJECT_DIR$/src/app/admin/admin_reportes/admin_reportes.component.html" />
         <option value="$PROJECT_DIR$/src/app/admin/admin_reportes/editar-reporte/editar-reporte.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/encuestas/contestar_encuesta.component.html" />
+        <option value="$PROJECT_DIR$/src/app/clases/Usuario/Empleado.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.html" />
+        <option value="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.html" />
+        <option value="$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.ts" />
       </list>
     </option>
   </component>
@@ -819,6 +838,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -881,7 +903,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servicios" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -903,81 +925,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servicios" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util.service.ts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GEMMAA_CLI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GEMMAA_CLI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clases" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GEMMAA_CLI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GEMMAA_CLI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clases" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Usuario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GEMMAA_CLI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GEMMAA_CLI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e2e" />
+              <option name="myItemId" value="admin_usuarios" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1419,12 +1376,13 @@
       <workItem from="1487598857845" duration="12750000" />
       <workItem from="1487621075836" duration="2841000" />
       <workItem from="1487685743080" duration="7624000" />
-      <workItem from="1487712566234" duration="1000" />
+      <workItem from="1487712566234" duration="234000" />
+      <workItem from="1487712855946" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138770000" />
+    <option name="totallyTimeSpent" value="139601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1452,8 +1410,9 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15591398" sideWeight="0.491404" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1747851" sideWeight="0.49328858" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1769341" sideWeight="0.49328858" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1464,7 +1423,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34005377" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1665,13 +1623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/admin/asignar_encuestas/empleado_asignado.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1708,20 +1659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="169" column="20" lean-forward="false" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3128">
-          <caret line="184" column="53" lean-forward="false" selection-start-line="184" selection-start-column="53" selection-end-line="184" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/login/login.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1740,13 +1677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1775,6 +1705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="422" column="9" lean-forward="false" selection-start-line="422" selection-start-column="9" selection-end-line="422" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1821,23 +1752,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/admin/admin_reportes/editar-reporte/editar-reporte.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
           <folding>
-            <marker date="1487626166819" expanded="false" signature="3035:3045" ph="..." />
-            <marker date="1487626166819" expanded="false" signature="5198:5210" ph="..." />
+            <marker date="1487712820609" expanded="false" signature="3035:3045" ph="..." />
+            <marker date="1487712820609" expanded="false" signature="5198:5210" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1877,7 +1798,51 @@
     <entry file="file://$PROJECT_DIR$/src/app/clases/Usuario/Empleado.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
-          <caret line="54" column="1" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+          <caret line="54" column="1" lean-forward="false" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1338">
+          <caret line="122" column="20" lean-forward="false" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+            <marker date="1487712895668" expanded="true" signature="4025:5662" ph="{...}" />
+            <marker date="1487712895668" expanded="true" signature="5687:5690" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_ponderado.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/asignar_encuestas/asignar_encuestas.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="169" column="68" lean-forward="true" selection-start-line="169" selection-start-column="68" selection-end-line="169" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="131" column="45" lean-forward="true" selection-start-line="131" selection-start-column="45" selection-end-line="131" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/admin/admin_usuarios/admin_usuarios.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
           <folding />
         </state>
       </provider>

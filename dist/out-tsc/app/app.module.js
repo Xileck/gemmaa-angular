@@ -63,7 +63,6 @@ import { ReporteEvaluacionComponent } from "./reportes/reporte_evaluacion.compon
 import { EvaluadoresComponent } from "./reportes/evaluadores.component";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { AdminReportesComponent } from "./admin/admin_reportes/admin_reportes.component";
-import { NavbarModule } from "./navbar/navbar.module";
 import { WrongBrowserComponent } from './wrong-browser/wrong-browser.component';
 import { EditarReporteComponent } from './admin/admin_reportes/editar-reporte/editar-reporte.component';
 export var AppModule = (function () {
@@ -125,7 +124,6 @@ export var AppModule = (function () {
                 TooltipModule,
                 InputTextModule,
                 GrowlModule,
-                NavbarModule
             ],
             providers: [
                 LoginService,

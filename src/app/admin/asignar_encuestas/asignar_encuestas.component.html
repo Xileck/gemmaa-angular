@@ -1,281 +1,281 @@
 <p-confirmDialog width="425" header="Confirmacion"></p-confirmDialog>
 <div class="home-content">
-    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+  <div class="ui-grid ui-grid-responsive ui-grid-pad">
+    <div class="ui-grid-row">
+      <div class="ui-grid-col-12">
         <div class="ui-grid-row">
-            <div class="ui-grid-col-12">
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                        <p-fieldset legend="Datos de la Evaluacion" *ngIf="evaluacionGuardada == false">
-                            <div class="ui-grid-row">
-                                <div class="ui-grid-col-6">
-                                    <p-fieldset legend="Evaluadores">
-                                        <button type="button" pButton class="ui-button-danger"
-                                                *ngIf="environment.modoDios"
-                                                (click)="llenarEvaluadores()"
-                                                label="Llenar evaluadores [Boton modo dios]"></button>
-                                        <table class="table table-bordered table-hover">
-                                            <tbody>
-                                            <tr style="border: solid .3px;border-color: gray;"
-                                                (click)="buscarEmpleado(evaluado,'EVALUADO')">
-                                                <app-empleado-asignado
-                                                        (empleadoEliminado)="eliminarUsuario('EVALUADO')"
-                                                        [empleado]="evaluado"
-                                                        [titulo]="'Evaluado'"></app-empleado-asignado>
-                                            </tr>
-                                            <tr style="border: solid .3px;border-color: gray;"
-                                                (click)="buscarEmpleado(jefe, 'JEFE')">
-                                                <app-empleado-asignado [empleado]="jefe"
-                                                                       (empleadoEliminado)="eliminarUsuario('JEFE')"
-                                                                       [titulo]="'Jefe'"></app-empleado-asignado>
-                                            </tr>
-                                            <tr style="border: solid .3px;border-color: gray;"
-                                                (click)="buscarEmpleado(par, 'PAR')">
-                                                <app-empleado-asignado [empleado]="par"
-                                                                       (empleadoEliminado)="eliminarUsuario('PAR')"
-                                                                       [titulo]="'Par'"></app-empleado-asignado>
-                                            </tr>
-                                            <tr style="border: solid .3px;border-color: gray;"
-                                                (click)="buscarEmpleado(colaborador, 'COLABORADOR')">
-                                                <app-empleado-asignado [empleado]="colaborador"
-                                                                       (empleadoEliminado)="eliminarUsuario('COLABORADOR')"
-                                                                       [titulo]="'Colaborador (Opcional)'"></app-empleado-asignado>
-                                            </tr>
-                                            <tr style="border: solid .3px;border-color: gray;"
-                                                (click)="buscarEmpleado(cliente, 'CLIENTE')">
-                                                <app-empleado-asignado [empleado]="cliente"
-                                                                       (empleadoEliminado)="eliminarUsuario('CLIENTE')"
-                                                                       [titulo]="'Cliente (Opcional)'"></app-empleado-asignado>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </p-fieldset>
-                                </div>
-                                <div class="ui-grid-col-6">
-                                    <div class="ui-grid-row">
-                                        <div class="ui-grid-col-12">
-                                            <p-fieldset legend="Ponderado" *ngIf="listaPonderados">
-                                                <p-dropdown [options]="listaPonderadosDropdown"
-                                                            [style]="{'width':'100%'}"
-                                                            [(ngModel)]="ponderadoSeleccionado"></p-dropdown>
-                                                <hr>
-                                                <button style="float:right;" type="button" pButton icon="fa-plus"
-                                                        (click)="nuevoPonderadoModal()"
-                                                        label="Crear Nuevo Ponderado"></button>
-                                            </p-fieldset>
-                                        </div>
-                                    </div>
-                                    <div class="ui-grid-row">
-                                        <div class="ui-grid-col-12">
-                                            <p-fieldset legend="Encuesta">
-                                                Selecciona la encuesta que los 5 empleados deberan responder
-                                                <table class="table table-bordered table-hover"
-                                                       *ngIf="catalogoEncuestas">
-                                                    <tbody>
-                                                    <tr *ngFor="let ce of catalogoEncuestas"
-                                                        (click)="encuestaSeleccionada = ce"
-                                                        [ngClass]="{'encuestaSeleccionada': encuestaSeleccionada == ce}">
-                                                        <td>
-                                                            {{ce.idEncuesta}} {{ce.descripcion}}
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </p-fieldset>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <footer>
-                                <br>
-                                <button type="button" pButton icon="fa-search"
-                                        (click)="confirmarGuardarEvaluacion()"
-                                        label="Crear Evaluacion"></button>
-                            </footer>
-                        </p-fieldset>
-                    </div>
+          <div class="ui-grid-col-12">
+            <p-fieldset legend="Datos de la Evaluacion" *ngIf="evaluacionGuardada == false">
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                  <p-fieldset legend="Evaluadores">
+                    <button type="button" pButton class="ui-button-danger"
+                            *ngIf="environment.modoDios"
+                            (click)="llenarEvaluadores()"
+                            label="Llenar evaluadores [Boton modo dios]"></button>
+                    <table class="table table-bordered table-hover">
+                      <tbody>
+                      <tr style="border: solid .3px;border-color: gray;"
+                          (click)="buscarEmpleado(evaluado,'EVALUADO')">
+                        <app-empleado-asignado
+                          (empleadoEliminado)="eliminarUsuario('EVALUADO')"
+                          [empleado]="evaluado"
+                          [titulo]="'Evaluado'"></app-empleado-asignado>
+                      </tr>
+                      <tr style="border: solid .3px;border-color: gray;"
+                          (click)="buscarEmpleado(jefe, 'JEFE')">
+                        <app-empleado-asignado [empleado]="jefe"
+                                               (empleadoEliminado)="eliminarUsuario('JEFE')"
+                                               [titulo]="'Jefe'"></app-empleado-asignado>
+                      </tr>
+                      <tr style="border: solid .3px;border-color: gray;"
+                          (click)="buscarEmpleado(par, 'PAR')">
+                        <app-empleado-asignado [empleado]="par"
+                                               (empleadoEliminado)="eliminarUsuario('PAR')"
+                                               [titulo]="'Par'"></app-empleado-asignado>
+                      </tr>
+                      <tr style="border: solid .3px;border-color: gray;"
+                          (click)="buscarEmpleado(colaborador, 'COLABORADOR')">
+                        <app-empleado-asignado [empleado]="colaborador"
+                                               (empleadoEliminado)="eliminarUsuario('COLABORADOR')"
+                                               [titulo]="'Colaborador (Opcional)'"></app-empleado-asignado>
+                      </tr>
+                      <tr style="border: solid .3px;border-color: gray;"
+                          (click)="buscarEmpleado(cliente, 'CLIENTE')">
+                        <app-empleado-asignado [empleado]="cliente"
+                                               (empleadoEliminado)="eliminarUsuario('CLIENTE')"
+                                               [titulo]="'Cliente (Opcional)'"></app-empleado-asignado>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </p-fieldset>
                 </div>
-            </div>
+                <div class="ui-grid-col-6">
+                  <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                      <p-fieldset legend="Ponderado" *ngIf="listaPonderados">
+                        <p-dropdown [options]="listaPonderadosDropdown"
+                                    [style]="{'width':'100%'}"
+                                    [(ngModel)]="ponderadoSeleccionado"></p-dropdown>
+                        <hr>
+                        <button style="float:right;" type="button" pButton icon="fa-plus"
+                                (click)="nuevoPonderadoModal()"
+                                label="Crear Nuevo Ponderado"></button>
+                      </p-fieldset>
+                    </div>
+                  </div>
+                  <div class="ui-grid-row">
+                    <div class="ui-grid-col-12">
+                      <p-fieldset legend="Encuesta">
+                        Selecciona la encuesta que los 5 empleados deberan responder
+                        <table class="table table-bordered table-hover"
+                               *ngIf="catalogoEncuestas">
+                          <tbody>
+                          <tr *ngFor="let ce of catalogoEncuestas"
+                              (click)="encuestaSeleccionada = ce"
+                              [ngClass]="{'encuestaSeleccionada': encuestaSeleccionada == ce}">
+                            <td>
+                              {{ce.idEncuesta}} {{ce.descripcion}}
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </p-fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer>
+                <br>
+                <button type="button" pButton icon="fa-search"
+                        (click)="confirmarGuardarEvaluacion()"
+                        label="Crear Evaluacion"></button>
+              </footer>
+            </p-fieldset>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- Trigger/Open The Modal -->
 
 <div align="center" *ngIf="selectedRolEvaluador" class="modal2 show in danger home-content" #myModal2 id="myModal2"
      role="dialog">
-    <div class="modal2-dialog home-content">
-        <div class="modal2-content">
+  <div class="modal2-dialog home-content">
+    <div class="modal2-content">
             <span class="close2" style="color: black; text-align: right;"
                   (click)="cerrarModal()">x</span>
-            <p-panel header="Buscar {{selectedRolEvaluador == 'EVALUADO' ? 'EVALUADO' : selectedRolEvaluador}}">
-                <div *ngIf="blockedDocument" class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                </div>
-                <form *ngIf="(busqueda == null && !blockedDocument && evaluadores?.length < 5 && selectedRolEvaluador)
-                                                || (busqueda?.length ==0 && !blockedDocument && evaluadores?.length < 5 && selectedRolEvaluador)"
-                      (ngSubmit)="buscarEmpleados()">
-                    <div class="form-group">
-                        <label for="name">Buscar: </label>
-                        <input type="text"
-                               [(ngModel)]="busquedaInput" class="form-control" id="name"
-                               required placeholder="Ingresa nombre o rpe" name="test" #inputRef>
-                        <br>
-                        <button type="submit" pButton icon="fa-search"
-                                label="Agregar" style="margin:auto;"></button>
-                    </div>
-                </form>
-                <div *ngIf="empleadoSeleccionado">
-                    <legend>Empleado seleccionado</legend>
-                    <div style="border: solid .2px;border-color: gray;padding: 20px">
-                        <div class="ui-grid-row">
-                            <div class="ui-grid-col-3">
-                                <img *ngIf="empleadoSeleccionado?.foto"
-                                     [src]="'data:image/jpeg;base64,'+ empleadoSeleccionado.empleadoFoto"
-                                     style="max-height: 70px;margin:auto;"/>
-                            </div>
-                            <div class="ui-grid-col-9">
-                                {{empleadoSeleccionado.nombreCompleto}}<br>
-                                <span style="font-size: 10px"><b>Puesto: </b>{{empleadoSeleccionado.perfil}}</span><br>
-                                <span style="font-size: 10px"><b>Area: </b>{{empleadoSeleccionado.areaTrabajo.descripcion}}({{empleadoSeleccionado.areaTrabajo.clave}})</span>
-                                <span style="font-size: 10px"><b>RPE: </b>{{empleadoSeleccionado.rpe}}</span>
-                            </div>
-                        </div>
-                        <div class="ui-grid-row">
-                            <div class="ui-grid-col-12">
-                                <p-dropdown [options]="rolesPermisoUsuario"
-                                            [(ngModel)]="selectedPermisoUsuario"></p-dropdown>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="ui-grid-row">
-                            <div class="ui-grid-col-6">
-                                <button type="button" pButton icon="fa-plus"
-                                        (click)="agregarEvaluador(empleadoSeleccionado,selectedRolEvaluador,selectedPermisoUsuario);"
-                                        label="Agregar" style="margin:auto;"></button>
-                            </div>
-                            <div class="ui-grid-col-6">
-                                <button type="button" pButton icon="fa-ban" class="ui-button-danger"
-                                        (click)="cancelarBusqueda()"
-                                        label="Cancelar" style="margin:auto;"></button>
-                            </div>
-                        </div>
-                        <hr>
-
-                    </div>
-
-                </div>
-                <div *ngIf="busqueda && busqueda.length >0 && !empleadoSeleccionado && !blockedDocument">
-                    <legend>Busqueda de <b>{{busquedaInput.toUpperCase()}}</b></legend>
-                    <div style="max-height:200px;overflow:auto;">
-                        <table class="table table-bordered table-hover ">
-                            <thead></thead>
-                            <tbody>
-                            <tr *ngFor="let e of busqueda"
-                                (click)="seleccionarEmpleado(e.rpe)"
-                                [ngClass]="{'active': empleadoSeleccionado?.rpe == e?.rpe}">
-                                <td>
-                                    {{e.nombreCompleto}}<br>
-                                    <span style="font-size: 10px"><b>Area: </b>{{e.area}}</span>
-                                    <span style="font-size: 10px"><b>RPE: </b>{{e.rpe}}</span>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br>
-                    <button type="button" pButton icon="fa-ban" class="ui-button-danger"
-                            (click)="cancelarBusqueda()"
-                            label="Cancelar" style="margin:auto;"></button>
-                </div>
-                <p-messages [value]="msgsBuscar"></p-messages>
-            </p-panel>
+      <p-panel header="Buscar {{selectedRolEvaluador == 'EVALUADO' ? 'EVALUADO' : selectedRolEvaluador}}">
+        <div *ngIf="blockedDocument" class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
         </div>
+        <form *ngIf="(busqueda == null && !blockedDocument && evaluadores?.length < 5 && selectedRolEvaluador)
+                                                || (busqueda?.length ==0 && !blockedDocument && evaluadores?.length < 5 && selectedRolEvaluador)"
+              (ngSubmit)="buscarEmpleados()">
+          <div class="form-group">
+            <label for="name">Buscar: </label>
+            <input type="text"
+                   [(ngModel)]="busquedaInput" class="form-control" id="name"
+                   required placeholder="Ingresa nombre o rpe" name="test" #inputRef>
+            <br>
+            <button type="submit" pButton icon="fa-search"
+                    label="Agregar" style="margin:auto;"></button>
+          </div>
+        </form>
+        <div *ngIf="empleadoSeleccionado">
+          <legend>Empleado seleccionado</legend>
+          <div style="border: solid .2px;border-color: gray;padding: 20px">
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-3">
+                <img *ngIf="empleadoSeleccionado?.foto"
+                     [src]="'data:image/jpeg;base64,'+ empleadoSeleccionado.empleadoFoto"
+                     style="max-height: 70px;margin:auto;"/>
+              </div>
+              <div class="ui-grid-col-9">
+                {{empleadoSeleccionado.nombreCompleto}}<br>
+                <span style="font-size: 10px"><b>Puesto: </b>{{empleadoSeleccionado.perfil}}</span><br>
+                <span style="font-size: 10px"><b>Area: </b>{{empleadoSeleccionado.areaTrabajo.descripcion}}({{empleadoSeleccionado.areaTrabajo.clave}})</span>
+                <span style="font-size: 10px"><b>RPE: </b>{{empleadoSeleccionado.rpe}}</span>
+              </div>
+            </div>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-12">
+                <p-dropdown [options]="rolesPermisoUsuario"
+                            [(ngModel)]="selectedPermisoUsuario"></p-dropdown>
+              </div>
+            </div>
+            <br>
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-6">
+                <button type="button" pButton icon="fa-plus"
+                        (click)="agregarEvaluador(empleadoSeleccionado,selectedRolEvaluador,selectedPermisoUsuario);"
+                        label="Agregar" style="margin:auto;"></button>
+              </div>
+              <div class="ui-grid-col-6">
+                <button type="button" pButton icon="fa-ban" class="ui-button-danger"
+                        (click)="cancelarBusqueda()"
+                        label="Cancelar" style="margin:auto;"></button>
+              </div>
+            </div>
+            <hr>
+
+          </div>
+
+        </div>
+        <div *ngIf="busqueda && busqueda.length >0 && !empleadoSeleccionado && !blockedDocument">
+          <legend>Busqueda de <b>{{busquedaInput.toUpperCase()}}</b>: {{busqueda.length}} resultados.</legend>
+          <div style="max-height:200px;overflow:auto;">
+            <table class="table table-bordered table-hover ">
+              <thead></thead>
+              <tbody>
+              <tr *ngFor="let e of busqueda"
+                  (click)="seleccionarEmpleado(e.rpe)"
+                  [ngClass]="{'active': empleadoSeleccionado?.rpe == e?.rpe}">
+                <td>
+                  {{e.nombreCompleto}}<br>
+                  <span style="font-size: 10px"><b>Area: </b>{{e.area}}</span>
+                  <span style="font-size: 10px"><b>RPE: </b>{{e.rpe}}</span>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <button type="button" pButton icon="fa-ban" class="ui-button-danger"
+                  (click)="cancelarBusqueda()"
+                  label="Cancelar" style="margin:auto;"></button>
+        </div>
+        <p-messages [value]="msgsBuscar"></p-messages>
+      </p-panel>
     </div>
+  </div>
 </div>
 <p-dialog header="Crear Nuevo Ponderado" [(visible)]="displayPonderadoPanel" *ngIf="displayPonderadoPanel"
           showEffect="fade"
           [modal]="true"
           [resizable]="false" [responsive]="true" [minWidth]="300">
-    <div *ngIf="blockedDocument" class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-    </div>
-    <form (ngSubmit)="agregarPonderado()">
-        <div class="form-group">
-            <div class="ui-grid ui-grid-responsive ui-grid-pad">
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                        <label for="evaluadoInput">Evaluado: </label>
-                        <input type="text" (keypress)="_keyPress($event)"
-                               (keyup)="totalDePonderado(nuevoPonderado)"
-                               [(ngModel)]="nuevoPonderado.evaluado" class="form-control" id="evaluadoInput"
-                               maxlength="3"
-                               required placeholder="evaluado" name="evaluadoInput"
-                               #evaluadoInput="ngModel">
-                    </div>
-                </div>
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                        <label for="jefeInput">Jefe: </label>
-                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
-                               [(ngModel)]="nuevoPonderado.jefe" class="form-control" id="jefeInput"
-                               maxlength="3"
-                               (keypress)="_keyPress($event)"
-                               required placeholder="jefe" name="jefeInput">
-                    </div>
-                </div>
-                <div class="ui-grid-row">
-                    <div class="ui-grid-row-12">
-                        <label for="parInput">Par: </label>
-                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)" style="width:100%"
-                               [(ngModel)]="nuevoPonderado.par" class="form-control" id="parInput"
-                               maxlength="3"
-                               (keypress)="_keyPress($event)"
-                               required placeholder="par" name="parInput">
-                    </div>
-                </div>
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                        <label for="colInput">Colaborador: </label>
-                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
-                               [(ngModel)]="nuevoPonderado.colaborador" class="form-control" id="colInput"
-                               maxlength="3"
-                               (keypress)="_keyPress($event)"
-                               required placeholder="colaborador" name="colInput">
-                    </div>
-                </div>
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                        <label for="clienteInput">Cliente: </label>
-                        <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
-                               [(ngModel)]="nuevoPonderado.cliente" class="form-control" id="clienteInput"
-                               maxlength="3"
-                               (keypress)="_keyPress($event)"
-                               required placeholder="cliente" name="clienteInput">
-                    </div>
-                </div>
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                        <hr>
-                        <label for="clienteInput">Total: </label>
-                        <input type="text"
-                               [(ngModel)]="ponderadoTotal" class="form-control" id="ponderadoTotal"
-                               maxlength="3" [disabled]="true"
-                               required name="ponderadoTotal">
-                    </div>
-                </div>
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-12">
-                        <button style="float:right;" type="button" pButton icon="fa-plus"
-                                (click)="agregarPonderado()"
-                                label="Agregar"></button>
-                    </div>
-                </div>
-            </div>
+  <div *ngIf="blockedDocument" class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+  <form (ngSubmit)="agregarPonderado()">
+    <div class="form-group">
+      <div class="ui-grid ui-grid-responsive ui-grid-pad">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <label for="evaluadoInput">Evaluado: </label>
+            <input type="text" (keypress)="_keyPress($event)"
+                   (keyup)="totalDePonderado(nuevoPonderado)"
+                   [(ngModel)]="nuevoPonderado.evaluado" class="form-control" id="evaluadoInput"
+                   maxlength="3"
+                   required placeholder="evaluado" name="evaluadoInput"
+                   #evaluadoInput="ngModel">
+          </div>
         </div>
-    </form>
-    <p-messages [value]="msgsBuscarPonderado"></p-messages>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <label for="jefeInput">Jefe: </label>
+            <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
+                   [(ngModel)]="nuevoPonderado.jefe" class="form-control" id="jefeInput"
+                   maxlength="3"
+                   (keypress)="_keyPress($event)"
+                   required placeholder="jefe" name="jefeInput">
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-row-12">
+            <label for="parInput">Par: </label>
+            <input type="text" (keyup)="totalDePonderado(nuevoPonderado)" style="width:100%"
+                   [(ngModel)]="nuevoPonderado.par" class="form-control" id="parInput"
+                   maxlength="3"
+                   (keypress)="_keyPress($event)"
+                   required placeholder="par" name="parInput">
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <label for="colInput">Colaborador: </label>
+            <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
+                   [(ngModel)]="nuevoPonderado.colaborador" class="form-control" id="colInput"
+                   maxlength="3"
+                   (keypress)="_keyPress($event)"
+                   required placeholder="colaborador" name="colInput">
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <label for="clienteInput">Cliente: </label>
+            <input type="text" (keyup)="totalDePonderado(nuevoPonderado)"
+                   [(ngModel)]="nuevoPonderado.cliente" class="form-control" id="clienteInput"
+                   maxlength="3"
+                   (keypress)="_keyPress($event)"
+                   required placeholder="cliente" name="clienteInput">
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <hr>
+            <label for="clienteInput">Total: </label>
+            <input type="text"
+                   [(ngModel)]="ponderadoTotal" class="form-control" id="ponderadoTotal"
+                   maxlength="3" [disabled]="true"
+                   required name="ponderadoTotal">
+          </div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12">
+            <button style="float:right;" type="button" pButton icon="fa-plus"
+                    (click)="agregarPonderado()"
+                    label="Agregar"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <p-messages [value]="msgsBuscarPonderado"></p-messages>
 </p-dialog>

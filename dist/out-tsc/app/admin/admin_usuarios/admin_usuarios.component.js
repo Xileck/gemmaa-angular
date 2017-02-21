@@ -179,7 +179,7 @@ export var AdminUsuariosComponent = (function () {
         this.blockedDocument = true;
         var t0 = performance.now();
         setTimeout(function () {
-            if (_this.busquedaInput != null && _this.busquedaInput.length > 1)
+            if (_this.busquedaInput != null && _this.busquedaInput.length > 3)
                 Promise.resolve(_this.utilService.buscarEmpleados(_this.busquedaInput)).then(function (result) {
                     _this.busqueda = result;
                     var t1 = performance.now();

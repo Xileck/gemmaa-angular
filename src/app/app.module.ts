@@ -54,80 +54,78 @@ import {ReporteEvaluacionComponent} from "./reportes/reporte_evaluacion.componen
 import {EvaluadoresComponent} from "./reportes/evaluadores.component";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {AdminReportesComponent} from "./admin/admin_reportes/admin_reportes.component";
-import {NavbarModule} from "./navbar/navbar.module";
-import { WrongBrowserComponent } from './wrong-browser/wrong-browser.component';
-import { EditarReporteComponent } from './admin/admin_reportes/editar-reporte/editar-reporte.component';
+import {WrongBrowserComponent} from './wrong-browser/wrong-browser.component';
+import {EditarReporteComponent} from './admin/admin_reportes/editar-reporte/editar-reporte.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        LoginComponent,
-        PrincipalComponent,
-        EncabezadoComponent,
-        FooterComponent,
-        NavbarComponent,
-        DialogoComponent,
-        MenuAdminComponent,
-        AdminEncuestasComponent,
-        AdminUsuariosComponent,
-        AsignarEncuestasComponent,
-        BitacoraComponent,
-        AgregarEmpleadoComponent,
-        AsignarPonderadoComponent,
-        EncuestasComponent,
-        ContestarEncuestaComponent,
-        ReportesComponent,
-        FortalezasMejorasComponent,
-        ReporteEvaluacionComponent,
-        EvaluadoresComponent,
-        AdminReportesComponent,
-        WrongBrowserComponent,
-        EditarReporteComponent
-    ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        FieldsetModule,
-        AppRoutingModule,
-        PanelModule,
-        ButtonModule,
-        InplaceModule,
-        DataTableModule,
-        AccordionModule,
-        TabViewModule,
-        DataListModule,
-        DataTableModule,
-        DialogModule,
-        ConfirmDialogModule,
-        MessagesModule,
-        PanelMenuModule,
-        DropdownModule,
-        OverlayPanelModule,
-        BlockUIModule,
-        SlideMenuModule,
-        RadioButtonModule,
-        StepsModule,
-        ChartModule,
-        ProgressBarModule,
-        TooltipModule,
-        InputTextModule,
-        GrowlModule,
-        NavbarModule
-    ],
-    providers: [
-        LoginService,
-        AdminService,
-        UtilService,
-        EvaluacionService,
-        WindowRef,
-        SeguridadService,
-        //Cambiar idioma a español para fechas, mensajes etc...
-        {provide: LOCALE_ID, useValue: "es-MX"},
-        //utilizar # para cambiar de ruta (este metodo hace que funcione el redireccionamiento en tomcat y jboss)
-        {provide: LocationStrategy, useClass: HashLocationStrategy}
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    PrincipalComponent,
+    EncabezadoComponent,
+    FooterComponent,
+    NavbarComponent,
+    DialogoComponent,
+    MenuAdminComponent,
+    AdminEncuestasComponent,
+    AdminUsuariosComponent,
+    AsignarEncuestasComponent,
+    BitacoraComponent,
+    AgregarEmpleadoComponent,
+    AsignarPonderadoComponent,
+    EncuestasComponent,
+    ContestarEncuestaComponent,
+    ReportesComponent,
+    FortalezasMejorasComponent,
+    ReporteEvaluacionComponent,
+    EvaluadoresComponent,
+    AdminReportesComponent,
+    WrongBrowserComponent,
+    EditarReporteComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    FieldsetModule,
+    AppRoutingModule,
+    PanelModule,
+    ButtonModule,
+    InplaceModule,
+    DataTableModule,
+    AccordionModule,
+    TabViewModule,
+    DataListModule,
+    DataTableModule,
+    DialogModule,
+    ConfirmDialogModule,
+    MessagesModule,
+    PanelMenuModule,
+    DropdownModule,
+    OverlayPanelModule,
+    BlockUIModule,
+    SlideMenuModule,
+    RadioButtonModule,
+    StepsModule,
+    ChartModule,
+    ProgressBarModule,
+    TooltipModule,
+    InputTextModule,
+    GrowlModule,
+  ],
+  providers: [
+    LoginService,
+    AdminService,
+    UtilService,
+    EvaluacionService,
+    WindowRef,
+    SeguridadService,
+    //Cambiar idioma a español para fechas, mensajes etc...
+    {provide: LOCALE_ID, useValue: "es-MX"},
+    //utilizar # para cambiar de ruta (este metodo hace que funcione el redireccionamiento en tomcat y jboss)
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

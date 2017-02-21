@@ -196,7 +196,7 @@ export class AdminUsuariosComponent implements OnChanges {
         this.blockedDocument = true;
         var t0 = performance.now();
         setTimeout(() => {
-            if (this.busquedaInput != null && this.busquedaInput.length > 1)
+            if (this.busquedaInput != null && this.busquedaInput.length > 3)
                 Promise.resolve(this.utilService.buscarEmpleados(this.busquedaInput)).then(result => {
                     this.busqueda = result
                     var t1 = performance.now();
