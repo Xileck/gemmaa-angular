@@ -29,6 +29,7 @@ export class ContestarEncuestaComponent implements OnInit {
     currentTime = new Date();
     blockedDocument: boolean = false;
     servicioEncuesta: any = webORB.bind("com.cfemex.lv.is.GEMMAA.BO.EncuestaBO", environment.rutaWebORB, null, null);
+
     constructor(private router: Router, private loginService: LoginService,
                 public evaluacionService: EvaluacionService, private  utilService: UtilService, private encuestaService: EncuestaService) {
         if (!loginService.usuarioValidado())
@@ -71,12 +72,7 @@ export class ContestarEncuestaComponent implements OnInit {
             scroll(0, 0);
         }
         else {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error',
-                detail: 'Responde todas las preguntas de esta pagina antes de continuar.'
-            });
+            this.loginService.mensajeError('Error', 'Responde todas las preguntas de esta pagina antes de continuar.');
         }
     }
 
@@ -111,12 +107,7 @@ export class ContestarEncuestaComponent implements OnInit {
     terminarEvaluacion(): void {
         for (let cre of this.encuesta.listaCRE) {
             if (cre.respuesta == null) {
-                this.loginService.mensajesGlobales = [];
-                this.loginService.mensajesGlobales.push({
-                    severity: 'error',
-                    summary: 'Error',
-                    detail: 'Responde todas las preguntas de esta pagina antes de continuar.'
-                });
+                this.loginService.mensajeError('Error', 'Responde todas las preguntas de esta pagina antes de continuar.');
                 return;
             }
         }

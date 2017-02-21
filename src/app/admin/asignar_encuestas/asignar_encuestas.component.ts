@@ -286,7 +286,7 @@ export class AsignarEncuestasComponent implements AfterViewInit {
     confirmarGuardarEvaluacion() {
         if (this.checarSiEvaluadosEstanAsignados() == null && this.encuestaSeleccionada != null && this.ponderadoSeleccionado != null) {
             this.confirmationService.confirm({
-                    message: 'Estas seguro que los datos son los correctos?',
+                    message: '¿Estas seguro que los datos son los correctos?',
                     accept: () => {
                         this.guardarEvaluacion()
                     }
@@ -294,28 +294,13 @@ export class AsignarEncuestasComponent implements AfterViewInit {
             );
         }
         else if (this.encuestaSeleccionada == null) {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Necesitas seleccionar una encuesta.'
-            });
+            this.loginService.mensajeError('Error', 'Necesitas seleccionar una encuesta.');
         }
         else if (this.ponderadoSeleccionado == null) {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Necesitas seleccionar o crear un ponderado.'
-            });
+            this.loginService.mensajeError('Error', 'Necesitas seleccionar un o crear un ponderado.');
         }
         else {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: this.checarSiEvaluadosEstanAsignados() + '.'
-            });
+            this.loginService.mensajeError('Error', this.checarSiEvaluadosEstanAsignados() + '.');
         }
     }
 
@@ -436,7 +421,6 @@ export class AsignarEncuestasComponent implements AfterViewInit {
             && this.ponderadoSeleccionado.colaborador != 0) {
             roles.push('Si no se va a seleccionar un colaborador el ponderado del colaborador debe tener el valor de 0.')
         }
-        console.log(JSON.stringify(this.ponderadoSeleccionado));
         if (roles.length == 0)
             return null;
         else if (roles.length == 1)

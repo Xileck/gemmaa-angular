@@ -47,11 +47,7 @@ export class EditarReporteComponent implements OnInit {
             this.salir.emit(false);
         }
         else {
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Selecciona un ponderado.'
-            })
+            this.loginService.mensajeError('Error', 'Selecciona un ponderado.');
         }
     }
 
@@ -71,12 +67,10 @@ export class EditarReporteComponent implements OnInit {
                                 + p.jefe + " | Par: " + p.par + " | Colaborador: " + p.colaborador + " | Cliente: " + p.cliente,
                                 value: p
                             });
-
                         }
                     }
                     this.ponderadoSeleccionado = this.grupo.ponderados;
                 }
             );
     }
-
 }

@@ -35,11 +35,7 @@ export var EditarReporteComponent = (function () {
             this.salir.emit(false);
         }
         else {
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Selecciona un ponderado.'
-            });
+            this.loginService.mensajeError('Error', 'Selecciona un ponderado.');
         }
     };
     EditarReporteComponent.prototype.cargarPonderados = function () {

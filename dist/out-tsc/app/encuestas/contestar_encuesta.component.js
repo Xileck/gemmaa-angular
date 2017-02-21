@@ -70,12 +70,7 @@ export var ContestarEncuestaComponent = (function () {
             scroll(0, 0);
         }
         else {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error',
-                detail: 'Responde todas las preguntas de esta pagina antes de continuar.'
-            });
+            this.loginService.mensajeError('Error', 'Responde todas las preguntas de esta pagina antes de continuar.');
         }
     };
     ContestarEncuestaComponent.prototype.botonMagico = function () {
@@ -109,12 +104,7 @@ export var ContestarEncuestaComponent = (function () {
         for (var _i = 0, _a = this.encuesta.listaCRE; _i < _a.length; _i++) {
             var cre = _a[_i];
             if (cre.respuesta == null) {
-                this.loginService.mensajesGlobales = [];
-                this.loginService.mensajesGlobales.push({
-                    severity: 'error',
-                    summary: 'Error',
-                    detail: 'Responde todas las preguntas de esta pagina antes de continuar.'
-                });
+                this.loginService.mensajeError('Error', 'Responde todas las preguntas de esta pagina antes de continuar.');
                 return;
             }
         }

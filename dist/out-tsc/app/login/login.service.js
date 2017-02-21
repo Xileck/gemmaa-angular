@@ -85,6 +85,30 @@ export var LoginService = (function () {
         else
             return false;
     };
+    LoginService.prototype.mensajeError = function (titulo, mensaje) {
+        this.mensajesGlobales = [];
+        this.mensajesGlobales.push({
+            severity: 'error',
+            summary: titulo,
+            detail: mensaje
+        });
+    };
+    LoginService.prototype.mensajeInfo = function (titulo, mensaje) {
+        this.mensajesGlobales = [];
+        this.mensajesGlobales.push({
+            severity: 'info',
+            summary: titulo,
+            detail: mensaje
+        });
+    };
+    LoginService.prototype.mensajeExito = function (titulo, mensaje) {
+        this.mensajesGlobales = [];
+        this.mensajesGlobales.push({
+            severity: 'success',
+            summary: titulo,
+            detail: mensaje
+        });
+    };
     LoginService = __decorate([
         Injectable(), 
         __metadata('design:paramtypes', [Router, UtilService, SeguridadService])

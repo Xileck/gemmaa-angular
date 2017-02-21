@@ -30,7 +30,8 @@ export class AdminReportesComponent {
     }
 
     mostrarDialogo: boolean;
-
+    fechaMin:Date;
+    fechaMax:Date;
     buscarEvaluaciones() {
         this.buscando = true;
         document.body.style.cursor = 'wait';

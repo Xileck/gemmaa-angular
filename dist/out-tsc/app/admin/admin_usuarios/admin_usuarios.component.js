@@ -68,39 +68,23 @@ export var AdminUsuariosComponent = (function () {
                             Promise.resolve(_this.seguridadService.getInfoEmpleado(_this.empleadoSeleccionado.nip))
                                 .then(function (empleado) {
                                 _this.usuarios.push(empleado);
-                                _this.loginService.mensajesGlobales = [];
-                                _this.loginService.mensajesGlobales.push({
-                                    severity: 'success',
-                                    summary: 'Exito: ',
-                                    detail: 'Se agrego al empleado  : ' + _this.empleadoSeleccionado.nombreCompleto + '.'
-                                });
+                                _this.loginService.mensajeExito('Exito', 'Se agrego al empleado  : ' + _this.empleadoSeleccionado.nombreCompleto + '.');
                                 _this.cerrarModal();
                             });
                         });
                     }
                     else {
-                        _this.loginService.mensajesGlobales = [];
-                        _this.loginService.mensajesGlobales.push({
-                            severity: 'error',
-                            summary: 'Error: ',
-                            detail: 'Empleado ya existe : ' + _this.empleadoSeleccionado.nombreCompleto + '.'
-                        });
+                        _this.loginService.mensajeError('Error', 'Empleado ya existe : ' + _this.empleadoSeleccionado.nombreCompleto + '.');
                         _this.cerrarModal();
                     }
                 });
             }
             catch (e) {
-                this.loginService.mensajesGlobales = [];
-                this.loginService.mensajesGlobales.push({
-                    severity: 'error',
-                    summary: 'Error:',
-                    detail: 'Error de conexion.'
-                });
+                this.loginService.mensajeError('Error', 'Error de conexion.');
             }
         }
         else {
-            this.msgsBuscar = [];
-            this.msgsBuscar.push({ severity: 'error', summary: 'Error:', detail: 'Selecciona un rol.' });
+            this.loginService.mensajeError('Error', 'Selecciona un rol.');
         }
     };
     AdminUsuariosComponent.prototype.modificarUsuario = function () {
@@ -115,40 +99,20 @@ export var AdminUsuariosComponent = (function () {
                         _this.selectedUsuario.passwordUsuariosRol = _this.selectedUser.empleado.password;
                         _this.selectedUser = null;
                         _this.selectedUsuario = null;
-                        _this.loginService.mensajesGlobales = [];
-                        _this.loginService.mensajesGlobales.push({
-                            severity: 'success',
-                            summary: 'Exito:',
-                            detail: 'Usuario actualizado correctamente.'
-                        });
+                        _this.loginService.mensajeExito('Exito', 'Usuario actualizado correctamente.');
                     });
                     _this.utilService.reiniciarDialogo();
                 }, 100);
             }
             catch (error) {
-                this.loginService.mensajesGlobales = [];
-                this.loginService.mensajesGlobales.push({
-                    severity: 'error',
-                    summary: 'Error:',
-                    detail: 'Error de conexion.'
-                });
+                this.loginService.mensajeError('Error', 'Error de conexion.');
             }
         }
         else if (this.selectedRol == null) {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Selecciona un rol.'
-            });
+            this.loginService.mensajeError('Error', 'Selecciona un rol.');
         }
         else if (this.selectedUser.clave.length < 3) {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Proporciona una contraseña de almenos 3 caracteres.'
-            });
+            this.loginService.mensajeError('Error', 'Proporciona una contraseña de almenos 3 caracteres');
         }
     };
     AdminUsuariosComponent.prototype.actualizar = function () {
@@ -166,7 +130,6 @@ export var AdminUsuariosComponent = (function () {
     AdminUsuariosComponent.prototype.soloMayusculas = function (event) {
         if (isNaN(Number(event))) {
             var inputChar = String.fromCharCode(event.charCode);
-            // console.log(inputChar, e.charCode);
             if (inputChar.toUpperCase() != inputChar && this.busquedaInput.length <= 5) {
                 event.preventDefault();
                 this.busquedaInput += inputChar.toUpperCase();
@@ -188,12 +151,7 @@ export var AdminUsuariosComponent = (function () {
                         }
                     }
                     _this.adminService.eliminarUsuarioRol(environment.nombreProyecto, usuario.rpe);
-                    _this.loginService.mensajesGlobales = [];
-                    _this.loginService.mensajesGlobales.push({
-                        severity: 'info',
-                        summary: 'Exito:',
-                        detail: 'Usuario Eliminado'
-                    });
+                    _this.loginService.mensajeExito('Exito', 'Usuario Eliminado.');
                 }
                 catch (e) {
                     console.error(e);

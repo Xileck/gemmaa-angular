@@ -247,35 +247,20 @@ export var AsignarEncuestasComponent = (function () {
         var _this = this;
         if (this.checarSiEvaluadosEstanAsignados() == null && this.encuestaSeleccionada != null && this.ponderadoSeleccionado != null) {
             this.confirmationService.confirm({
-                message: 'Estas seguro que los datos son los correctos?',
+                message: '¿Estas seguro que los datos son los correctos?',
                 accept: function () {
                     _this.guardarEvaluacion();
                 }
             });
         }
         else if (this.encuestaSeleccionada == null) {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Necesitas seleccionar una encuesta.'
-            });
+            this.loginService.mensajeError('Error', 'Necesitas seleccionar una encuesta.');
         }
         else if (this.ponderadoSeleccionado == null) {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Necesitas seleccionar o crear un ponderado.'
-            });
+            this.loginService.mensajeError('Error', 'Necesitas seleccionar un o crear un ponderado.');
         }
         else {
-            this.loginService.mensajesGlobales = [];
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: this.checarSiEvaluadosEstanAsignados() + '.'
-            });
+            this.loginService.mensajeError('Error', this.checarSiEvaluadosEstanAsignados() + '.');
         }
     };
     AsignarEncuestasComponent.prototype.buscarEmpleados = function () {
@@ -391,7 +376,6 @@ export var AsignarEncuestasComponent = (function () {
             && this.ponderadoSeleccionado.colaborador != 0) {
             roles.push('Si no se va a seleccionar un colaborador el ponderado del colaborador debe tener el valor de 0.');
         }
-        console.log(JSON.stringify(this.ponderadoSeleccionado));
         if (roles.length == 0)
             return null;
         else if (roles.length == 1)

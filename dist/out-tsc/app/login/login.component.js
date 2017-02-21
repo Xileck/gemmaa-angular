@@ -41,32 +41,19 @@ export var LoginComponent = (function () {
         return this.loginService.validarEmpleado(usuarioInput, contraseniaInput);
     };
     LoginComponent.prototype.informacionCorrecta = function () {
-        this.loginService.mensajesGlobales = [];
         if (this.usuarioInput.length == 5 && this.contraseniaInput.length > 0) {
             return true;
         }
         else if (this.usuarioInput.length == 0 && this.contraseniaInput.length == 0) {
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Ingrese RPE y Contraseña.'
-            });
+            this.loginService.mensajeError('Error', 'Ingresa RPE y contraseña.');
             return false;
         }
         else if (this.usuarioInput.length != 5) {
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Ingrese RPE valido.'
-            });
+            this.loginService.mensajeError('Error', 'Ingresa RPE valido.');
             return false;
         }
         else if (this.contraseniaInput.length == 0) {
-            this.loginService.mensajesGlobales.push({
-                severity: 'error',
-                summary: 'Error:',
-                detail: 'Ingrese contraseña.'
-            });
+            this.loginService.mensajeError('Error', 'Ingresa contraseña.');
             return false;
         }
     };
