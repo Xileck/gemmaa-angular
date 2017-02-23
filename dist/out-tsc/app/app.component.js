@@ -11,7 +11,7 @@ import { Component, Compiler } from '@angular/core';
 export var AppComponent = (function () {
     function AppComponent(_compiler) {
         this._compiler = _compiler;
-        // this._compiler.clearCache();
+        this._compiler.clearCache();
         document.addEventListener('contextmenu', function (event) { return event.preventDefault(); });
         if (this.detectIE()) {
             alert("Este navegador no es comatible: " + this.detectIE() + ".\nPor favor utiliza chrome, edge o firefox");

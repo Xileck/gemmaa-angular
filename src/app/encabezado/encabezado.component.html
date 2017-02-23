@@ -1,38 +1,38 @@
 <div class style="z-index: 10310;position: relative;">
-    <p-growl *ngIf="loginService"
-             [value]="loginService.mensajesGlobales"
-             life="4000"></p-growl>
-    <app-dialogo [title]="utilService.app_dialogo_argumentos.title"
-                 [tipo]="utilService.app_dialogo_argumentos.tipo"
-                 [msg]="utilService.app_dialogo_argumentos.msg"
-                 [finalizo]="utilService.app_dialogo_argumentos.finalizo"
-                 [display]="utilService.app_dialogo_argumentos.display"></app-dialogo>
+  <p-growl *ngIf="loginService"
+           [value]="loginService.mensajesGlobales"
+           life="4000"></p-growl>
+  <app-dialogo [title]="utilService.app_dialogo_argumentos.title"
+               [tipo]="utilService.app_dialogo_argumentos.tipo"
+               [msg]="utilService.app_dialogo_argumentos.msg"
+               [finalizo]="utilService.app_dialogo_argumentos.finalizo"
+               [display]="utilService.app_dialogo_argumentos.display"></app-dialogo>
 </div>
 <section class="home-section parallax-2 ">
-    <div class="home-content container main-background-filter">
-        <div class="ui-grid ui-grid-responsive ui-grid-pad"
-             *ngIf="loginService.usuarioValidado()">
-            <div class="ui-grid-row">
-                <div class="ui-grid-col-12">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <img [src]="'data:image/jpeg;base64,'+ loginService.usuario.empleadoFoto"
-                                     style="height: 70px;max-width: 65px"/>
-                            </td>
-                            <td style="padding: 5px;margin: 5px;">
-                                <h5>{{loginService.usuario.empleadoNombreCompleto}}</h5>
-                                <small>{{loginService.usuario.empleadoPuesto}} {{loginService.usuario.empleadoRPE}}
-                                </small>
-                                <h6>{{loginService.usuario.empleadoRol}}</h6>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+  <div class="home-content container main-background-filter">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad"
+         *ngIf="loginService.usuarioValidado()">
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-12">
+          <table>
+            <tbody>
+            <tr>
+              <td>
+                <img [src]="'data:image/jpeg;base64,'+ loginService.usuario.empleadoFoto"
+                     style="height: 70px;max-width: 65px"/>
+              </td>
+              <td style="padding: 5px;margin: 5px;">
+                <h5>{{loginService.usuario.empleadoNombreCompleto}}</h5>
+                <small>{{loginService.usuario.empleadoPuesto}} {{loginService.usuario.empleadoRPE}}
+                </small>
+                <h6>{{loginService.usuario.empleadoRol}}</h6>
+              </td>
+            </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 <app-navbar *ngIf="loginService.usuarioValidado()"></app-navbar>

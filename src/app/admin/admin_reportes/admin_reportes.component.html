@@ -33,7 +33,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </p-fieldset>
             </div>
@@ -61,11 +60,11 @@
                         <thead style="background: rgb(55,76,97);color:white;">
                         <tr>
                             <th rowspan="2">ID</th>
-                            <th rowspan="2">Evaluado</th>
                             <th rowspan="2">Fecha</th>
-                            <th colspan="4">Evaluadores</th>
+                            <th colspan="5" align="center">Evaluadores</th>
                         </tr>
                         <tr>
+                            <th>Evaluado</th>
                             <th>Jefe</th>
                             <th>Par</th>
                             <th>Colaborador</th>
@@ -73,15 +72,21 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let grupo of gruposEvaluacion" (click)="grupoSeleccionado = grupo"
+                        <tr *ngFor="let grupo of gruposEvaluacion"
+                            (click)="grupoSeleccionado = grupo; cargarPonderados();"
                             [ngClass]="{'active' : grupo == grupoSeleccionado}">
                             <th>{{grupo.id_evaluacion}}</th>
-                            <th>{{utilService.getNombreCompleto(grupo.nip_de_evaluado)}}</th>
                             <th>{{grupo.fecha | date:'medium'}}</th>
-                            <th>{{getNombreTipoEvaluador(grupo,'JEFE')}}</th>
-                            <th>{{getNombreTipoEvaluador(grupo,'PAR')}}</th>
-                            <th>{{getNombreTipoEvaluador(grupo,'COLABORADOR')}}</th>
-                            <th>{{getNombreTipoEvaluador(grupo,'CLIENTE')}}</th>
+                            <th>{{utilService.getNombreCompleto(grupo.nip_de_evaluado)}}</th>
+                            <th>{{getNombreTipoEvaluador(grupo,'JEFE') ? getNombreTipoEvaluador(grupo,'JEFE') :'✕'}}
+                            </th>
+                            <th>{{getNombreTipoEvaluador(grupo,'PAR')? getNombreTipoEvaluador(grupo,'PAR') :'✕'}}</th>
+                            <th>{{getNombreTipoEvaluador(grupo,'COLABORADOR')?
+                                getNombreTipoEvaluador(grupo,'COLABORADOR') :'✕'}}
+                            </th>
+                            <th>{{getNombreTipoEvaluador(grupo,'CLIENTE')? getNombreTipoEvaluador(grupo,'CLIENTE')
+                                :'✕'}}
+                            </th>
                         </tr>
                         </tbody>
                     </table>
@@ -90,9 +95,25 @@
         </div>
     </div>
 </p-fieldset>
-
-
-<p-dialog header="Catalogo Encuestas" [(visible)]="mostrarDialogo" *ngIf="grupoSeleccionado" showEffect="fade"
+<p-dialog header="Catalogo Encuestas" [(visible)]="mostrarDialogo" *ngIf="grupoSeleccionado && mostrarDialogo"
+          showEffect="fade"
           draggable="false" modal="true" [resizable]="false" [responsive]="true" [minWidth]="350" [minHeight]="500">
-    <app-editar-reporte [grupo]="grupoSeleccionado" (salir)="mostrarDialogo =($event)"></app-editar-reporte>
+    <div class="ui-grid ui-grid-responsive ui-grid-pad" *ngIf="grupoSeleccionado?.id_evaluacion">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12">
+                <h1>Editar Reporte:</h1>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-12">
+                <p-dropdown [options]="listaPonderadosDropdown"
+                            [style]="{'width':'100%','z-index':'20'}"
+                            [(ngModel)]="ponderadoSeleccionado"></p-dropdown>
+                <hr>
+                <button style="float:right;" type="button" pButton icon="fa-plus"
+                        (click)="guardarCambios()"
+                        label="Guardar cambios"></button>
+            </div>
+        </div>
+    </div>
 </p-dialog>

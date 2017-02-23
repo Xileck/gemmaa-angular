@@ -13,12 +13,14 @@ import { UtilService } from "../../servicios/util.service";
 import { LoginService } from "../../login/login.service";
 import { ReportesService } from "../../servicios/reportes.service";
 import { environment } from "../../../environments/environment";
+import { EncuestaService } from "../../servicios/encuesta.service";
 export var AdminReportesComponent = (function () {
-    function AdminReportesComponent(loginService, router, reportesService, utilService) {
+    function AdminReportesComponent(loginService, router, reportesService, utilService, encuestaService) {
         this.loginService = loginService;
         this.router = router;
         this.reportesService = reportesService;
         this.utilService = utilService;
+        this.encuestaService = encuestaService;
         this.gruposEvaluacion = null;
         this.buscando = false;
         if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
@@ -77,14 +79,46 @@ export var AdminReportesComponent = (function () {
         else
             return (countFinalized * 100) / countTotal;
     };
+    AdminReportesComponent.prototype.guardarCambios = function () {
+        if (this.ponderadoSeleccionado != null) {
+            this.reportesService.updatePonderado(this.grupoSeleccionado.id_evaluacion, this.ponderadoSeleccionado.idp);
+            this.mostrarDialogo = false;
+        }
+        else {
+            this.loginService.mensajeError('Error', 'Selecciona un ponderado.');
+        }
+    };
+    AdminReportesComponent.prototype.cargarPonderados = function () {
+        var _this = this;
+        Promise.resolve(this.encuestaService.getListaPonderados())
+            .then(function (ponderados) {
+            _this.listaPonderados = ponderados;
+            if (_this.listaPonderados) {
+                _this.listaPonderadosDropdown = [];
+                _this.listaPonderadosDropdown.push({
+                    label: "Selecciona un ponderado",
+                    value: null
+                });
+                for (var _i = 0, _a = _this.listaPonderados; _i < _a.length; _i++) {
+                    var p = _a[_i];
+                    _this.listaPonderadosDropdown.push({
+                        label: "ID: " + p.idp + " | Evaluado: " + p.evaluado + " | Jefe: "
+                            + p.jefe + " | Par: " + p.par + " | Colaborador: " + p.colaborador + " | Cliente: " + p.cliente,
+                        value: p
+                    });
+                }
+            }
+            _this.ponderadoSeleccionado = _this.grupoSeleccionado.ponderados;
+        });
+    };
     AdminReportesComponent = __decorate([
         Component({
             selector: "app-admin-reportes",
             templateUrl: "./admin_reportes.component.html",
             styleUrls: ["./admin_reportes.component.css"],
-            providers: [ReportesService, UtilService]
+            providers: [ReportesService, UtilService, EncuestaService]
         }), 
-        __metadata('design:paramtypes', [LoginService, Router, ReportesService, UtilService])
+        __metadata('design:paramtypes', [LoginService, Router, ReportesService, UtilService, EncuestaService])
     ], AdminReportesComponent);
     return AdminReportesComponent;
 }());

@@ -1,11 +1,11 @@
 {
   "name": "GEMMAA360",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "productivo": "ng build --env=productivo -bh /weborb/apps/gemmaaP/",
-    "tomcat": "ng build --env=tomcat -bh /weborb/apps/gemmaaP/",
+    "productivo": "ng build --env=productivo --prod -bh /weborb/apps/gemmaaP/ ",
+    "tomcat": "ng build --env=tomcat --pro -bh /weborb/apps/gemmaaP/",
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",

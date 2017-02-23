@@ -8,7 +8,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { GrupoEvaluacion } from "../../../clases/Reportes/GrupoEvaluacion";
 import { EncuestaService } from "../../../servicios/encuesta.service";
 import { ReportesService } from "../../../servicios/reportes.service";
 import { LoginService } from "../../../login/login.service";
@@ -20,14 +19,9 @@ export var EditarReporteComponent = (function () {
         this.displayPonderadoPanel = false;
         this.salir = new EventEmitter();
         this.cargarPonderados();
-        this.roles = [];
-        this.roles.push({ label: 'EVALUADO', value: 'EVALUADO' });
-        this.roles.push({ label: 'JEFE', value: 'JEFE' });
-        this.roles.push({ label: 'PAR', value: 'PAR' });
-        this.roles.push({ label: 'COLABORADOR', value: 'COLABORADOR' });
-        this.roles.push({ label: 'CLIENTE', value: 'CLIENTE' });
     }
     EditarReporteComponent.prototype.ngOnInit = function () {
+        this.grupo = this.reportesService.getGrupoEvaluacionSimple(this.idEvalucion);
     };
     EditarReporteComponent.prototype.guardarCambios = function () {
         if (this.ponderadoSeleccionado != null) {
@@ -63,8 +57,8 @@ export var EditarReporteComponent = (function () {
     };
     __decorate([
         Input(), 
-        __metadata('design:type', GrupoEvaluacion)
-    ], EditarReporteComponent.prototype, "grupo", void 0);
+        __metadata('design:type', Number)
+    ], EditarReporteComponent.prototype, "idEvalucion", void 0);
     __decorate([
         Output(), 
         __metadata('design:type', Object)

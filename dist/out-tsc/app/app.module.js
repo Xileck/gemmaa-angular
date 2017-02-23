@@ -52,9 +52,7 @@ import { AdminService } from "./servicios/administracion.service";
 import { EvaluacionService } from "./servicios/evaluacion.service";
 import { WindowRef } from "./servicios/WindowRef";
 import { AsignarEncuestasComponent } from "./admin/asignar_encuestas/asignar_encuestas.component";
-import { BitacoraComponent } from "./admin/admin_encuestas/bitacora.component";
 import { AgregarEmpleadoComponent } from "./admin/asignar_encuestas/empleado_asignado.component";
-import { AsignarPonderadoComponent } from "./admin/asignar_encuestas/asignar_ponderado.component";
 import { EncuestasComponent } from "./encuestas/encuestas_menu.component";
 import { ContestarEncuestaComponent } from "./encuestas/contestar_encuesta.component";
 import { ReportesComponent } from "./reportes/reportes_menu.component";
@@ -82,9 +80,7 @@ export var AppModule = (function () {
                 AdminEncuestasComponent,
                 AdminUsuariosComponent,
                 AsignarEncuestasComponent,
-                BitacoraComponent,
                 AgregarEmpleadoComponent,
-                AsignarPonderadoComponent,
                 EncuestasComponent,
                 ContestarEncuestaComponent,
                 ReportesComponent,

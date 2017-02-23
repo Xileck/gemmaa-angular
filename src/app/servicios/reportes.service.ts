@@ -21,6 +21,10 @@ export class ReportesService {
         return this.servicioReportes.getGrupoEvaluacion(id_evaluacion);
     }
 
+    getGrupoEvaluacionSimple(id_evaluacion: number) {
+        return this.servicioReportes.getGrupoEvaluacionSimple(id_evaluacion);
+    }
+
     getEvaluacionesUsuario(nip: number) {
         return this.servicioReportes.getEvaluacionesDeUsuario(nip);
     }

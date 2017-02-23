@@ -9,7 +9,7 @@ export class AppComponent {
     versionIE: number;
 
     constructor(private _compiler: Compiler) {
-        // this._compiler.clearCache();
+        this._compiler.clearCache();
         document.addEventListener('contextmenu', event => event.preventDefault());
         if (this.detectIE()) {
             alert("Este navegador no es comatible: " + this.detectIE() + ".\nPor favor utiliza chrome, edge o firefox");

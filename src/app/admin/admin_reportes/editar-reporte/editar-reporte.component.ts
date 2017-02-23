@@ -16,13 +16,13 @@ export class EditarReporteComponent implements OnInit {
     listaPonderados: Ponderados[];
     listaPonderadosDropdown: SelectItem[];
     ponderadoSeleccionado: Ponderados;
-    private _ponderadoTotal: number;
 
 
     msgsBuscarPonderado: Message[];
     displayPonderadoPanel: boolean = false;
     nuevoPonderado: Ponderados;
-    @Input() grupo: GrupoEvaluacion;
+    @Input() idEvalucion: number;
+    grupo: GrupoEvaluacion;
     @Output() salir = new EventEmitter();
     roles: SelectItem[];
 
@@ -30,15 +30,11 @@ export class EditarReporteComponent implements OnInit {
                 private reportesService: ReportesService,
                 private loginService: LoginService) {
         this.cargarPonderados();
-        this.roles = [];
-        this.roles.push({label: 'EVALUADO', value: 'EVALUADO'});
-        this.roles.push({label: 'JEFE', value: 'JEFE'});
-        this.roles.push({label: 'PAR', value: 'PAR'});
-        this.roles.push({label: 'COLABORADOR', value: 'COLABORADOR'});
-        this.roles.push({label: 'CLIENTE', value: 'CLIENTE'});
+
     }
 
     ngOnInit() {
+        this.grupo = this.reportesService.getGrupoEvaluacionSimple(this.idEvalucion);
     }
 
     guardarCambios(): void {

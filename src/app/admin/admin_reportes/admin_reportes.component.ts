@@ -5,12 +5,15 @@ import {LoginService} from "../../login/login.service";
 import {ReportesService} from "../../servicios/reportes.service";
 import {GrupoEvaluacion} from "../../clases/Reportes/GrupoEvaluacion";
 import {environment} from "../../../environments/environment";
+import {Ponderados} from "../../clases/Reportes/Ponderados";
+import {SelectItem} from "primeng/components/common/api";
+import {EncuestaService} from "../../servicios/encuesta.service";
 
 @Component({
     selector: "app-admin-reportes",
     templateUrl: "./admin_reportes.component.html",
     styleUrls: ["./admin_reportes.component.css"],
-    providers: [ReportesService, UtilService]
+    providers: [ReportesService, UtilService, EncuestaService]
 })
 export class AdminReportesComponent {
     modoDios;
@@ -18,11 +21,15 @@ export class AdminReportesComponent {
     busquedaInput: string;
     grupoSeleccionado: GrupoEvaluacion;
     buscando: boolean = false;
+    listaPonderados: Ponderados[];
+    listaPonderadosDropdown: SelectItem[];
+    ponderadoSeleccionado: Ponderados;
 
     constructor(private loginService: LoginService,
                 private router: Router,
                 private reportesService: ReportesService,
-                private utilService: UtilService) {
+                private utilService: UtilService,
+                private encuestaService: EncuestaService) {
         if (!loginService.usuarioValidado() || !loginService.usuario.emplHasAccess('admin'))
             if (!environment.modoDios)
                 this.router.navigate(['login']);
@@ -30,8 +37,9 @@ export class AdminReportesComponent {
     }
 
     mostrarDialogo: boolean;
-    fechaMin:Date;
-    fechaMax:Date;
+    fechaMin: Date;
+    fechaMax: Date;
+
     buscarEvaluaciones() {
         this.buscando = true;
         document.body.style.cursor = 'wait';
@@ -86,4 +94,36 @@ export class AdminReportesComponent {
             return (countFinalized * 100) / countTotal;
     }
 
+    guardarCambios(): void {
+        if (this.ponderadoSeleccionado != null) {
+            this.reportesService.updatePonderado(this.grupoSeleccionado.id_evaluacion, this.ponderadoSeleccionado.idp);
+            this.mostrarDialogo = false;
+        }
+        else {
+            this.loginService.mensajeError('Error', 'Selecciona un ponderado.');
+        }
+    }
+
+    cargarPonderados() {
+        Promise.resolve(this.encuestaService.getListaPonderados())
+            .then(ponderados => {
+                    this.listaPonderados = ponderados;
+                    if (this.listaPonderados) {
+                        this.listaPonderadosDropdown = [];
+                        this.listaPonderadosDropdown.push({
+                            label: "Selecciona un ponderado",
+                            value: null
+                        });
+                        for (let p of this.listaPonderados) {
+                            this.listaPonderadosDropdown.push({
+                                label: "ID: " + p.idp + " | Evaluado: " + p.evaluado + " | Jefe: "
+                                + p.jefe + " | Par: " + p.par + " | Colaborador: " + p.colaborador + " | Cliente: " + p.cliente,
+                                value: p
+                            });
+                        }
+                    }
+                    this.ponderadoSeleccionado = this.grupoSeleccionado.ponderados;
+                }
+            );
+    }
 }

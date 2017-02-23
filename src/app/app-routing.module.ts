@@ -4,7 +4,6 @@ import {LoginComponent} from './login/login.component';
 import {PrincipalComponent} from "./principal/principal.component";
 import {MenuAdminComponent} from "./admin/admin_menu.component";
 import {AdminEncuestasComponent} from "./admin/admin_encuestas/admin_encuestas.component";
-import {BitacoraComponent} from "./admin/admin_encuestas/bitacora.component";
 import {AdminUsuariosComponent} from "./admin/admin_usuarios/admin_usuarios.component";
 import {AsignarEncuestasComponent} from "./admin/asignar_encuestas/asignar_encuestas.component";
 import {EncuestasComponent} from "./encuestas/encuestas_menu.component";
@@ -23,7 +22,6 @@ const routes: Routes = [
     {path: 'encuestas', component: EncuestasComponent},
     {path: 'contestar_encuesta', component: ContestarEncuestaComponent},
     {path: 'reportes', component: ReportesComponent},
-    {path: 'bitacora', component: BitacoraComponent},
     {path: 'admin_usuarios', component: AdminUsuariosComponent},
     {path: 'admin_reportes', component: AdminReportesComponent},
     {path: 'reporte_evaluacion/:id', component: ReporteEvaluacionComponent},

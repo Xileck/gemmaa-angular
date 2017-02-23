@@ -4,9 +4,7 @@
  */
 var Ponderados = (function () {
     function Ponderados(jefe, colaborador, par, evaluado) {
-        this.jefe = jefe;
-        this.colaborador = colaborador;
-        this.par = par;
+        this par;
         this.evaluado = evaluado;
     }
     return Ponderados;

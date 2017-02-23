@@ -21,6 +21,9 @@ export var ReportesService = (function () {
     ReportesService.prototype.getGrupoEvaluacion = function (id_evaluacion) {
         return this.servicioReportes.getGrupoEvaluacion(id_evaluacion);
     };
+    ReportesService.prototype.getGrupoEvaluacionSimple = function (id_evaluacion) {
+        return this.servicioReportes.getGrupoEvaluacionSimple(id_evaluacion);
+    };
     ReportesService.prototype.getEvaluacionesUsuario = function (nip) {
         return this.servicioReportes.getEvaluacionesDeUsuario(nip);
     };
