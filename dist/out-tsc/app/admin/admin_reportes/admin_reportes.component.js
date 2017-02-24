@@ -61,6 +61,15 @@ export var AdminReportesComponent = (function () {
         }
         return null;
     };
+    AdminReportesComponent.prototype.finalizoEvaluador = function (grupo, tipo) {
+        for (var _i = 0, _a = grupo.evaluadores; _i < _a.length; _i++) {
+            var evaluador = _a[_i];
+            if (evaluador.tipo_de_evaluador.toUpperCase().indexOf(tipo) >= 0) {
+                return evaluador.finalizo;
+            }
+        }
+        return null;
+    };
     AdminReportesComponent.prototype.getProgress = function (evaluacion) {
         var countFinalized = 0;
         var countTotal = 0;

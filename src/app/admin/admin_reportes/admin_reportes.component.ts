@@ -75,6 +75,17 @@ export class AdminReportesComponent {
 
     }
 
+  finalizoEvaluador(grupo: GrupoEvaluacion, tipo: string): string {
+
+    for (let evaluador of grupo.evaluadores) {
+      if (evaluador.tipo_de_evaluador.toUpperCase().indexOf(tipo) >= 0) {
+        return evaluador.finalizo;
+      }
+    }
+    return null;
+
+  }
+
     getProgress(evaluacion: GrupoEvaluacion): number {
         let countFinalized: number = 0;
         let countTotal: number = 0;

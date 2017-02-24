@@ -1,119 +1,131 @@
 <p-fieldset legend="Administración de reportes">
-    <div class="ui-grid ui-grid-responsive ui-grid-pad">
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-4">
-                <p-fieldset legend="Estado del reporte">
-                    <div *ngIf="!grupoSeleccionado">
-                        <h3>Escoge un reporte.</h3>
-                    </div>
-                    <div *ngIf="grupoSeleccionado">
-                        <div class="ui-grid ui-grid-responsive ui-grid-pad">
-                            <div *ngFor="let evaluador of grupoSeleccionado?.evaluadores" class="ui-grid-row">
-                                <div class="ui-grid-col-6">
-                                    <b>{{evaluador.tipo_de_evaluador}}</b>
-                                </div>
-                                <div class="ui-grid-col-4">
-                                    {{evaluador.finalizo =='t' ? 'Finalizo' : 'Sin contestar'}}
-                                </div>
-                                <div class="ui-grid-col-2">
-                                    {{evaluador.finalizo =='t' ? '✓' : '✕'}}
-                                </div>
-                            </div>
-                            <div class="ui-grid-row">
-                                <div class="ui-grid-col-12">
-                                    <hr style="color:black;">
-                                    <button [disabled]="getProgress(grupoSeleccionado)!=100" pButton
-                                            type="button"
-                                            class="ui-button-success" style="float:right;" label="Cargar Reporte"
-                                            icon="fa-spinner"
-                                            (click)="cargarReporte()"></button>
-                                    <button pButton type="button" class="ui-button-info" style="float:left;"
-                                            label="Editar Reporte" icon="fa-edit"
-                                            (click)="mostrarDialogo = true;"></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </p-fieldset>
-            </div>
-            <div class="ui-grid-col-8">
-                <div *ngIf="buscando" class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
+  <div class="ui-grid ui-grid-responsive ui-grid-pad">
+    <div class="ui-grid-row">
+      <div class="ui-grid-col-4">
+        <p-fieldset legend="Estado del reporte">
+          <div *ngIf="!grupoSeleccionado">
+            <h3>Escoge un reporte.</h3>
+          </div>
+          <div *ngIf="grupoSeleccionado">
+            <div class="ui-grid ui-grid-responsive ui-grid-pad">
+              <div *ngFor="let evaluador of grupoSeleccionado?.evaluadores" class="ui-grid-row">
+                <div class="ui-grid-col-6">
+                  <b>{{evaluador.tipo_de_evaluador}}</b>
                 </div>
-                <form (ngSubmit)="buscarEvaluaciones()" *ngIf="!buscando">
-
-                    <div class="form-group">
-                        <label for="name">Buscar: </label>
-                        <input type="text"
-                               [(ngModel)]="busquedaInput" class="form-control" id="name"
-                               required placeholder="Ingresa nombre, rpe o grupo de evaluacion" name="test" #inputRef>
-                        <br>
-                        <button type="submit" pButton icon="fa-search"
-                                label="Buscar" style="margin:auto;"></button>
-                    </div>
-                </form>
-                <div style="max-height:400px;overflow:auto;">
-                    <table class="table table-bordered table-responsive table-hover" style="font-size:12px;"
-                           *ngIf="gruposEvaluacion">
-                        <thead style="background: rgb(55,76,97);color:white;">
-                        <tr>
-                            <th rowspan="2">ID</th>
-                            <th rowspan="2">Fecha</th>
-                            <th colspan="5" align="center">Evaluadores</th>
-                        </tr>
-                        <tr>
-                            <th>Evaluado</th>
-                            <th>Jefe</th>
-                            <th>Par</th>
-                            <th>Colaborador</th>
-                            <th>Cliente</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr *ngFor="let grupo of gruposEvaluacion"
-                            (click)="grupoSeleccionado = grupo; cargarPonderados();"
-                            [ngClass]="{'active' : grupo == grupoSeleccionado}">
-                            <th>{{grupo.id_evaluacion}}</th>
-                            <th>{{grupo.fecha | date:'medium'}}</th>
-                            <th>{{utilService.getNombreCompleto(grupo.nip_de_evaluado)}}</th>
-                            <th>{{getNombreTipoEvaluador(grupo,'JEFE') ? getNombreTipoEvaluador(grupo,'JEFE') :'✕'}}
-                            </th>
-                            <th>{{getNombreTipoEvaluador(grupo,'PAR')? getNombreTipoEvaluador(grupo,'PAR') :'✕'}}</th>
-                            <th>{{getNombreTipoEvaluador(grupo,'COLABORADOR')?
-                                getNombreTipoEvaluador(grupo,'COLABORADOR') :'✕'}}
-                            </th>
-                            <th>{{getNombreTipoEvaluador(grupo,'CLIENTE')? getNombreTipoEvaluador(grupo,'CLIENTE')
-                                :'✕'}}
-                            </th>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="ui-grid-col-4">
+                  {{evaluador.nombre_completo}}
                 </div>
+                <div class="ui-grid-col-2">
+                  {{evaluador.finalizo =='t' ? '✓' : '✕'}}
+                </div>
+              </div>
+              <div class="ui-grid-row">
+                <div class="ui-grid-col-12">
+                  <hr style="color:black;">
+                  <button [disabled]="getProgress(grupoSeleccionado)!=100" pButton
+                          type="button"
+                          class="ui-button-success" style="float:right;" label="Cargar Reporte"
+                          icon="fa-spinner"
+                          (click)="cargarReporte()"></button>
+                  <button pButton type="button" class="ui-button-info" style="float:left;"
+                          label="Editar Reporte" icon="fa-edit"
+                          (click)="mostrarDialogo = true;"></button>
+                </div>
+              </div>
             </div>
+          </div>
+        </p-fieldset>
+      </div>
+      <div class="ui-grid-col-8">
+        <div *ngIf="buscando" class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
         </div>
+        <form (ngSubmit)="buscarEvaluaciones()" *ngIf="!buscando">
+
+          <div class="form-group">
+            <label for="name">Buscar: </label>
+            <input type="text"
+                   [(ngModel)]="busquedaInput" class="form-control" id="name"
+                   required placeholder="Ingresa nombre, rpe o grupo de evaluacion" name="test" #inputRef>
+            <br>
+            <button type="submit" pButton icon="fa-search"
+                    label="Buscar" style="margin:auto;"></button>
+          </div>
+        </form>
+        <div style="max-height:400px;overflow:auto;">
+          <table class="table table-bordered table-responsive table-hover" style="font-size:12px;"
+                 *ngIf="gruposEvaluacion">
+            <thead style="background: rgb(55,76,97);color:white;">
+            <tr>
+              <th rowspan="2">ID</th>
+              <th rowspan="2">Fecha</th>
+              <th colspan="5" align="center">Evaluadores</th>
+            </tr>
+            <tr>
+              <th>Evaluado</th>
+              <th>Jefe</th>
+              <th>Par</th>
+              <th>Colaborador</th>
+              <th>Cliente</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let grupo of gruposEvaluacion"
+                (click)="grupoSeleccionado = grupo; cargarPonderados();"
+                [ngClass]="{'active' : grupo == grupoSeleccionado}">
+              <th>{{grupo.id_evaluacion}}</th>
+              <th>{{grupo.fecha | date:'medium'}}</th>
+              <th
+                [ngClass]="{'termino' : finalizoEvaluador(grupo,'EVAL') == 't','pendiente' : finalizoEvaluador(grupo,'EVAL') != 't'}">
+                {{utilService.getNombreCompleto(grupo.nip_de_evaluado)}}
+              </th>
+              <th
+                [ngClass]="{'termino' : finalizoEvaluador(grupo,'JEFE') == 't','pendiente' : finalizoEvaluador(grupo,'JEFE') != 't'}">
+                {{getNombreTipoEvaluador(grupo,'JEFE') ? getNombreTipoEvaluador(grupo,'JEFE') :'✕'}}
+              </th>
+              <th
+                [ngClass]="{'termino' : finalizoEvaluador(grupo,'PAR') == 't','pendiente' : finalizoEvaluador(grupo,'PAR') != 't'}">
+                {{getNombreTipoEvaluador(grupo,'PAR')? getNombreTipoEvaluador(grupo,'PAR') :'✕'}}
+              </th>
+              <th
+                [ngClass]="{'termino' : finalizoEvaluador(grupo,'COLABORADOR') == 't','pendiente' : finalizoEvaluador(grupo,'COLABORADOR') != 't'}">
+                {{getNombreTipoEvaluador(grupo,'COLABORADOR')?
+                getNombreTipoEvaluador(grupo,'COLABORADOR') :'✕'}}
+              </th>
+              <th
+                [ngClass]="{'termino' : finalizoEvaluador(grupo,'CLIENTE') == 't','pendiente' : finalizoEvaluador(grupo,'CLIENTE') != 't'}">
+                {{getNombreTipoEvaluador(grupo,'CLIENTE')? getNombreTipoEvaluador(grupo,'CLIENTE')
+                :'✕'}}
+              </th>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+  </div>
 </p-fieldset>
 <p-dialog header="Catalogo Encuestas" [(visible)]="mostrarDialogo" *ngIf="grupoSeleccionado && mostrarDialogo"
           showEffect="fade"
           draggable="false" modal="true" [resizable]="false" [responsive]="true" [minWidth]="350" [minHeight]="500">
-    <div class="ui-grid ui-grid-responsive ui-grid-pad" *ngIf="grupoSeleccionado?.id_evaluacion">
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-12">
-                <h1>Editar Reporte:</h1>
-            </div>
-        </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-12">
-                <p-dropdown [options]="listaPonderadosDropdown"
-                            [style]="{'width':'100%','z-index':'20'}"
-                            [(ngModel)]="ponderadoSeleccionado"></p-dropdown>
-                <hr>
-                <button style="float:right;" type="button" pButton icon="fa-plus"
-                        (click)="guardarCambios()"
-                        label="Guardar cambios"></button>
-            </div>
-        </div>
+  <div class="ui-grid ui-grid-responsive ui-grid-pad" *ngIf="grupoSeleccionado?.id_evaluacion">
+    <div class="ui-grid-row">
+      <div class="ui-grid-col-12">
+        <h1>Editar Reporte:</h1>
+      </div>
     </div>
+    <div class="ui-grid-row">
+      <div class="ui-grid-col-12">
+        <p-dropdown [options]="listaPonderadosDropdown"
+                    [style]="{'width':'100%','z-index':'20'}"
+                    [(ngModel)]="ponderadoSeleccionado"></p-dropdown>
+        <hr>
+        <button style="float:right;" type="button" pButton icon="fa-plus"
+                (click)="guardarCambios()"
+                label="Guardar cambios"></button>
+      </div>
+    </div>
+  </div>
 </p-dialog>
