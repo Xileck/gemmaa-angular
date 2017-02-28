@@ -177,15 +177,15 @@
                     <app-fortalezas-mejoras [mejoras]="mejoras.total" [fortalezas]="fortalezas.total"
                                             [titulo]="'Promedio de fortalezas y mejoras'"
                                             [encuesta]="grupoSeleccionado.evaluadores[0].encuesta"></app-fortalezas-mejoras>
-                    <app-fortalezas-mejoras
+                    <app-fortalezas-mejoras *ngIf="grupoSeleccionado?.evaluadores[0]"
                             [evaluador]="grupoSeleccionado.evaluadores[0]"></app-fortalezas-mejoras>
-                    <app-fortalezas-mejoras
+                    <app-fortalezas-mejoras *ngIf="grupoSeleccionado?.evaluadores[1]"
                             [evaluador]="grupoSeleccionado.evaluadores[1]"></app-fortalezas-mejoras>
-                    <app-fortalezas-mejoras
+                    <app-fortalezas-mejoras *ngIf="grupoSeleccionado?.evaluadores[2]"
                             [evaluador]="grupoSeleccionado.evaluadores[2]"></app-fortalezas-mejoras>
-                    <app-fortalezas-mejoras
+                    <app-fortalezas-mejoras *ngIf="grupoSeleccionado?.evaluadores[3]"
                             [evaluador]="grupoSeleccionado.evaluadores[3]"></app-fortalezas-mejoras>
-                    <app-fortalezas-mejoras
+                    <app-fortalezas-mejoras *ngIf="grupoSeleccionado?.evaluadores[4]"
                             [evaluador]="grupoSeleccionado.evaluadores[4]"></app-fortalezas-mejoras>
                 </p-accordion>
                 <br>
@@ -217,7 +217,7 @@
                         <p-chart type="bar" [options]="optionsBarGraphs"
                                  [data]="promediosData.cliente" *ngIf="promediosData.cliente"></p-chart>
                     </div>
-                    <div class="ui-grid-col-6">
+                    <div class="ui-grid-col-6"> 
                         <p-chart type="bar" [options]="optionsBarGraphs"
                                  [data]="promediosData.colaborador" *ngIf="promediosData.colaborador"></p-chart>
                     </div>
