@@ -29,17 +29,19 @@
         "./resources/css/style.css",
         "./resources/css/style-responsive.css",
         "./resources/css/animate.min.css",
-        "./resources/css/vertical-rhythm.min.css",
+
         "./resources/css/owl.carousel.css",
         "./resources/css/magnific-popup.css"
       ],
       "scripts": [
       ],
       "environments": {
+        "calidad": "environments/enviroment.calidad.ts",
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
         "productivo": "environments/environment.prod.ts",
         "tomcat": "environments/environment.tomcat.ts"
+
       }
     }
   ],
@@ -80,3 +82,4 @@
     }
   }
 }
+

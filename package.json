@@ -6,6 +6,7 @@
   "scripts": {
     "productivo": "ng build --env=productivo --prod -bh /weborb/apps/gemmaaP/ ",
     "tomcat": "ng build --env=tomcat --pro -bh /weborb/apps/gemmaaP/",
+    "calidad": "ng build --env=calidad --prod -bh /weborb/apps/gemmaaP/",
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",

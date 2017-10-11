@@ -14,7 +14,7 @@ import {environment} from "../../environments/environment";
     selector: "app-encuestas",
     templateUrl: "./encuestas_menu.component.html",
     styles: [`
-#foto{
+#foto{  
 float: right;
 }
 .evaluado_finalizo{

@@ -14,6 +14,7 @@ import 'core-js/es6/regexp';
 import 'core-js/es6/map';
 import 'core-js/es6/set';
 import 'core-js/es6/reflect';
+import 'classlist.js';
 
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
@@ -23,7 +24,6 @@ import 'zone.js/dist/zone';
 // Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
 
 // Needed for: IE9
-import 'classlist.js';
 
 // Animations
 // Needed for: All but Chrome and Firefox, Not supported in IE9

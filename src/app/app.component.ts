@@ -54,11 +54,11 @@ export class AppComponent {
         if (edge > 0) {
             // Edge (IE 12+) => return version number
             this.versionIE = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-            return false
+            return false;
             //return "Edge " + parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
         }
 
         // other browser
         return false;
     }
-}
+    }

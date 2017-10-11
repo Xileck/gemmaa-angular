@@ -83,7 +83,7 @@ export var EncuestasComponent = (function () {
         Component({
             selector: "app-encuestas",
             templateUrl: "./encuestas_menu.component.html",
-            styles: ["\n#foto{\nfloat: right;\n}\n.evaluado_finalizo{\nopacity: .4;\nbackground: gray;\nfont-size: 20px;\n}\n.emplSeleccionado{\n    background: #a7c9e7;\n}"],
+            styles: ["\n#foto{  \nfloat: right;\n}\n.evaluado_finalizo{\nopacity: .4;\nbackground: gray;\nfont-size: 20px;\n}\n.emplSeleccionado{\n    background: #a7c9e7;\n}"],
             encapsulation: ViewEncapsulation.None
         }), 
         __metadata('design:paramtypes', [LoginService, Router, UtilService, AdminService, EvaluacionService, WindowRef])

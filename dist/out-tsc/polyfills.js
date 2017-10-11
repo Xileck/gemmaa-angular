@@ -12,9 +12,9 @@ import 'core-js/es6/regexp';
 import 'core-js/es6/map';
 import 'core-js/es6/set';
 import 'core-js/es6/reflect';
+import 'classlist.js';
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
-import 'classlist.js';
 import 'intl';
 // NgClass on SVG elements
 // Needed for: IE10, IE11

@@ -408,10 +408,10 @@ export class AsignarEncuestasComponent implements AfterViewInit {
             roles.push('Necesitas seleccionar : evaluado');
         }
 
-        else if (this.colaborador == null && this.cliente == null) {
+       /* else if (this.colaborador == null && this.cliente == null) {
             roles.push('Se necesitan almenos 4 evaluadores, solo colaborador y cliente son opcionales.')
         }
-
+*/
         else if (this.cliente == null && this.ponderadoSeleccionado != null
             && this.ponderadoSeleccionado.cliente != 0) {
             roles.push('Si no se va a seleccionar un cliente el ponderado del cliente debe tener el valor de 0.')
